@@ -169,7 +169,7 @@ h6 {
 
 .pre-header {
     font-size: 11px;
-    background: #fff;
+    background: #0c242e;
     height: 40px;
 }
 
@@ -1322,6 +1322,7 @@ ul.footer-links li i {
 
 .footer-logo img {
     display: inline-block;
+    max-width: 80%;
 }
 
 .pre-footer {

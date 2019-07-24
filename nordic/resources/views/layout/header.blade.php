@@ -1,63 +1,82 @@
-<!-- Top header -->
-<div id="top-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6">
-        <div class="th-text pull-left"> For Reservation:
-          <div class="th-item"> <a href="#"><i class="fa fa-phone"></i>+2347080266555 </a> </div>
-          <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i>info@nordichospitalitysuites.com </a></div>
-        </div>
-      </div>
-      <div class="col-xs-6">
-        <div class="th-text pull-right">
-        
-          <div class="th-item">
-            <div class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-youtube-play"></i></a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>About | Luxen Premium Hotel Template</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" img="/favicon.ico" />
+<!-- CSS FILES -->
+<link rel="stylesheet" href="{{asset('resources/assets/css/bootstrap.min.css')}} ">
+<link rel="stylesheet" href="{{asset('resources/assets/css/supersized.css')}}">
+<link rel="stylesheet" href="{{asset('resources/assets/css/supersized.shutter.css')}}">
+<link rel="stylesheet" href="{{asset('resources/assets/css/flexslider.css')}}">
+<link rel="stylesheet" href="{{asset('resources/assets/css/prettyPhoto.css')}}">
+<link rel="stylesheet" href="{{asset('resources/assets/css/datepicker.css')}}">
+<link rel="stylesheet" href="{{asset('resources/assets/css/selectordie.css')}}">
+<link rel="stylesheet" href="{{asset('resources/assets/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('resources/assets/css/2035.responsive.css')}}">
+<link rel="stylesheet" href="{{asset('resources/assets/css/custom.css')}}">
 
-<!-- Header -->
-<header>
-  <!-- Navigation -->
-  <div class="navbar yamm navbar-default" id="sticky">
-    <div class="container">
-      <div class="navbar-header">
-       <a href="{{url('/')}}" class="navbar-brand">         
-        <!-- Logo -->
-        <div id="logo"> <img id="default-logo" src="{{asset('assets/images/logo-grey.png')}}" alt="Starhotel" style="width: 160px;height: auto">
-
-        </div>
-        </a> </div>
-      <div id="navbar-collapse-grid" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="dropdown active"> <a href="{{url('/')}}">Home</a>
-          </li>
-          <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Rooms <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="{{url('/rooms/nordicbalcony')}}">The Nordic Suite Balcony</a></li>
-              <li><a href="{{url('/rooms/nordicsuites')}}">The Nordic Suite</a></li>
-              <li><a href="{{url('/rooms/deluxebalcony')}}">The Deluxe Balcony</a></li>
-              <li><a href="{{url('/rooms/deluxe')}}">The Deluxe Room</a></li>
-              <li><a href="{{url('/rooms/standard')}}">The Standard Room</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"> <a href="{{url('/offer')}}"  class="">Our Offer</a>
-           
-          </li>
-          <li class="dropdown"> <a href="{{url('/about')}}">About the Hotel</a>
-            
-          </li>
-          <li> <a href="{{url('/gallery')}}">Gallery</a></li>
-          <li> <a href="{{url('/contact')}}" target="_new" >Contact</b></a>
-               <li> <a href="{{url('/terms')}}" target="_new" >Terms & Conditions</b></a>
-            
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
+<script src="resources/assets/js/vendor/modernizr-2.8.3-respond-1.1.0.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<div id="wrapper">
+	<div class="header"><!-- Header Section -->
+		<div class="pre-header"><!-- Pre-header -->
+			<div class="container">
+				<div class="row">
+					<div class="pull-left pre-address-b"><p class="whiteColor" ><i class="fa fa-map-marker"></i>No. 14, Patrick O. Bokkor CrescentJabi, Abuja</p></div>
+					<div class="pull-right">
+                        <div class="pull-left">
+                            <ul class="pre-link-box">
+                                <li><a class="whiteColor" href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-header"><!-- Main-header -->
+			<div class="container">
+				<div class="row">
+					<div class="pull-left">
+						<div class="logo">
+                            <img alt="Logo" src="resources/assets/img/logo-grey.png" class="img-responsive" style="width: 120px; height: auto" />
+						</div>
+					</div>
+					<div class="pull-right">
+						<div class="pull-left">
+							<nav class="nav">
+								<ul id="navigate" class="sf-menu navigate">
+                                    <li><a href="{{url('/')}}">HOME</a>
+									</li>
+									<li class="parent-menu"><a href="#">OUR ROOMS</a>
+                                        <ul>
+                                            <li></li>												
+                                        </ul>
+                                    </li>
+									<li class="active" ><a href="{{url('/about')}}">ABOUT US</a></li>
+                                    <li><a href="#">GALLERY</a></li>
+                                    <li><a href="#">CONTACT</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="pull-right">
+							<div class="button-style-1 margint45">
+								<a href="#"><i class="fa fa-calendar"></i>BOOK NOW</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
