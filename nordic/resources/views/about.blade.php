@@ -1,6 +1,6 @@
 
 @include('layout.header')
-	<div class="breadcrumb breadcrumb-1 pos-center">
+	<div class="breadcrumb breadcrumb-1 pos-center bg">
 		<h1>ABOUT THE HOTEL</h1>
 	</div>
 	<div class="content"><!-- Content Section -->

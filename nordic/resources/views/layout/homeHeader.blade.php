@@ -67,7 +67,7 @@
 												</ul>
 											</li>
 											<li><a href="{{url('/about')}}">ABOUT US</a></li>
-											<li><a href="#">GALLERY</a></li>
+											<li><a href="{{url('/gallery')}}">GALLERY</a></li>
 											<li><a href="#">CONTACT</a></li>
 										</ul>
 									</nav>

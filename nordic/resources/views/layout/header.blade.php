@@ -1,3 +1,6 @@
+@php
+    $url = url()->current();
+@endphp
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -7,7 +10,11 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>About | Luxen Premium Hotel Template</title>
+<title>
+	 @if (preg_match("/about/", $url)) About 
+	 @elseif(preg_match("/gallery/", $url)) Gallery
+	 @endif | Nordic Hospitality Suites
+</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="shortcut icon" img="/favicon.ico" />
@@ -64,8 +71,8 @@
                                             <li></li>												
                                         </ul>
                                     </li>
-									<li class="active" ><a href="{{url('/about')}}">ABOUT US</a></li>
-                                    <li><a href="#">GALLERY</a></li>
+									<li <?php if (preg_match("/about/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/about')}}">ABOUT US</a></li>
+                                    <li <?php if (preg_match("/gallery/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/gallery')}}">GALLERY</a></li>
                                     <li><a href="#">CONTACT</a></li>
 								</ul>
 							</nav>

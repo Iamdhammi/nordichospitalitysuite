@@ -24,3 +24,4 @@ use App\Http\Controllers\MainController;
 
 Route::get('/', 'MainController@home');
 Route::get('/about', 'MainController@about');
+Route::get('/gallery', 'MainController@gallery');
