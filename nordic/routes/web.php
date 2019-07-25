@@ -12,16 +12,7 @@ use App\Http\Controllers\MainController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/login', function () {
-//     return view('login');
-// });
-// Route::get('/about', function() {
-//     return view('about');
-// });
-
 Route::get('/', 'MainController@home');
 Route::get('/about', 'MainController@about');
 Route::get('/gallery', 'MainController@gallery');
+Route::get('/contact', 'MainController@contact');

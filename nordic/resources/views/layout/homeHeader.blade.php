@@ -68,7 +68,7 @@
 											</li>
 											<li><a href="{{url('/about')}}">ABOUT US</a></li>
 											<li><a href="{{url('/gallery')}}">GALLERY</a></li>
-											<li><a href="#">CONTACT</a></li>
+											<li><a href="{{url('/contact')}}">CONTACT</a></li>
 										</ul>
 									</nav>
 								</div>

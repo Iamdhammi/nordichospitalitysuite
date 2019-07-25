@@ -1709,20 +1709,22 @@ ul.tabbed-area li.active a {
 /*-----------------------------------------------------------------------------------*/
 
 .contact-form input[type="text"] {
-    width: 60%;
+    width: 100%;
     margin-bottom: 10px;
     height: 46px;
-    border: solid 1px #f1f1f1;
+    border: solid 1px #ddd;
     padding-left: 10px;
     padding-top: 10px;
+    box-shadow: 0px 1px 2px #ddd;
 }
 
 .contact-form textarea {
     width: 100%;
-    border: solid 1px #f1f1f1;
-    height: 300px;
+    border: solid 1px #ddd;
+    height: 200px;
     padding-left: 10px;
     padding-top: 10px;
+    box-shadow: 0px 1px 2px #ddd;
 }
 
 .contact-form  ::-webkit-input-placeholder {

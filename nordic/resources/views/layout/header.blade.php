@@ -13,6 +13,7 @@
 <title>
 	 @if (preg_match("/about/", $url)) About 
 	 @elseif(preg_match("/gallery/", $url)) Gallery
+	 @elseif(preg_match("/contact/", $url)) Contact
 	 @endif | Nordic Hospitality Suites
 </title>
 <meta name="description" content="">
@@ -41,7 +42,7 @@
 		<div class="pre-header"><!-- Pre-header -->
 			<div class="container">
 				<div class="row">
-					<div class="pull-left pre-address-b"><p class="whiteColor" ><i class="fa fa-map-marker"></i>No. 14, Patrick O. Bokkor CrescentJabi, Abuja</p></div>
+					<div class="pull-left pre-address-b"><p class="whiteColor" ><i class="fa fa-map-marker"></i>No. 14, Patrick O. Bokkor Crescent, Jabi, Abuja</p></div>
 					<div class="pull-right">
                         <div class="pull-left">
                             <ul class="pre-link-box">
@@ -73,7 +74,7 @@
                                     </li>
 									<li <?php if (preg_match("/about/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/about')}}">ABOUT US</a></li>
                                     <li <?php if (preg_match("/gallery/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/gallery')}}">GALLERY</a></li>
-                                    <li><a href="#">CONTACT</a></li>
+                                    <li <?php if (preg_match("/contact/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/contact')}}">CONTACT</a></li>
 								</ul>
 							</nav>
 						</div>
