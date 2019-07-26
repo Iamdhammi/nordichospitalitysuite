@@ -16,3 +16,4 @@ Route::get('/', 'MainController@home');
 Route::get('/about', 'MainController@about');
 Route::get('/gallery', 'MainController@gallery');
 Route::get('/contact', 'MainController@contact');
+Route::get('/rooms', 'MainController@Rooms');

@@ -68,8 +68,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="content"><!-- Content Section -->
-		<div class="about clearfix"><!-- About Section -->
+
+	<!-- Content Section -->
+	<div class="content">
+		<!-- About Section -->
+		<div class="about clearfix">
 			<div class="container">
 				<div class="row">
 					<div class="about-title pos-center margint60">
@@ -84,7 +87,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="explore-rooms margint30 clearfix"><!-- Explore Rooms Section -->
+
+		<!-- Explore Rooms Section -->
+		<div class="explore-rooms margint30 clearfix">
 			<div class="container">
 				<div class="row">	
 					<div class="title-style-2 marginb40 pos-center">
@@ -214,8 +219,9 @@
 				</div>
 			</div>
 		</div>
-	
-		<div id="parallax123" class="parallax parallax-one clearfix margint60"><!-- Parallax Section -->
+
+		<!-- Parallax Section -->
+		<div id="parallax123" class="parallax parallax-one clearfix margint60">
 			<div class="support-section">
 				<div class="container">
 					<div class="row">

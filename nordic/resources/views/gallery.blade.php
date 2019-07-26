@@ -2,7 +2,8 @@
 	<div class="breadcrumb breadcrumb-1 pos-center bg">
 		<h1>GALLERY</h1>
 	</div>
-	<div class="content mg-t30"><!-- Gallery Section -->
+	<!-- Gallery Section -->
+	<div class="content mg-t30">
 		<div class="container">
 			<div class="row">	
 				<div class="col-lg-4 col-sm-6 gallery-box">

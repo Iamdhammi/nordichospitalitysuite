@@ -3,10 +3,12 @@
 	<div class="breadcrumb breadcrumb-1 pos-center bg">
 		<h1>ABOUT THE HOTEL</h1>
 	</div>
-	<div class="content"><!-- Content Section -->
+	<!-- Content Section -->
+	<div class="content">
 		<div class="container">
 			<div class="row">
-				<div class="about-slider margint40"><!-- About Slider -->
+				<!-- About Slider -->
+				<div class="about-slider margint40">
 					<div class="col-lg-12">
 						<div class="flexslider">
 							<ul class="slides">
@@ -17,7 +19,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="about-info clearfix"><!-- About Info -->
+
+				<!-- About Info -->
+				<div class="about-info clearfix">
 					<div class="col-lg-8">
 						<h3>ABOUT US</h3>
 						<p class="margint30">Nordic Hospitality is a boutique hotel located in Jabi. We offer 22 unique state of the art rooms furnished in a modern day style and decorated with designer furniture. Our rooms are ideal for travelers and families who want the best of leisure time.  </p>
@@ -60,7 +64,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="about-services margint60 clearfix"><!-- About Services -->
+				<!-- About Services -->
+				<div class="about-services margint60 clearfix">
 					<div class="col-lg-4 col-sm-6">
 						<img alt="About Services" class="img-responsive" src="assets/img/b-edited.jpg" >
 						<h5 class="margint20">SERENE ENVIRONMENT</h5>

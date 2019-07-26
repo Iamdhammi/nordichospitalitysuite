@@ -20,3 +20,11 @@
 .breadcrumb h1 {
     color: white!important;
 }
+.pagination>li>a {
+    color: black;
+}
+.pagination>.active>a {
+    background-color: #e4b248;
+    border-color: #e4b248;
+
+}

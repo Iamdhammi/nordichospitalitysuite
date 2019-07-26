@@ -2,10 +2,12 @@
 	<div class="breadcrumb breadcrumb-1 pos-center bg">
 		<h1>CONTACT</h1>
 	</div>
-	<div class="content"><!-- Content Section -->
+	<!-- Content Section -->
+	<div class="content">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-sm-4 margint60"><!-- Sidebar -->
+				<!-- Sidebar -->
+				<div class="col-lg-4 col-sm-4 margint60">
 					<div class="luxen-widget news-widget">
 						<div class="title">
 							<h5>HOTEL INFORMATION</h5>
@@ -35,7 +37,8 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-8 col-sm-8 mg-t60"><!-- Contact -->
+				<!-- Contact -->
+				<div class="col-lg-8 col-sm-8 mg-t60">
 					<div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="300px" id="gmap_canvas" src="https://maps.google.com/maps?q=%2014%2C%20Patrick%20O.%20Bokkor%20Crescent%2C%20Jabi%2C%20Abuja&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/best-wordpress-themes/">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:300px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:100%;}</style></div>
 					<div class="contact-form margint30"><!-- Contact Form -->
 						<form action="#" method="post" id="ajax-contact-form">

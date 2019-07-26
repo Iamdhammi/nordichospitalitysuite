@@ -14,6 +14,7 @@
 	 @if (preg_match("/about/", $url)) About 
 	 @elseif(preg_match("/gallery/", $url)) Gallery
 	 @elseif(preg_match("/contact/", $url)) Contact
+	 @elseif(preg_match("/rooms/", $url)) Hotel Rooms
 	 @endif | Nordic Hospitality Suites
 </title>
 <meta name="description" content="">
@@ -29,9 +30,13 @@
 <link rel="stylesheet" href="{{asset('assets/css/selectordie.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/2035.responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.1.0.min.js"></script>
+
+
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -67,9 +72,9 @@
 								<ul id="navigate" class="sf-menu navigate">
                                     <li><a href="{{url('/')}}">HOME</a>
 									</li>
-									<li class="parent-menu"><a href="#">OUR ROOMS</a>
+									<li <?php if(preg_match("/rooms/", $url)) { ?> class="active" <?php } ?> class="parent-menu"><a href="#">OUR ROOMS</a>
                                         <ul>
-                                            <li><a href="#" >HOTEL ROOMS</a></li>												
+                                            <li><a href="{{url('/rooms/')}}" >HOTEL ROOMS</a></li>												
                                         </ul>
                                     </li>
 									<li <?php if (preg_match("/about/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/about')}}">ABOUT US</a></li>

@@ -69,7 +69,8 @@
 </div>
 </div>
 <!-- JS FILES -->
-<script src="assets/js/vendor/jquery-1.11.1.min.js"></script>
+{{-- <script src="assets/js/vendor/jquery-1.11.1.min.js"></script> --}}
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script src="assets/js/vendor/bootstrap.min.js"></script>
 <script src="assets/js/retina-1.1.0.min.js"></script>
 <script src="assets/js/jquery.flexslider-min.js"></script>
@@ -77,14 +78,21 @@
 <script src="assets/js/jquery.slicknav.min.js"></script>
 <script src="assets/js/jquery.prettyPhoto.js"></script>
 <script src="assets/js/jquery.parallax-1.1.3.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+{{-- <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script> --}}
 <script src="assets/js/main.js"></script>
-<!--
+{{-- DataTable --}}
 <script>
-var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-g.src='//www.google-analytics.com/ga.js';
-s.parentNode.insertBefore(g,s)}(document,'script'));
+  $(document).ready( function () {
+      $('#roomtable').DataTable({
+        "order": [[0, 'asc']],
+        "searching": false,
+        'destroy': true,
+        "lengthChange": false
+      });
+  } );
 </script>
--->
 </body>
 </html>

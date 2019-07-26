@@ -63,7 +63,7 @@
 											</li>
 											<li class="parent-menu"><a href="#">OUR ROOMS</a>
 												<ul>
-													<li><a href="#" >HOTEL ROOMS</a></li>												
+													<li><a href="{{url('/rooms')}}">HOTEL ROOMS</a></li>												
 												</ul>
 											</li>
 											<li><a href="{{url('/about')}}">ABOUT US</a></li>
