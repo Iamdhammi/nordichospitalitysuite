@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-sm-2 footer-logo">
-            <img alt="Logo" src="resources/assets/img/logo-grey.png" class="img-responsive" >
+            <img alt="Logo" src="assets/img/logo-grey.png" class="img-responsive" >
           </div>
           <div class="col-lg-10 col-sm-10">
             <div class="col-lg-3 col-sm-3">
@@ -57,10 +57,10 @@
           <div class="pull-right">
             <ul>
               <li><p>CONNECT WITH US</p></li>
-              <li><a><img alt="Facebook" src="resources/assets/temp/orkut.png" ></a></li>
-              <li><a><img alt="Tripadvisor" src="resources/assets/temp/tripadvisor.png" ></a></li>
-              <li><a><img alt="Yelp" src="resources/assets/temp/hyves.png" ></a></li>
-              <li><a><img alt="Twitter" src="resources/assets/temp/skype.png" ></a></li>
+              <li><a><img alt="Facebook" src="assets/temp/orkut.png" ></a></li>
+              <li><a><img alt="Tripadvisor" src="assets/temp/tripadvisor.png" ></a></li>
+              <li><a><img alt="Yelp" src="assets/temp/hyves.png" ></a></li>
+              <li><a><img alt="Twitter" src="assets/temp/skype.png" ></a></li>
             </ul>
           </div>
         </div>
@@ -69,15 +69,15 @@
 </div>
 </div>
 <!-- JS FILES -->
-<script src="resources/assets/js/vendor/jquery-1.11.1.min.js"></script>
-<script src="resources/assets/js/vendor/bootstrap.min.js"></script>
-<script src="resources/assets/js/retina-1.1.0.min.js"></script>
-<script src="resources/assets/js/jquery.flexslider-min.js"></script>
-<script src="resources/assets/js/superfish.pack.1.4.1.js"></script>
-<script src="resources/assets/js/jquery.slicknav.min.js"></script>
-<script src="resources/assets/js/jquery.prettyPhoto.js"></script>
-<script src="resources/assets/js/jquery.parallax-1.1.3.js"></script>
-<script src="resources/assets/js/main.js"></script>
+<script src="assets/js/vendor/jquery-1.11.1.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/retina-1.1.0.min.js"></script>
+<script src="assets/js/jquery.flexslider-min.js"></script>
+<script src="assets/js/superfish.pack.1.4.1.js"></script>
+<script src="assets/js/jquery.slicknav.min.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+<script src="assets/js/main.js"></script>
 <!--
 <script>
 var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

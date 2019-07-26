@@ -74,7 +74,7 @@
 				<div class="row">
 					<div class="about-title pos-center margint60">
 						<h2>WELCOME TO NORDIC HOSPITALITY SUITES</h2>
-						<div class="title-shape"><img alt="Shape" src="resources/assets/img/shape.png"></div>
+						<div class="title-shape"><img alt="Shape" src="assets/img/shape.png"></div>
 						<p>Welcome to our hotel, Nordic Hospitality is a boutique hotel located in Jabi.
 						We offer 22 unique state of the art rooms furnished in a modern day
 						style and decorated with designer furniture.
@@ -94,7 +94,7 @@
 					<div class="col-lg-4 col-sm-6">
 						<div class="home-room-box">
 							<div class="room-image">
-								<img alt="Room Images" class="img-responsive" src="resources/assets/img/rooms/room-2.JPG">
+								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-2.JPG">
 								<div class="home-room-details">
 									<h5><a href="#">The Standard Room</a></h5>
 									<div class="pull-left">
@@ -133,7 +133,7 @@
 					<div class="col-lg-4 col-sm-6">
 						<div class="home-room-box">
 							<div class="room-image">
-								<img alt="Room Images" class="img-responsive" src="resources/assets/img/rooms/room-04.JPG">
+								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-04.JPG">
 								<div class="home-room-details">
 									<h5><a href="#">The Nordic Suite</a></h5>
 									<div class="pull-left">
@@ -174,7 +174,7 @@
 						<div class="home-room-box">
 							<div class="room-image">
 								<div class="room-features">FEATURED</div>
-								<img alt="Room Images" class="img-responsive" src="resources/assets/img/rooms/room-5.JPG">
+								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-5.JPG">
 								<div class="home-room-details">
 									<h5><a href="#">The Deluxe</a></h5>
 									<div class="pull-left">
@@ -276,7 +276,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="newsletter-top pos-center margint30">
-						<img alt="Shape Image" src="resources/assets/img/shape.png" >
+						<img alt="Shape Image" src="assets/img/shape.png" >
 					</div>
 					<div class="newsletter-form margint40 pos-center">
 						<div class="newsletter-wrapper">

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-2 col-sm-2 footer-logo">
-          <img alt="Logo" src="resources/assets/img/logo-grey.png" class="img-responsive" >
+          <img alt="Logo" src="assets/img/logo-grey.png" class="img-responsive" >
         </div>
         <div class="col-lg-10 col-sm-10">
           <div class="col-lg-3 col-sm-3">
@@ -57,10 +57,10 @@
         <div class="pull-right">
           <ul>
             <li><p>CONNECT WITH US</p></li>
-            <li><a><img alt="Facebook" src="resources/assets/temp/orkut.png" ></a></li>
-            <li><a><img alt="Tripadvisor" src="resources/assets/temp/tripadvisor.png" ></a></li>
-            <li><a><img alt="Yelp" src="resources/assets/temp/hyves.png" ></a></li>
-            <li><a><img alt="Twitter" src="resources/assets/temp/skype.png" ></a></li>
+            <li><a><img alt="Facebook" src="assets/temp/orkut.png" ></a></li>
+            <li><a><img alt="Tripadvisor" src="assets/temp/tripadvisor.png" ></a></li>
+            <li><a><img alt="Yelp" src="assets/temp/hyves.png" ></a></li>
+            <li><a><img alt="Twitter" src="assets/temp/skype.png" ></a></li>
           </ul>
         </div>
       </div>
@@ -70,19 +70,19 @@
 </div>
 </div>
 <!-- JS FILES -->
-<script src="resources/assets/js/vendor/jquery-1.11.1.min.js"></script>
-<script src="resources/assets/js/vendor/bootstrap.min.js"></script>
-<script src="resources/assets/js/retina-1.1.0.min.js"></script>
-<script src="resources/assets/js/jquery.flexslider-min.js"></script>
-<script src="resources/assets/js/superfish.pack.1.4.1.js"></script>
-<script src="resources/assets/js/jquery.slicknav.min.js"></script>
-<script src="resources/assets/js/bootstrap-datepicker.js"></script>
-<script src="resources/assets/js/selectordie.min.js"></script>
-<script src="resources/assets/js/jquery.parallax-1.1.3.js"></script>
-<script src="resources/assets/js/jquery.prettyPhoto.js"></script>
-<script src="resources/assets/js/supersized.3.2.7.min.js"></script>
-<script src="resources/assets/js/supersized.shutter.min.js"></script>
-<script src="resources/assets/js/main.js"></script>
+<script src="assets/js/vendor/jquery-1.11.1.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/retina-1.1.0.min.js"></script>
+<script src="assets/js/jquery.flexslider-min.js"></script>
+<script src="assets/js/superfish.pack.1.4.1.js"></script>
+<script src="assets/js/jquery.slicknav.min.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/selectordie.min.js"></script>
+<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/supersized.3.2.7.min.js"></script>
+<script src="assets/js/supersized.shutter.min.js"></script>
+<script src="assets/js/main.js"></script>
 <script type="text/javascript">
 jQuery(function($){				
 $.supersized({
@@ -95,11 +95,11 @@ pause_hover			:0,			// Pause slideshow on hover
 performance			:1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
 image_protect		:1,			// Disables image dragging and right click with Javascript
 slides				:[			// Slideshow Images
-  {image : 'resources/assets/img/e-edited.jpg'},
-  {image : 'resources/assets/img/f-edited.jpg'},
-  {image : 'resources/assets/img/b-edited.jpg'},
-  {image : 'resources/assets/img/b-edited.jpg'},
-  {image : 'resources/assets/img/c-edited.jpg'}
+  {image : 'assets/img/e-edited.jpg'},
+  {image : 'assets/img/f-edited.jpg'},
+  {image : 'assets/img/b-edited.jpg'},
+  {image : 'assets/img/b-edited.jpg'},
+  {image : 'assets/img/c-edited.jpg'}
 ]
 });
 });	  

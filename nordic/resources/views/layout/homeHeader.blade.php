@@ -8,18 +8,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<link rel="shortcut icon" img="/favicon.ico" />
 	<!-- CSS FILES -->
-	<link rel="stylesheet" href="{{asset('resources/assets/css/bootstrap.min.css')}} ">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/supersized.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/supersized.shutter.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/flexslider.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/prettyPhoto.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/datepicker.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/selectordie.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/main.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/2035.responsive.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/assets/css/custom.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}} ">
+	<link rel="stylesheet" href="{{asset('assets/css/supersized.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/supersized.shutter.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/flexslider.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/prettyPhoto.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/datepicker.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/selectordie.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/2035.responsive.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 
-	<script src="resources/assets/js/vendor/modernizr-2.8.3-respond-1.1.0.min.js"></script>
+	<script src="assets/js/vendor/modernizr-2.8.3-respond-1.1.0.min.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -51,7 +51,7 @@
 							<div class="pull-left">
 								<div class="logo colorWhiteBg">
 									<a href="#">
-										<img alt="Logo" src="resources/assets/img/logo-grey.png" class="img-responsive" style="width: 120px; height: auto" />
+										<img alt="Logo" src="assets/img/logo-grey.png" class="img-responsive" style="width: 120px; height: auto" />
 									</a>
 								</div>
 							</div>
@@ -63,7 +63,7 @@
 											</li>
 											<li class="parent-menu"><a href="#">OUR ROOMS</a>
 												<ul>
-													<li></li>												
+													<li><a href="#" >HOTEL ROOMS</a></li>												
 												</ul>
 											</li>
 											<li><a href="{{url('/about')}}">ABOUT US</a></li>

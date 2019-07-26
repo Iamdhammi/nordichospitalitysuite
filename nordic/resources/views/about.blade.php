@@ -10,9 +10,9 @@
 					<div class="col-lg-12">
 						<div class="flexslider">
 							<ul class="slides">
-                                <li><img alt="Slider 3" class="img-responsive" src="resources/assets/img/e-edited.jpg" /></li>
-								<li><img alt="Slider 1" class="img-responsive" src="resources/assets/img/a-edited.jpg" /></li>
-								<li><img alt="Slider 1" class="img-responsive" src="resources/assets/img/d-edited.jpg" /></li>
+                                <li><img alt="Slider 3" class="img-responsive" src="assets/img/e-edited.jpg" /></li>
+								<li><img alt="Slider 1" class="img-responsive" src="assets/img/a-edited.jpg" /></li>
+								<li><img alt="Slider 1" class="img-responsive" src="assets/img/d-edited.jpg" /></li>
 							</ul>
 						</div>
 					</div>
@@ -62,17 +62,17 @@
 				</div>
 				<div class="about-services margint60 clearfix"><!-- About Services -->
 					<div class="col-lg-4 col-sm-6">
-						<img alt="About Services" class="img-responsive" src="resources/assets/img/b-edited.jpg" >
+						<img alt="About Services" class="img-responsive" src="assets/img/b-edited.jpg" >
 						<h5 class="margint20">SERENE ENVIRONMENT</h5>
 						<p class="margint20">Duis mollis, est non commodo luctus, nisi erat odio sewd euismod semp, est non nuluis risus eget urna mollis ornare vel eu leo. semper. </p>
 					</div>
 					<div class="col-lg-4 col-sm-6">
-						<img alt="About Services" class="img-responsive" src="resources/assets/img/f-edited.jpg" >
+						<img alt="About Services" class="img-responsive" src="assets/img/f-edited.jpg" >
 						<h5 class="margint20">EXCELLENT CUSTOMER SERVICE</h5>
 						<p class="margint20">Duis mollis, est non commodo luctus, nisi erat odio sewd euismod semp, est non nuluis risus eget urna mollis ornare vel eu leo. semper. </p>
 					</div>
 					<div class="col-lg-4 col-sm-6">
-						<img alt="About Services" class="img-responsive" src="resources/assets/img/c-edited.jpg" >
+						<img alt="About Services" class="img-responsive" src="assets/img/c-edited.jpg" >
 						<h5 class="margint20">HOSPITABLE RECEPTION</h5>
 						<p class="margint20">Duis mollis, est non commodo luctus, nisi erat odio sewd euismod semp, est non nuluis risus eget urna mollis ornare vel eu leo. semper. </p>
 					</div>
