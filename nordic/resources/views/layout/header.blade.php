@@ -63,7 +63,7 @@
 				<div class="row">
 					<div class="pull-left">
 						<div class="logo">
-                            <img alt="Logo" src="assets/img/logo-grey.png" class="img-responsive" style="width: 120px; height: auto" />
+                            <img alt="Logo" src="{{asset('assets/img/logo-grey.png')}}" class="img-responsive" style="width: 120px; height: auto" />
 						</div>
 					</div>
 					<div class="pull-right">

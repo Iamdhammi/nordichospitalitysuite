@@ -25,4 +25,8 @@ class MainController extends Controller
     public function rooms() {
         return view('rooms');
     }
+
+    public function deluxe() {
+        return view('deluxe');
+    }
 }

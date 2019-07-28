@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-sm-2 footer-logo">
-            <img alt="Logo" src="assets/img/logo-grey.png" class="img-responsive" >
+            <img alt="Logo" src="{{asset('assets/img/logo-grey.png')}}" class="img-responsive" >
           </div>
           <div class="col-lg-10 col-sm-10">
             <div class="col-lg-3 col-sm-3">
@@ -57,10 +57,10 @@
           <div class="pull-right">
             <ul>
               <li><p>CONNECT WITH US</p></li>
-              <li><a><img alt="Facebook" src="assets/temp/orkut.png" ></a></li>
-              <li><a><img alt="Tripadvisor" src="assets/temp/tripadvisor.png" ></a></li>
-              <li><a><img alt="Yelp" src="assets/temp/hyves.png" ></a></li>
-              <li><a><img alt="Twitter" src="assets/temp/skype.png" ></a></li>
+              <li><a><img alt="Facebook" src="{{asset('assets/temp/orkut.png')}}" ></a></li>
+              <li><a><img alt="Tripadvisor" src="{{asset('assets/temp/tripadvisor.png')}}" ></a></li>
+              <li><a><img alt="Yelp" src="{{asset('assets/temp/hyves.png')}}" ></a></li>
+              <li><a><img alt="Twitter" src="{{asset('assets/temp/skype.png')}}" ></a></li>
             </ul>
           </div>
         </div>
@@ -71,18 +71,21 @@
 <!-- JS FILES -->
 {{-- <script src="assets/js/vendor/jquery-1.11.1.min.js"></script> --}}
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/retina-1.1.0.min.js"></script>
-<script src="assets/js/jquery.flexslider-min.js"></script>
-<script src="assets/js/superfish.pack.1.4.1.js"></script>
-<script src="assets/js/jquery.slicknav.min.js"></script>
-<script src="assets/js/jquery.prettyPhoto.js"></script>
-<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+<script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/retina-1.1.0.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.flexslider-min.js')}}"></script>
+<script src="{{asset('assets/js/superfish.pack.1.4.1.js')}}"></script>
+<script src="{{asset('assets/js/jquery.slicknav.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.prettyPhoto.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap-datepicker.js')}}"></script>
+<script src="{{asset('assets/js/selectordie.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.parallax-1.1.3.js')}}"></script>
+<script src="{{asset('assets/js/jquery.simpleWeather.min.js')}}"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 {{-- <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script> --}}
-<script src="assets/js/main.js"></script>
+<script src="{{asset('assets/js/main.js')}}"></script>
 {{-- DataTable --}}
 <script>
   $(document).ready( function () {

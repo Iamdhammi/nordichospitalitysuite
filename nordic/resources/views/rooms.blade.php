@@ -21,7 +21,7 @@
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Deluxe Room 1</h5>
+											<h5>Deluxe Room</h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -41,97 +41,9 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
-								</td>
-								<td><h3>70$</h3></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
-							</tr>
-							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/deluxe/room-2.jpg" class="img-responsive"></td>
-								<td class="title-table">
-									<div class="room-details-list clearfix">
-										<div class="pull-left">
-											<h5>Deluxe Room 2</h5>
-										</div>
-										<div class="pull-left room-rating">
-											<ul>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<div class="list-room-icons clearfix">
-										<ul>
-											<li><i class="fa fa-calendar"></i></li>
-											<li><i class="fa fa-flask"></i></li>
-											<li><i class="fa fa-umbrella"></i></li>
-											<li><i class="fa fa-laptop"></i></li>
-										</ul>
-									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
-								</td>
-								<td><h3>70$</h3></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
-							</tr>
-							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 1" src="assets/img/rooms/deluxe/room-3.jpg" class="img-responsive"></td>
-								<td class="title-table">
-									<div class="room-details-list clearfix">
-										<div class="pull-left">
-											<h5>Deluxe Room 3</h5>
-										</div>
-										<div class="pull-left room-rating">
-											<ul>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<div class="list-room-icons clearfix">
-										<ul>
-											<li><i class="fa fa-calendar"></i></li>
-											<li><i class="fa fa-flask"></i></li>
-											<li><i class="fa fa-umbrella"></i></li>
-											<li><i class="fa fa-laptop"></i></li>
-										</ul>
-									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
-								</td>
-								<td><h3>70$</h3></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
-							</tr>
-							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/deluxe/room-6.jpg" class="img-responsive"></td>
-								<td class="title-table">
-									<div class="room-details-list clearfix">
-										<div class="pull-left">
-											<h5>Deluxe Room 4</h5>
-										</div>
-										<div class="pull-left room-rating">
-											<ul>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<div class="list-room-icons clearfix">
-										<ul>
-											<li><i class="fa fa-calendar"></i></li>
-											<li><i class="fa fa-flask"></i></li>
-											<li><i class="fa fa-umbrella"></i></li>
-											<li><i class="fa fa-laptop"></i></li>
-										</ul>
-									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
+									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <br>
+										<a class="active-color" href="{{url('/rooms/deluxe')}}">View More</a> 
+									</p>
 								</td>
 								<td><h3>70$</h3></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
@@ -141,7 +53,7 @@
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Deluxe Balcony Room 1</h5>
+											<h5>Deluxe Balcony Room</h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -161,17 +73,17 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
+									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero<br> <a class="active-color" href="#">View More</a> </p>
 								</td>
 								<td><h3>70$</h3></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/room-01.jpg" class="img-responsive"></td>
+								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/nordic_suite/room-1.jpg" class="img-responsive"></td>
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Suit Room</h5>
+											<h5>Nordic Suite Room</h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -179,7 +91,7 @@
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star inactive"></i></li>
+												<li><i class="fa fa-star"></i></li>
 											</ul>
 										</div>
 									</div>
@@ -191,17 +103,17 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
+									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero<br> <a class="active-color" href="#">View More</a> </p>
 								</td>
 								<td><h3>70$</h3></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/room-01.jpg" class="img-responsive"></td>
+								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/nordic_suite_balcony/room-1.jpg" class="img-responsive"></td>
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Suit Room</h5>
+											<h5>Nordic Suite Balcony Room</h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -209,7 +121,7 @@
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star inactive"></i></li>
+												<li><i class="fa fa-star"></i></li>
 											</ul>
 										</div>
 									</div>
@@ -221,17 +133,17 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
+									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <br><a class="active-color" href="#">View More</a> </p>
 								</td>
 								<td><h3>70$</h3></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/room-01.jpg" class="img-responsive"></td>
+								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/standard	/room-1.jpg" class="img-responsive"></td>
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Suit Room</h5>
+											<h5>Standard Room</h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -239,7 +151,7 @@
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star inactive"></i></li>
+												<li><i class="fa fa-star"></i></li>
 											</ul>
 										</div>
 									</div>
@@ -251,67 +163,7 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
-								</td>
-								<td><h3>70$</h3></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
-							</tr>
-							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/room-01.jpg" class="img-responsive"></td>
-								<td class="title-table">
-									<div class="room-details-list clearfix">
-										<div class="pull-left">
-											<h5>Suit Room</h5>
-										</div>
-										<div class="pull-left room-rating">
-											<ul>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star inactive"></i></li>
-											</ul>
-										</div>
-									</div>
-									<div class="list-room-icons clearfix">
-										<ul>
-											<li><i class="fa fa-calendar"></i></li>
-											<li><i class="fa fa-flask"></i></li>
-											<li><i class="fa fa-umbrella"></i></li>
-											<li><i class="fa fa-laptop"></i></li>
-										</ul>
-									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
-								</td>
-								<td><h3>70$</h3></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
-							</tr>
-							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/room-01.jpg" class="img-responsive"></td>
-								<td class="title-table">
-									<div class="room-details-list clearfix">
-										<div class="pull-left">
-											<h5>Suit Room</h5>
-										</div>
-										<div class="pull-left room-rating">
-											<ul>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star inactive"></i></li>
-											</ul>
-										</div>
-									</div>
-									<div class="list-room-icons clearfix">
-										<ul>
-											<li><i class="fa fa-calendar"></i></li>
-											<li><i class="fa fa-flask"></i></li>
-											<li><i class="fa fa-umbrella"></i></li>
-											<li><i class="fa fa-laptop"></i></li>
-										</ul>
-									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <a class="active-color" href="#">[...]</a> </p>
+									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <br><a class="active-color" href="#">View More</a> </p>
 								</td>
 								<td><h3>70$</h3></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
