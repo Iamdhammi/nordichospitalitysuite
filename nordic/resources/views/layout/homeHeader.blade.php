@@ -78,7 +78,7 @@
 								</div>
 								<div class="pull-right">
 									<div class="button-style-1 margint45">
-										<a href="#"><i class="fa fa-calendar"></i>BOOK NOW</a>
+										<a href="#"><i class="fa fa-search"></i>Check Availability</a>
 									</div>
 								</div>
 							</div>
