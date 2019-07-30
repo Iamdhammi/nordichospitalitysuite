@@ -19,7 +19,7 @@
 </title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="shortcut icon" img="/favicon.ico" />
+<link rel="shortcut icon" img="{{asset('assets/img/favicon.ico')}}" />
 <!-- CSS FILES -->
 <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}} ">
 <link rel="stylesheet" href="{{asset('assets/css/supersized.css')}}">
@@ -51,7 +51,7 @@
 					<div class="pull-right">
                         <div class="pull-left">
                             <ul class="pre-link-box">
-                                <li><a class="whiteColor" href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
                             </ul>
                         </div>
 					</div>
@@ -70,15 +70,11 @@
 						<div class="pull-left">
 							<nav class="nav">
 								<ul id="navigate" class="sf-menu navigate">
-                                    <li><a href="{{url('/')}}">HOME</a>
-									</li>
-									<li <?php if(preg_match("/rooms/", $url)) { ?> class="active" <?php } ?> class="parent-menu"><a href="#">OUR ROOMS</a>
-                                        <ul>
-                                            <li><a href="{{url('/rooms/')}}" >HOTEL ROOMS</a></li>												
-                                        </ul>
-                                    </li>
+                                    <li><a href="{{url('/')}}">HOME</a></li>
+									<li <?php if(preg_match("/rooms/", $url)) { ?> class="active" <?php } ?>><a href="{{url('/rooms')}}">OUR ROOMS</a></li>
 									<li <?php if (preg_match("/about/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/about')}}">ABOUT US</a></li>
-                                    <li <?php if (preg_match("/gallery/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/gallery')}}">GALLERY</a></li>
+									<li <?php if (preg_match("/gallery/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/gallery')}}">GALLERY</a></li>
+									<li <?php if (preg_match("/news/", $url)) { ?>  class="active" <?php } ?>><a href="#">NEWS</a></li>
                                     <li <?php if (preg_match("/contact/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/contact')}}">CONTACT</a></li>
 								</ul>
 							</nav>

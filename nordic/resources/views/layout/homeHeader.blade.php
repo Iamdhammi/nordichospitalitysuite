@@ -6,7 +6,7 @@
 	<title>The Nordic hospitality Suites- Jabi, Abuja</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<link rel="shortcut icon" img="/favicon.ico" />
+	<link rel="shortcut icon" img="{{asset('assets/img/favicon.ico')}}" />
 	<!-- CSS FILES -->
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}} ">
 	<link rel="stylesheet" href="{{asset('assets/css/supersized.css')}}">
@@ -37,7 +37,7 @@
 							<div class="pull-right">
 								<div class="pull-left">
 									<ul class="pre-link-box">
-										<li><a class="whiteColor" href="#">Terms & Conditions</a></li>
+										<li><a href="#">Terms & Conditions</a></li>
 									</ul>
 								</div>
 								
@@ -59,15 +59,11 @@
 								<div class="pull-left">
 									<nav class="nav">
 										<ul id="navigate" class="sf-menu navigate">
-											<li class="active"><a href="{{url('/')}}">HOME</a>											
-											</li>
-											<li class="parent-menu"><a href="#">OUR ROOMS</a>
-												<ul>
-													<li><a href="{{url('/rooms')}}">HOTEL ROOMS</a></li>												
-												</ul>
-											</li>
+											<li class="active"><a href="{{url('/')}}">HOME</a></li>
+											<li><a href="{{url('/rooms')}}">OUR ROOMS</a></li>
 											<li><a href="{{url('/about')}}">ABOUT US</a></li>
 											<li><a href="{{url('/gallery')}}">GALLERY</a></li>
+											<li><a href="#">NEWS</a></li>
 											<li><a href="{{url('/contact')}}">CONTACT</a></li>
 										</ul>
 									</nav>

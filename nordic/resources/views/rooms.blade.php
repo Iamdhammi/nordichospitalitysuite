@@ -17,11 +17,15 @@
 						</thead>
 						<tbody>
 							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 1" src="assets/img/rooms/deluxe/room-1.jpg" class="img-responsive"></td>
+								<td class="products-image-table">
+									<a href="{{url('/rooms/deluxe')}}">
+										<img alt="Products Image 1" src="assets/img/rooms/deluxe/room-1.jpg" class="img-responsive">
+									</a>
+								</td>
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Deluxe Room</h5>
+											<h5><a href="{{url('/rooms/deluxe')}}">The Deluxe Room</a></h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -41,19 +45,23 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <br>
+									<p>The Deluxe Rooms offer great comfort having all the facilities travellers could require such as spacious room, king size bed, sitting area.<br>
 										<a class="active-color" href="{{url('/rooms/deluxe')}}">View More</a> 
 									</p>
 								</td>
-								<td><h3>70$</h3></td>
+								<td><h5>₦25,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 1" src="assets/img/rooms/deluxe_balcony/room-1.jpg" class="img-responsive"></td>
+								<td class="products-image-table">
+									<a href="{{url('/rooms/deluxebalcony')}}">
+										<img alt="Products Image 1" src="assets/img/rooms/deluxe_balcony/room-1.jpg" class="img-responsive">
+									</a>
+								</td>
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Deluxe Balcony Room</h5>
+											<h5><a href="{{url('/rooms/deluxebalcony')}}">The Deluxe Balcony</a></h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -73,17 +81,23 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero<br> <a class="active-color" href="#">View More</a> </p>
+									<p>A modern hotel roomwith walk-in closet and a spacious bathroom with a full size spa tub. It has a spaciously sized king size bed, a sitting area, a writing desk. This room also features a balcony.<br>
+										<a class="active-color" href="{{url('/rooms/deluxebalcony')}}">View More</a>
+									</p>
 								</td>
-								<td><h3>70$</h3></td>
+								<td><h5>₦29,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/nordic_suite/room-1.jpg" class="img-responsive"></td>
+								<td class="products-image-table">
+									<a href="{{url('/rooms/nordicsuite')}}">
+										<img alt="Products Image 2" src="assets/img/rooms/nordic_suite/room-1.jpg" class="img-responsive">
+									</a>
+								</td>
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Nordic Suite Room</h5>
+											<h5><a href="{{url('/rooms/nordicsuite')}}">The Nordic Suite</a></h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -103,17 +117,23 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero<br> <a class="active-color" href="#">View More</a> </p>
+									<p>Our Nordic Suites are spaciously sized with a king size bed, a large sitting area, a writing desk. The Suite is furnished to suit your need, its also perfect as an office while staying with us.<br> 
+										<a class="active-color" href="{{url('/rooms/nordicsuite')}}">View More</a> 
+									</p>
 								</td>
-								<td><h3>70$</h3></td>
+								<td><h5>₦35,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/nordic_suite_balcony/room-1.jpg" class="img-responsive"></td>
+								<td class="products-image-table">
+									<a href="{{url('/rooms/nordicsuitebalcony')}}">
+										<img alt="Products Image 2" src="assets/img/rooms/nordic_suite_balcony/room-1.jpg" class="img-responsive">
+									</a>
+								</td>
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Nordic Suite Balcony Room</h5>
+											<h5><a href="{{url('/rooms/nordicsuitebalcony')}}">The Nordic Suite Balcony</a></h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -133,17 +153,23 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <br><a class="active-color" href="#">View More</a> </p>
+									<p>Spaciously sized with a king size bed. A large sitting area, a writing desk, a Full Size Bathtub with luxurious bath products and the scented candles. This room is perfect not only for business but also for a romantic getaway.<br>
+										<a class="active-color" href="{{url('/rooms/nordicsuitebalcony')}}">View More</a> 
+									</p>
 								</td>
-								<td><h3>70$</h3></td>
+								<td><h5>₦39,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
-								<td class="products-image-table"><img alt="Products Image 2" src="assets/img/rooms/standard	/room-1.jpg" class="img-responsive"></td>
+								<td class="products-image-table">
+									<a href="{{url('/rooms/standard')}}">
+										<img alt="Products Image 2" src="assets/img/rooms/standard	/room-1.jpg" class="img-responsive">
+									</a>
+								</td>
 								<td class="title-table">
 									<div class="room-details-list clearfix">
 										<div class="pull-left">
-											<h5>Standard Room</h5>
+											<h5><a href="{{url('/rooms/standard')}}">The Standard Room</a></h5>
 										</div>
 										<div class="pull-left room-rating">
 											<ul>
@@ -163,9 +189,11 @@
 											<li><i class="fa fa-laptop"></i></li>
 										</ul>
 									</div>
-									<p>Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque orla porta felis euismodnean eu at ero <br><a class="active-color" href="#">View More</a> </p>
+									<p>Our standards Rooms are comfortably furnished with a queen sized bed, a writing desk, 32" flat-screen TV, High Speed Internet. A Standard Room can accommodate one guest.<br>
+										<a class="active-color" href="{{url('/rooms/standard')}}">View More</a> 
+									</p>
 								</td>
-								<td><h3>70$</h3></td>
+								<td><h5>₦18,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 						</tbody>

@@ -18,3 +18,7 @@ Route::get('/gallery', 'MainController@gallery');
 Route::get('/contact', 'MainController@contact');
 Route::get('/rooms', 'MainController@Rooms');
 Route::get('/rooms/deluxe', 'MainController@deluxe');
+Route::get('/rooms/deluxebalcony', 'MainController@deluxeBalcony');
+Route::get('/rooms/nordicsuite', 'MainController@nordicSuite');
+Route::get('/rooms/nordicsuitebalcony', 'MainController@nordicSuiteBalcony');
+Route::get('/rooms/standard', 'MainController@standard');

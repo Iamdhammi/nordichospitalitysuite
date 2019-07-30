@@ -26,5 +26,20 @@
 .pagination>.active>a {
     background-color: #e4b248;
     border-color: #e4b248;
-
+}
+.bullet-point {
+    padding-left: 10px;
+}
+.footer-hr {
+    border-color: #e4b248;
+    margin-top: 10px;
+    width: 20px;
+}
+.footer-image {
+    width: 135px;
+    margin-left: -5px;
+}
+.footer-text {
+    padding: 10px;
+    color: black;
 }

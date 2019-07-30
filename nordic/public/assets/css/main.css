@@ -514,7 +514,11 @@ h6 {
 }
 
 #home .pre-header ul li a{
-    color: #C9C9CB;
+    color: #fff;
+}
+
+#home .pre-header ul li a:hover{
+    color: #e4b248;
 }
 
 #home .language-box ul{
@@ -1138,7 +1142,8 @@ label {
 }
 
 .parallax-one {
-    background: url('../temp/parallax.jpg');
+    background: url('../img/image.jpg');
+    background-position: top!important;
     height: 380px;
     padding: 100px 0;
 }
@@ -1301,7 +1306,7 @@ input[type="submit"]:hover {
 }
 
 .main-footer {
-    padding: 60px;
+    padding: 60px 60px 30px 60px;
     font-size: 12px;
     border-bottom: solid 1px #eeeeee;
 }
@@ -1314,7 +1319,13 @@ ul.footer-links li i {
     color: #e4b248;
     padding-right: 10px;
 }
-
+ul.footer-links a {
+    font-size: 13px;
+}
+ul.footer-links p {
+    color: #000;
+    font-size: 13px;
+}
 .footer-logo {
     height: 160px;
     line-height: 160px;
@@ -1330,6 +1341,7 @@ ul.footer-links li i {
     padding: 10px 0;
     padding-bottom: 20px;
     padding-bottom: 0px;
+    background-color: #0c242e;
 }
 
 .pre-footer ul li {
@@ -1338,7 +1350,7 @@ ul.footer-links li i {
 }
 
 .pre-footer p {
-    color: #333;
+    color: #fff;
     margin-right: 10px;
     margin-top: 2px;
 }
@@ -1657,8 +1669,8 @@ label {
 }
 
 .quick-reservation .search-button {
-    width: 45%;
-    margin-left: 10%;
+    width: 100%;
+    /* margin-left: 10%; */
 }
 
 .quick-reservation .button-style-1 {
@@ -1668,7 +1680,7 @@ label {
 
 .quick-reservation .button-style-1 a {
     font-size: 11px !important;
-    padding: 8px 15px;
+    padding: 8px 25px;
 }
 
 /*-----------------------------------------------------------------------------------*/

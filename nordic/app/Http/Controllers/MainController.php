@@ -29,4 +29,16 @@ class MainController extends Controller
     public function deluxe() {
         return view('deluxe');
     }
+    public function deluxeBalcony() {
+        return view('deluxeBalcony');
+    }
+    public function nordicSuite() {
+        return view('nordicsuite');
+    }
+    public function nordicSuiteBalcony() {
+        return view('nordicSuiteBalcony');
+    }
+    public function standard() {
+        return view('standard');
+    }
 }

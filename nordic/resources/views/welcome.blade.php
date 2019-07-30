@@ -83,7 +83,58 @@
 						style and decorated with designer furniture.
 						Our rooms are ideal for travelers and families who want the best of leisure time. </p>
 					</div>
-					
+					<div class="otel-info margint60">
+						<div class="col-lg-4 col-sm-12">
+							<div class="title-style-1 marginb40">
+								<h5>GALLERY</h5>
+								<hr>
+							</div>
+							<div class="flexslider">
+								<ul class="slides">
+									<li><img alt="Slider 1" class="img-responsive" src="{{asset('assets/img/a-edited.jpg')}}" /></li>
+									<li><img alt="Slider 1" class="img-responsive" src="{{asset('assets/img/c-edited.jpg')}}" /></li>
+									<li><img alt="Slider 1" class="img-responsive" src="{{asset('assets/img/d-edited.jpg')}}" /></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="title-style-1 marginb40">
+								<h5>ABOUT US</h5>
+								<hr>
+							</div>
+							<p>Nordic Hospitality is a boutique hotel with rooms furnished in a modern day style and decorated with designer furniture. Our rooms are perfect not only for business but also for a romantic getaway.</p>
+							<p><i class="fa fa-check-circle fa-lg" style="color: #e4b248"></i><span class="bullet-point">24 hours Front Desk and Daily Housekeeping</span></p>
+							<p><i class="fa fa-check-circle fa-lg" style="color: #e4b248"></i><span class="bullet-point">24 hours Security</span></p>
+							<p><i class="fa fa-check-circle fa-lg" style="color: #e4b248"></i><span class="bullet-point">Free Wi-Fi (high speed)</span></p>
+							<p><i class="fa fa-check-circle fa-lg" style="color: #e4b248"></i><span class="bullet-point">Secured parking space</span></p>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="title-style-1 marginb40">
+								<h5>OUR NEWS</h5>
+								<hr>
+							</div>
+							<div class="home-news">
+								<div class="news-box clearfix">
+									<div class="news-time pull-left">
+										<div class="news-date pos-center"><div class="date-day">20<hr></div>MAY</div>
+									</div>
+									<div class="news-content pull-left">
+										<h6><a href="#">News from us from now</a></h6>
+										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui <a class="active-color" href="#">[...]</a></p>
+									</div>
+								</div>
+								<div class="news-box clearfix">
+									<div class="news-time pull-left">
+										<div class="news-date pos-center"><div class="date-day">20<hr></div>MAY</div>
+									</div>
+									<div class="news-content pull-left">
+										<h6><a href="#">News from us from now</a></h6>
+										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue <a class="active-color" href="#">[...]</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -101,7 +152,7 @@
 							<div class="room-image">
 								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-2.JPG">
 								<div class="home-room-details">
-									<h5><a href="#">The Standard Room</a></h5>
+									<h5><a href="{{url('/rooms/standard')}}">The Standard Room</a></h5>
 									<div class="pull-left">
 										<ul>
 											<li><i class="fa fa-calendar"></i></li>
@@ -123,7 +174,7 @@
 							</div>
 							<div class="room-details">
 								<p>Our standards Rooms are comfortably furnished with a queen sized bed, a writing desk, 
-									32" flat-screen TV, High Speed Internet. A Standard Room can accommodate one guest[...]</p>
+									32" flat-screen TV, High Speed Internet. A Standard Room can accommodate one guest<a class="active-color" href="{{url('/rooms/standard')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
 								<div class="pull-left"><h4>89$<span class="room-bottom-time">/ Day</span></h4></div>
@@ -140,7 +191,7 @@
 							<div class="room-image">
 								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-04.JPG">
 								<div class="home-room-details">
-									<h5><a href="#">The Nordic Suite</a></h5>
+									<h5><a href="{{url('/rooms/nordicsuite')}}">The Nordic Suite</a></h5>
 									<div class="pull-left">
 										<ul>
 											<li><i class="fa fa-calendar"></i></li>
@@ -163,7 +214,7 @@
 							<div class="room-details">
 								<p>Our Nordic Suites are spaciously sized with a king size bed, a large sitting area, a writing desk. 
 								The Suite is furnished to suit your need, its also perfect as an office while staying with us.
-								[...]</p>
+								<a class="active-color" href="{{url('/rooms/nordicsuite')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
 								<div class="pull-left"><h4>89$<span class="room-bottom-time">/ Day</span></h4></div>
@@ -181,7 +232,7 @@
 								<div class="room-features">FEATURED</div>
 								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-5.JPG">
 								<div class="home-room-details">
-									<h5><a href="#">The Deluxe</a></h5>
+									<h5><a href="{{url('/rooms/deluxe')}}">The Deluxe</a></h5>
 									<div class="pull-left">
 										<ul>
 											<li><i class="fa fa-calendar"></i></li>
@@ -204,7 +255,7 @@
 							<div class="room-details">
 								<p>Spaciously sized with a king size bed. A large sitting area, a writing desk,
 								a Full Size Bathtub with luxurious bath products and the scented candles. 
-								This room is perfect not only for business but also for a romantic getaway[...]</p>
+								This room is perfect not only for business but also for a romantic getaway<a class="active-color" href="{{url('/rooms/deluxe')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
 								<div class="pull-left"><h4>89$<span class="room-bottom-time">/ Day</span></h4></div>
@@ -231,12 +282,12 @@
 									<div class="support-box pos-center front">
 										<div class="support-box-title"><i class="fa fa-phone"></i></div>
 										<h4>CALL US</h4>
-										<p class="margint20">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferme fentum</p>
+										<p class="margint20">We are always available to respond as our staff are on ground 24/7</p>
 									</div>
 									<div class="support-box pos-center back">
 										<div class="support-box-title"><i class="fa fa-phone"></i></div>
 										<h4>PHONE NUMBER</h4>
-										<p class="margint20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et.<br />+61 3 8376 6284</p>
+										<p class="margint20">+234 708 026 6555</p>
 									</div>
 								</div>
 							</div>
@@ -247,12 +298,12 @@
 									<div class="support-box pos-center front">
 										<div class="support-box-title"><i class="fa fa-envelope"></i></div>
 										<h4>SEND US E-MAIL</h4>
-										<p class="margint20">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferme fentum</p>
+										<p class="margint20">If you have any questions or further enquiries, send us a message and we'll be glad to reply</p>
 									</div>
 									<div class="support-box pos-center back">
 										<div class="support-box-title"><i class="fa fa-envelope"></i></div>
 										<h4>E-MAIL ADDRESS</h4>
-										<p class="margint20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et.<br />luxen@2035themes.com</p>
+										<p class="margint20">info@nordichospitalitysuites.com</p>
 									</div>
 								</div>
 							</div>
@@ -263,12 +314,12 @@
 									<div class="support-box pos-center front">
 										<div class="support-box-title"><i class="fa fa-home"></i></div>
 										<h4>VISIT US</h4>
-										<p class="margint20">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut ferme fentum</p>
+										<p class="margint20">Our rooms are ideal for travelers and families who want the best of leisure time</p>
 									</div>
 									<div class="support-box pos-center back">
 										<div class="support-box-title"><i class="fa fa-home"></i></div>
 										<h4>COMPANY ADDRESS</h4>
-										<p class="margint20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et.<br />Manhattan square. 124 avenue. Bodrum</p>
+										<p class="margint20">No. 14, Patrick O. Bokkor Crescent, Jabi, Abuja</p>
 									</div>
 								</div>
 							</div>

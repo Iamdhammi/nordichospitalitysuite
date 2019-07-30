@@ -1,59 +1,60 @@
 <div class="footer margint40"><!-- Footer Section -->
     <div class="main-footer">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-2 col-sm-2 footer-logo">
-            <img alt="Logo" src="{{asset('assets/img/logo-grey.png')}}" class="img-responsive" >
-          </div>
-          <div class="col-lg-10 col-sm-10">
-            <div class="col-lg-3 col-sm-3">
-              <h6>TOUCH WITH US</h6>
-              <ul class="footer-links">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Google +</a></li>
-                <li><a href="#">otels.com</a></li>
-                <li><a href="#">Tripadvisor</a></li>
-              </ul>
+          <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <div class="col-lg-4 col-sm-4">
+                  <div class="footer-image" >
+                    <img alt="Logo" src="assets/img/logo-grey.png" class="img-responsive" >
+                  </div>
+                  <div class="footer-text">
+                    <p>
+                      Nordic Hospitality is a boutique hotel located in Jabi. We offer 22 unique state of the art rooms furnished in a modern day style 
+                      and decorated with designer furniture. Our rooms are ideal for travelers and families who want the best of leisure time
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                    <h5>NORDIC ROOMS</h5>
+                    <hr class="footer-hr">
+                    <ul class="footer-links">
+                      
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Deluxe Room</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Deluxe Balcony</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Nordic Suite</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Nordic Suite Balcony</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Standard Room</a></li>
+                    
+                  </ul>
+                </div>
+                <div class="col-lg-2 col-sm-2">
+                  <h5>LINKS</h5>
+                  <hr class="footer-hr">
+                  <ul class="footer-links">
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Home </a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> About</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Contact</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Gallery</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Terms & Conditions</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                  <h5>CONTACT</h5>
+                  <hr class="footer-hr">
+                  <ul class="footer-links">
+                    <li><p><i class="fa fa-map-marker"></i> No. 14, Patrick O. Bokkor Crescent Jabi, Abuja </p></li>
+                    <li><p><i class="fa fa-phone"></i> For Reservation: +2347080266555 </p></li>
+                    <li><p><i class="fa fa-envelope"></i> <a href="mailto:info@nordichospitalitysuites.com">info@nordichospitalitysuites.com</a></p></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-3 col-sm-3">
-              <h6>ABOUT NORDIC</h6>
-              <ul class="footer-links">
-                
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Blog SIngle</a></li>
-                <li><a href="#">Category grid</a></li>
-                <li><a href="#">Category list</a></li>
-                
-              </ul>
-            </div>
-            <div class="col-lg-2 col-sm-2">
-              <h6>LINKS</h6>
-              <ul class="footer-links">
-                <li><a href="#">Home </a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Gallery</a></li>
-                
-              </ul>
-            </div>
-            <div class="col-lg-4 col-sm-4">
-              <h6>CONTACT</h6>
-              <ul class="footer-links">
-                <li><p><i class="fa fa-map-marker"></i> No. 14, Patrick O. Bokkor Crescent Jabi, Abuja </p></li>
-                <li><p><i class="fa fa-phone"></i> For Reservation: +2347080266555 </p></li>
-                <li><p><i class="fa fa-envelope"></i> <a href="mailto:info@nordichospitalitysuites.com">info@nordichospitalitysuites.com</a></p></li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <div class="pre-footer">
       <div class="container">
         <div class="row">
-          <div class="pull-left"><p>Nordic Hospitality Suites © 2019 | Developed by D'Bel</p></div>
+          <div class="pull-left"><p>Nordic Hospitality Suites © <script>document.write(new Date().getFullYear());</script> | Developed by D'Bel</p></div>
           <div class="pull-right">
             <ul>
               <li><p>CONNECT WITH US</p></li>
@@ -69,8 +70,8 @@
 </div>
 </div>
 <!-- JS FILES -->
-{{-- <script src="assets/js/vendor/jquery-1.11.1.min.js"></script> --}}
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="{{asset('assets/js/vendor/jquery-1.11.1.min.js')}}"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> --}}
 <script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>
 <script src="{{asset('assets/js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.flexslider-min.js')}}"></script>

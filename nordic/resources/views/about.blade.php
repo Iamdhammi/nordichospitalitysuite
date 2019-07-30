@@ -25,8 +25,11 @@
 					<div class="col-lg-8">
 						<h3>ABOUT US</h3>
 						<p class="margint30">Nordic Hospitality is a boutique hotel located in Jabi. We offer 22 unique state of the art rooms furnished in a modern day style and decorated with designer furniture. Our rooms are ideal for travelers and families who want the best of leisure time.  </p>
-						<p>Lorem ipsum dolor sit amet, consectetur.Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur.Aenean lacinia bibenPraesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur.Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur.Aeum dolor sit amet, consectetur.</p>
-						<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur.Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur.Aeum dolor sit amet, consectetur.</p>
+						<p>Our rooms are furnished in a modern day style and decorated with designer furniture. They are perfect not only for business but also for a romantic getaway.</p>
+						<p><i class="fa fa-check-circle fa-lg" style="color: #e4b248"></i><span class="bullet-point">24 hours Front Desk and Daily Housekeeping</span></p>
+						<p><i class="fa fa-check-circle fa-lg" style="color: #e4b248"></i><span class="bullet-point">24 hours Security</span></p>
+						<p><i class="fa fa-check-circle fa-lg" style="color: #e4b248"></i><span class="bullet-point">Free Wi-Fi (high speed)</span></p>
+						<p><i class="fa fa-check-circle fa-lg" style="color: #e4b248"></i><span class="bullet-point">Secured parking space</span></p>
 					</div>
 					<div class="col-lg-4">
 						{{-- <h3>SIDEBAR</h3> --}}
@@ -74,7 +77,7 @@
 					<div class="col-lg-4 col-sm-6">
 						<img alt="About Services" class="img-responsive" src="assets/img/f-edited.jpg" >
 						<h5 class="margint20">EXCELLENT CUSTOMER SERVICE</h5>
-						<p class="margint20">Duis mollis, est non commodo luctus, nisi erat odio sewd euismod semp, est non nuluis risus eget urna mollis ornare vel eu leo. semper. </p>
+						<p class="margint20">Our staff are on ground 24 hours,You have no minimum night of stay. </p>
 					</div>
 					<div class="col-lg-4 col-sm-6">
 						<img alt="About Services" class="img-responsive" src="assets/img/c-edited.jpg" >
