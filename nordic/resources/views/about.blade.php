@@ -12,9 +12,7 @@
 					<div class="col-lg-12">
 						<div class="flexslider">
 							<ul class="slides">
-                                <li><img alt="Slider 3" class="img-responsive" src="assets/img/e-edited.jpg" /></li>
 								<li><img alt="Slider 1" class="img-responsive" src="assets/img/a-edited.jpg" /></li>
-								<li><img alt="Slider 1" class="img-responsive" src="assets/img/d-edited.jpg" /></li>
 							</ul>
 						</div>
 					</div>

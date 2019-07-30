@@ -42,3 +42,6 @@
     padding: 10px;
     color: black;
 }
+.flex-viewport {
+    max-height: 500px;
+}

@@ -54,7 +54,7 @@
     <div class="pre-footer">
       <div class="container">
         <div class="row">
-          <div class="pull-left"><p>Nordic Hospitality Suites © <script>document.write(new Date().getFullYear());</script> | Developed by D'Bel</p></div>
+          <div class="pull-left"><p>Nordic Hospitality Suites © Copyright <script>document.write(new Date().getFullYear());</script></p></div>
           <div class="pull-right">
             <ul>
               <li><p>CONNECT WITH US</p></li>

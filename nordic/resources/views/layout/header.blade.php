@@ -71,7 +71,15 @@
 							<nav class="nav">
 								<ul id="navigate" class="sf-menu navigate">
                                     <li><a href="{{url('/')}}">HOME</a></li>
-									<li <?php if(preg_match("/rooms/", $url)) { ?> class="active" <?php } ?>><a href="{{url('/rooms')}}">OUR ROOMS</a></li>
+									<li class="parent-menu" <?php if(preg_match("/rooms/", $url)) { ?> class="active" <?php } ?>><a href="{{url('/rooms')}}">OUR ROOMS</a>
+										<ul>
+											<li><a href="{{url('/rooms/deluxe')}}">Deluxe Rooms</a></li>
+											<li><a href="{{url('/rooms/deluxebalcony')}}">Deluxe Balcony</a></li>
+											<li><a href="{{url('/rooms/nordicsuite')}}">Nordic Suite Rooms</a></li>
+											<li><a href="{{url('/rooms/nordicsuitebalcony')}}">Nordic Suite Balcony</a></li>
+											<li><a href="{{url('/rooms/standard')}}">Standard Rooms</a></li>
+										</ul>
+									</li>
 									<li <?php if (preg_match("/about/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/about')}}">ABOUT US</a></li>
 									<li <?php if (preg_match("/gallery/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/gallery')}}">GALLERY</a></li>
 									<li <?php if (preg_match("/news/", $url)) { ?>  class="active" <?php } ?>><a href="#">NEWS</a></li>
@@ -81,7 +89,7 @@
 						</div>
 						<div class="pull-right">
 							<div class="button-style-1 margint45">
-								<a href="#"><i class="fa fa-calendar"></i>BOOK NOW</a>
+								<a href="#"><i class="fa fa-search"></i>Check Availability</a>
 							</div>
 						</div>
 					</div>

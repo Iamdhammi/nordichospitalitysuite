@@ -60,7 +60,15 @@
 									<nav class="nav">
 										<ul id="navigate" class="sf-menu navigate">
 											<li class="active"><a href="{{url('/')}}">HOME</a></li>
-											<li><a href="{{url('/rooms')}}">OUR ROOMS</a></li>
+											<li class="parent-menu" ><a href="{{url('/rooms')}}">OUR ROOMS</a>
+												<ul>
+													<li><a href="{{url('/rooms/deluxe')}}">Deluxe Rooms</a></li>
+													<li><a href="{{url('/rooms/deluxebalcony')}}">Deluxe Balcony</a></li>
+													<li><a href="{{url('/rooms/nordicsuite')}}">Nordic Suite Rooms</a></li>
+													<li><a href="{{url('/rooms/nordicsuitebalcony')}}">Nordic Suite Balcony</a></li>
+													<li><a href="{{url('/rooms/standard')}}">Standard Rooms</a></li>
+												</ul>
+											</li>
 											<li><a href="{{url('/about')}}">ABOUT US</a></li>
 											<li><a href="{{url('/gallery')}}">GALLERY</a></li>
 											<li><a href="#">NEWS</a></li>
