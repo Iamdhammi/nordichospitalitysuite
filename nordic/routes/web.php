@@ -22,3 +22,4 @@ Route::get('/rooms/deluxebalcony', 'MainController@deluxeBalcony');
 Route::get('/rooms/nordicsuite', 'MainController@nordicSuite');
 Route::get('/rooms/nordicsuitebalcony', 'MainController@nordicSuiteBalcony');
 Route::get('/rooms/standard', 'MainController@standard');
+Route::get('/terms', 'MainController@terms');

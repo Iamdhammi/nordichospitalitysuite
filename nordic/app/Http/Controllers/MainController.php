@@ -41,4 +41,7 @@ class MainController extends Controller
     public function standard() {
         return view('standard');
     }
+    public function terms() {
+        return view('terms');
+    }
 }

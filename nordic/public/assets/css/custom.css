@@ -45,3 +45,23 @@
 .flex-viewport {
     max-height: 500px;
 }
+
+.terms-content {
+    margin-top: 50px;
+}
+.terms-text {
+    font-size: 15px;
+    color: #000;
+}
+.terms-text p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.terms-text ol {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.terms-text ol li {
+    margin-bottom: 10px;
+}

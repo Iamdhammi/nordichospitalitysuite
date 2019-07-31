@@ -194,7 +194,13 @@ h6 {
     padding-top: 4px;
 }
 
+.pre-link-box li a {
+    color: #fff;
+}
 
+.pre-link-box li a:hover {
+    color: #e4b248;
+}
 
 .language-box {
     height: 40px;

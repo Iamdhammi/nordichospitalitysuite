@@ -15,6 +15,7 @@
 	 @elseif(preg_match("/gallery/", $url)) Gallery
 	 @elseif(preg_match("/contact/", $url)) Contact
 	 @elseif(preg_match("/rooms/", $url)) Hotel Rooms
+	 @elseif(preg_match("/terms/", $url)) Terms & Condition
 	 @endif | Nordic Hospitality Suites
 </title>
 <meta name="description" content="">
@@ -51,7 +52,7 @@
 					<div class="pull-right">
                         <div class="pull-left">
                             <ul class="pre-link-box">
-                                <li><a href="#">Terms & Conditions</a></li>
+								<li><a href="{{url('/terms')}}">Terms & Conditions</a></li>
                             </ul>
                         </div>
 					</div>

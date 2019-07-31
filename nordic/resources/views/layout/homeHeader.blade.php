@@ -37,7 +37,7 @@
 							<div class="pull-right">
 								<div class="pull-left">
 									<ul class="pre-link-box">
-										<li><a href="#">Terms & Conditions</a></li>
+										<li><a href="{{url('/terms')}}">Terms & Conditions</a></li>
 									</ul>
 								</div>
 								
