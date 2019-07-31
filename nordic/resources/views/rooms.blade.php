@@ -5,7 +5,7 @@
 	<div class="content"><!-- Content Section -->
 		<div class="container margint60">
 			<div class="row">
-				<div class="col-lg-9"><!-- Explore Rooms -->
+				<div class="col-lg-12"><!-- Explore Rooms -->
 					<table id="roomtable" data-page-length='5' style="width:100%">
 						<thead>
 							<tr class="products-title">
@@ -199,7 +199,7 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="col-lg-3"><!-- Sidebar -->
+				{{-- <div class="col-lg-3"><!-- Sidebar -->
 					<div class="quick-reservation-container">
 						<div class="quick-reservation clearfix">
 							<div class="title-quick pos-center margint30">
@@ -268,7 +268,7 @@
 							<li><p><i class="fa fa-envelope"></i> info@nordichospitalitysuites.com</p></li>
 						</ul>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 	</div>

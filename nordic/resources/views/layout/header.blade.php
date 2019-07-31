@@ -72,7 +72,11 @@
 							<nav class="nav">
 								<ul id="navigate" class="sf-menu navigate">
                                     <li><a href="{{url('/')}}">HOME</a></li>
-									<li class="parent-menu" <?php if(preg_match("/rooms/", $url)) { ?> class="active" <?php } ?>><a href="{{url('/rooms')}}">OUR ROOMS</a>
+									<li
+										@if(preg_match("/rooms/", $url)) class="active parent-menu"
+										@else class="parent-menu" 
+										@endif
+									><a href="{{url('/rooms')}}">OUR ROOMS</a>
 										<ul>
 											<li><a href="{{url('/rooms/deluxe')}}">Deluxe Rooms</a></li>
 											<li><a href="{{url('/rooms/deluxebalcony')}}">Deluxe Balcony</a></li>

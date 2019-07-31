@@ -65,3 +65,6 @@
 .terms-text ol li {
     margin-bottom: 10px;
 }
+.center {
+    text-align: center!important;
+}
