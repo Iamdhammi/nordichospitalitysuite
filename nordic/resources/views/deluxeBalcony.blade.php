@@ -88,7 +88,7 @@
 									</div>
 									<div class="pull-left search-button clearfix">
 										<div class="button-style-1 center">
-											<a id="res-submit" href="#">BOOK NOW</a>
+											<a id="res-submit" href="#"><i class="fa fa-calendar"></i>BOOK NOW</a>
 										</div>
 									</div>
 								</form>

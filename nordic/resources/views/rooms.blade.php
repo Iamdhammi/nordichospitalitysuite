@@ -11,6 +11,7 @@
 							<tr class="products-title">
 								<td class="table-products-image pos-center"><h6>IMAGE</h6></td>
 								<td class="table-products-name pos-center"><h6>ROOM NAME</h6></td>
+								<td class="table-products-no pos-center"><h6>NO. AVAILABLE <br>ROOMS</h6></td>
 								<td class="table-products-price pos-center"><h6>PRICE</h6></td>
 								<td class="table-products-total pos-center"><h6>PURCHASE</h6></td>
 							</tr>
@@ -49,6 +50,7 @@
 										<a class="active-color" href="{{url('/rooms/deluxe')}}">View More</a> 
 									</p>
 								</td>
+								<td><h5>8</h5></td>
 								<td><h5>₦25,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
@@ -85,6 +87,7 @@
 										<a class="active-color" href="{{url('/rooms/deluxebalcony')}}">View More</a>
 									</p>
 								</td>
+								<td><h5>4</h5></td>
 								<td><h5>₦29,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
@@ -121,6 +124,7 @@
 										<a class="active-color" href="{{url('/rooms/nordicsuite')}}">View More</a> 
 									</p>
 								</td>
+								<td><h5>2</h5></td>
 								<td><h5>₦35,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
@@ -157,6 +161,7 @@
 										<a class="active-color" href="{{url('/rooms/nordicsuitebalcony')}}">View More</a> 
 									</p>
 								</td>
+								<td><h5>4</h5></td>
 								<td><h5>₦39,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
@@ -193,6 +198,7 @@
 										<a class="active-color" href="{{url('/rooms/standard')}}">View More</a> 
 									</p>
 								</td>
+								<td><h5>2</h5></td>
 								<td><h5>₦18,500</h5></td>
 								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>

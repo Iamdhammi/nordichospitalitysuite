@@ -1572,15 +1572,18 @@ table td.table-products-image {
 }
 
 table td.table-products-name {
-    width: 55%;
+    width: 45%;
 }
 
 table td.table-products-price {
     width: 10%;
 }
+table td.table-products-no {
+    width: 15%;
+}
 
 table td.table-products-total {
-    width: 25%;
+    width: 20%;
 }
 
 table tr.table-products-list {
@@ -1686,7 +1689,7 @@ label {
 
 .quick-reservation .button-style-1 a {
     font-size: 11px !important;
-    padding: 8px 70px;
+    padding: 8px 60px;
 }
 
 /*-----------------------------------------------------------------------------------*/
