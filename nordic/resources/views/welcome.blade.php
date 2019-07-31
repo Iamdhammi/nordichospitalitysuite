@@ -177,7 +177,7 @@
 									32" flat-screen TV, High Speed Internet. A Standard Room can accommodate one guest<a class="active-color" href="{{url('/rooms/standard')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
-								<div class="pull-left"><h4>89$<span class="room-bottom-time">/ Day</span></h4></div>
+								<div class="pull-left"><h4>₦18,500<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
 										<a href="#">BOOK NOW</a>
@@ -217,7 +217,7 @@
 								<a class="active-color" href="{{url('/rooms/nordicsuite')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
-								<div class="pull-left"><h4>89$<span class="room-bottom-time">/ Day</span></h4></div>
+								<div class="pull-left"><h4>₦35,500<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
 										<a href="#">BOOK NOW</a>
@@ -258,7 +258,7 @@
 								This room is perfect not only for business but also for a romantic getaway<a class="active-color" href="{{url('/rooms/deluxe')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
-								<div class="pull-left"><h4>89$<span class="room-bottom-time">/ Day</span></h4></div>
+								<div class="pull-left"><h4>₦25,500<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
 										<a href="#">BOOK NOW</a>
