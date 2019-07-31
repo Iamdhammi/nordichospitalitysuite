@@ -42,7 +42,7 @@
     padding: 10px;
     color: black;
 }
-.flex-viewport {
+.max-h .flex-viewport {
     max-height: 500px;
 }
 

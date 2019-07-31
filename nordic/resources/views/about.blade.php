@@ -10,7 +10,7 @@
 				<!-- About Slider -->
 				<div class="about-slider margint40">
 					<div class="col-lg-12">
-						<div class="flexslider">
+						<div class="flexslider max-h">
 							<ul class="slides">
 								<li><img alt="Slider 1" class="img-responsive" src="assets/img/a-edited1.jpg" /></li>
 							</ul>
