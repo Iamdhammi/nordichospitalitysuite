@@ -98,5 +98,70 @@
       });
   } );
 </script>
+<script>
+  function calculate() {
+    let arrival = document.querySelector('.arrival').value;
+    let depart = document.querySelector('.departure').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let price = document.getElementById('price').value;
+    let room_no = document.getElementById('room_no').value;
+    let room_type = document.getElementById('room').value;
+    let guests = document.getElementById('guests').value;
+
+    if (arrival != "" && depart != "" && name != "" && email != "") {
+      let arrivaldate = new Date(arrival);
+      let departuredate = new Date(depart);
+      let diff = Math.abs(departuredate - arrivaldate)/1000/60/60/24;
+
+
+      let total = price * diff * room_no;
+
+      //document.getElementById('total').value = total;
+      
+
+      let totalprice = parseInt(total) * 100;
+      let handler = PaystackPop.setup({
+        key: 'pk_test_bbbca00e8ea21f67ffbc2cc8858436c592266f5f',
+        email: email,
+        amount: totalprice,
+        currency: "NGN",
+        ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+        metadata: {
+          custom_fields: [
+              {
+                display_name: "Customer Nmae",
+                variable_name: "customer_name",
+                value: "name"
+              },
+              {
+                display_name: "Email",
+                variable_name: "email",
+                value: "email"
+              }
+          ]
+        },
+        callback: function(response){
+          console.log(response);
+          let transaction = new Object();
+          transaction.name = name;
+          transaction.email = email;
+          transaction.ref = ref;
+          transaction.room_type = room_type;
+          transaction.room_no = room_no;
+          transaction.guests = guests;
+          transaction.arrival = arrival;
+          transaction.depart = depart;
+          transaction.total = total;
+        },
+        onClose: function(){
+            
+        }
+      });
+      handler.openIframe();
+
+    }
+  };
+</script>
 </body>
 </html>

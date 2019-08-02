@@ -16,6 +16,7 @@
 	 @elseif(preg_match("/contact/", $url)) Contact
 	 @elseif(preg_match("/rooms/", $url)) Hotel Rooms
 	 @elseif(preg_match("/terms/", $url)) Terms & Condition
+	 @elseif(preg_match("/reservation/", $url)) Reservation
 	 @endif | Nordic Hospitality Suites
 </title>
 <meta name="description" content="">

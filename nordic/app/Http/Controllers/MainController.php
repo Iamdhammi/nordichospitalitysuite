@@ -44,4 +44,21 @@ class MainController extends Controller
     public function terms() {
         return view('terms');
     }
+    public function dreservation() {
+        return view('deluxereservation');
+    }
+    public function dbreservation() {
+        return view('deluxebalconyreservation');
+    }
+    public function nsreservation() {
+        return view('nordicsuitereservation');
+    }
+    public function nsbreservation() {
+        return view('nordicsuitebalconyreservation');
+    }
+    public function sreservation() {
+        return view('standardreservation');
+    }
+
 }
+

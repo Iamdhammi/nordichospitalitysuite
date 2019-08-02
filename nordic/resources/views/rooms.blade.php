@@ -11,7 +11,7 @@
 							<tr class="products-title">
 								<td class="table-products-image pos-center"><h6>IMAGE</h6></td>
 								<td class="table-products-name pos-center"><h6>ROOM NAME</h6></td>
-								<td class="table-products-no pos-center"><h6>NO. AVAILABLE <br>ROOMS</h6></td>
+								<td class="table-products-no pos-center"><h6>NO. OF <br>AVAILABLE ROOMS</h6></td>
 								<td class="table-products-price pos-center"><h6>PRICE</h6></td>
 								<td class="table-products-total pos-center"><h6>PURCHASE</h6></td>
 							</tr>
@@ -52,7 +52,7 @@
 								</td>
 								<td><h5>8</h5></td>
 								<td><h5>₦25,500</h5></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
+								<td><div class="button-style-1"><a href="{{url('/dreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
 								<td class="products-image-table">

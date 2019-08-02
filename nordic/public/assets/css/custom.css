@@ -4,6 +4,12 @@
 .mg-t60 {
     margin-top: 60px;
 }
+.mg-t170 {
+    margin-top: 170px;
+}
+.mg-r20 {
+    margin-right: 20px;
+}
 .whiteColor {
     color: white!important;
 }
@@ -68,3 +74,6 @@
 .center {
     text-align: center!important;
 }
+/* .li-side {
+    display: inline;
+} */
