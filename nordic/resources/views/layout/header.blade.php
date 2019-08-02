@@ -36,7 +36,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 
-<script src="assets/js/vendor/modernizr-2.8.3-respond-1.1.0.min.js"></script>
+<script src="{{asset('assets/js/vendor/modernizr-2.8.3-respond-1.1.0.min.js')}}"></script>
 
 
 </head>

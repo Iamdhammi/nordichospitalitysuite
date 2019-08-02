@@ -1700,13 +1700,17 @@ label {
 }
 
 .quick-reservation .button-style-1 {
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
 }
 
 .quick-reservation .button-style-1 a {
     font-size: 11px !important;
-    padding: 8px 60px;
+    padding: 15px 60px;
+}
+.quick-reservation .button-style-1 button {
+    font-size: 11px !important;
+    padding: 15px 60px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2045,6 +2049,15 @@ ul.tabbed-area li.active a {
     color: #333;
 }
 .light-book-form input[type="date"]{
+    width: 100%;
+    border:solid 1px #f0f0f0;
+    height: 44px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333;
+}
+
+.light-book-form input[type="tel"]{
     width: 100%;
     border:solid 1px #f0f0f0;
     height: 44px;

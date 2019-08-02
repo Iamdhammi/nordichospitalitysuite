@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
+use App\Transaction;
 class MainController extends Controller
 {
     public function home() {
@@ -44,21 +46,109 @@ class MainController extends Controller
     public function terms() {
         return view('terms');
     }
-    public function dreservation() {
+    public function dreservation(Request $request) {
+        if($request->isMethod('post')) {
+            $data = $request->get('transaction');
+            $transaction = new Transaction;
+            $transaction->name = $data['name'];
+            $transaction->email = $data['email'];
+            $transaction->phone = $data['tel'];
+            $transaction->room_type = $data['room_type'];
+            $transaction->room_no = $data['room_no'];
+            $transaction->guests = $data['guests'];
+            $transaction->arrival = $data['arrival'];
+            $transaction->depart = $data['depart'];
+            $transaction->payment_ref = $data['ref'];
+            $transaction->payment_id = $data['id'];
+            $transaction->amount = $data['total'];
+
+            $transaction->save();
+        }
         return view('deluxereservation');
     }
-    public function dbreservation() {
+    public function dbreservation(Request $request) {
+        if($request->isMethod('post')) {
+            $data = $request->get('transaction');
+            $transaction = new Transaction;
+            $transaction->name = $data['name'];
+            $transaction->email = $data['email'];
+            $transaction->phone = $data['tel'];
+            $transaction->room_type = $data['room_type'];
+            $transaction->room_no = $data['room_no'];
+            $transaction->guests = $data['guests'];
+            $transaction->arrival = $data['arrival'];
+            $transaction->depart = $data['depart'];
+            $transaction->payment_ref = $data['ref'];
+            $transaction->payment_id = $data['id'];
+            $transaction->amount = $data['total'];
+
+            $transaction->save();
+        }
         return view('deluxebalconyreservation');
     }
-    public function nsreservation() {
+    public function nsreservation(Request $request) {
+        if($request->isMethod('post')) {
+            $data = $request->get('transaction');
+            $transaction = new Transaction;
+            $transaction->name = $data['name'];
+            $transaction->email = $data['email'];
+            $transaction->phone = $data['tel'];
+            $transaction->room_type = $data['room_type'];
+            $transaction->room_no = $data['room_no'];
+            $transaction->guests = $data['guests'];
+            $transaction->arrival = $data['arrival'];
+            $transaction->depart = $data['depart'];
+            $transaction->payment_ref = $data['ref'];
+            $transaction->payment_id = $data['id'];
+            $transaction->amount = $data['total'];
+
+            $transaction->save();
+        }
         return view('nordicsuitereservation');
     }
-    public function nsbreservation() {
+    public function nsbreservation(Request $request) {
+        if($request->isMethod('post')) {
+            $data = $request->get('transaction');
+            $transaction = new Transaction;
+            $transaction->name = $data['name'];
+            $transaction->email = $data['email'];
+            $transaction->phone = $data['tel'];
+            $transaction->room_type = $data['room_type'];
+            $transaction->room_no = $data['room_no'];
+            $transaction->guests = $data['guests'];
+            $transaction->arrival = $data['arrival'];
+            $transaction->depart = $data['depart'];
+            $transaction->payment_ref = $data['ref'];
+            $transaction->payment_id = $data['id'];
+            $transaction->amount = $data['total'];
+
+            $transaction->save();
+        }
         return view('nordicsuitebalconyreservation');
     }
-    public function sreservation() {
+    public function sreservation(Request $request) {
+        if($request->isMethod('post')) {
+            $data = $request->get('transaction');
+            $transaction = new Transaction;
+            $transaction->name = $data['name'];
+            $transaction->email = $data['email'];
+            $transaction->phone = $data['tel'];
+            $transaction->room_type = $data['room_type'];
+            $transaction->room_no = $data['room_no'];
+            $transaction->guests = $data['guests'];
+            $transaction->arrival = $data['arrival'];
+            $transaction->depart = $data['depart'];
+            $transaction->payment_ref = $data['ref'];
+            $transaction->payment_id = $data['id'];
+            $transaction->amount = $data['total'];
+
+            $transaction->save();
+        }
         return view('standardreservation');
     }
+    public function invoice() {
 
+        return view('invoice');
+    }
 }
 

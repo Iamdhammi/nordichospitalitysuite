@@ -35,6 +35,7 @@
 }
 .bullet-point {
     padding-left: 10px;
+    font-size: 14px;
 }
 .footer-hr {
     border-color: #e4b248;
@@ -73,6 +74,9 @@
 }
 .center {
     text-align: center!important;
+}
+.title-quick h4 {
+    color: white;
 }
 /* .li-side {
     display: inline;

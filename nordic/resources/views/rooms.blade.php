@@ -89,7 +89,7 @@
 								</td>
 								<td><h5>4</h5></td>
 								<td><h5>₦29,500</h5></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
+								<td><div class="button-style-1"><a href="{{url('/dbreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
 								<td class="products-image-table">
@@ -126,7 +126,7 @@
 								</td>
 								<td><h5>2</h5></td>
 								<td><h5>₦35,500</h5></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
+								<td><div class="button-style-1"><a href="{{url('/nsreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
 								<td class="products-image-table">
@@ -163,7 +163,7 @@
 								</td>
 								<td><h5>4</h5></td>
 								<td><h5>₦39,500</h5></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
+								<td><div class="button-style-1"><a href="{{url('/nsbreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 							<tr class="table-products-list pos-center">
 								<td class="products-image-table">
@@ -200,7 +200,7 @@
 								</td>
 								<td><h5>2</h5></td>
 								<td><h5>₦18,500</h5></td>
-								<td><div class="button-style-1"><a href="#"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
+							<td><div class="button-style-1"><a href="{{url('/sreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 							</tr>
 						</tbody>
 					</table>

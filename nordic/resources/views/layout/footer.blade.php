@@ -108,6 +108,7 @@
     let room_no = document.getElementById('room_no').value;
     let room_type = document.getElementById('room').value;
     let guests = document.getElementById('guests').value;
+    let tel = document.getElementById('tel').value;
 
     if (arrival != "" && depart != "" && name != "" && email != "") {
       let arrivaldate = new Date(arrival);
@@ -130,29 +131,46 @@
         metadata: {
           custom_fields: [
               {
-                display_name: "Customer Nmae",
+                display_name: "Customer Name",
                 variable_name: "customer_name",
-                value: "name"
-              },
+                value: name
+              }, 
               {
                 display_name: "Email",
                 variable_name: "email",
-                value: "email"
+                value: email
+              },
+              {
+                display_name: "Phone",
+                variable_name: "phone",
+                value: tel  
               }
           ]
         },
         callback: function(response){
-          console.log(response);
+          //console.log(window.location.href);
+          //console.log(response);
           let transaction = new Object();
           transaction.name = name;
           transaction.email = email;
-          transaction.ref = ref;
+          transaction.tel = tel;
+          transaction.ref = response.reference;
+          transaction.id = response.transaction;
           transaction.room_type = room_type;
           transaction.room_no = room_no;
           transaction.guests = guests;
           transaction.arrival = arrival;
           transaction.depart = depart;
           transaction.total = total;
+          //console.log(transaction);
+          let _token = $("input[name='_token']").val();
+            $.ajax({
+              url: window.location.href,
+              type: 'POST',
+              dataType: 'json',
+              data: { _token, transaction },
+            
+          })
         },
         onClose: function(){
             

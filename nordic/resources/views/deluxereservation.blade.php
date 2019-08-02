@@ -13,6 +13,7 @@
 					<div class="col-lg-3"></div>
 					<div class="col-lg-6">
 						<form method="post">
+							{{ csrf_field() }}
 							<ul class="clearfix">
 								<div class="row">
 									<div class="col-md-6">
@@ -30,11 +31,15 @@
 								</div>
 								<li class="li-input">
 									<label>Full Name</label>
-									<input type="text" id="name" name="deluxe_name" required/>
+									<input type="text" id="name" name="name" required/>
 								</li>
 								<li class="li-input">
 									<label>Email</label>
-									<input type="email" id="email" name="deluxe_email" required/>
+									<input type="email" id="email" name="email" required/>
+								</li>
+								<li class="li-input">
+									<label>Phone</label>
+									<input type="tel" id="tel" name="tel" required/>
 								</li>
 								<div class="row">
 									<div class="col-md-6">
@@ -52,7 +57,7 @@
 								</div>
 								<li class="li-select mg-r20">
 									<label>Rooms</label>
-									<select id="room_no" name="deluxe_room_no" class="pretty-select">
+									<select id="room_no" name="room_no" class="pretty-select">
 										<option selected="selected" value="1" >1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
