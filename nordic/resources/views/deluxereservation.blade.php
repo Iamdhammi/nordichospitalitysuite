@@ -19,13 +19,13 @@
 									<div class="col-md-6">
 										<li class="li-input li-side">
 											<label>Room Type</label>
-											<input type="text" id="room" name="deluxe_room" value="Deluxe Room" disabled/>
+											<input type="text" id="room" name="room_type" value="Deluxe Room" disabled/>
 										</li>
 									</div>
 									<div class="col-md-6">
 										<li class="li-input li-side">
 											<label>Price Per Night(₦)</label>
-											<input type="text" id="price" name="deluxe_price" value="25500" disabled/>
+											<input type="text" id="price" name="room_price" value="25500" disabled/>
 										</li>
 									</div>
 								</div>
@@ -57,7 +57,7 @@
 								</div>
 								<li class="li-select mg-r20">
 									<label>Rooms</label>
-									<select id="room_no" name="room_no" class="pretty-select">
+									<select id="room_no" name="room_no" class="pretty-select" required>
 										<option selected="selected" value="1" >1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
@@ -67,7 +67,7 @@
 								</li>
 								<li class="li-select">
 									<label>Guests</label>
-									<select id="guests" name="guest" class="pretty-select">
+									<select id="guests" name="guest" class="pretty-select" required>
 										<option selected="selected" value="1">1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
@@ -81,8 +81,11 @@
 								</li> --}}
 								<li class="clearfix">
 									<script src="https://js.paystack.co/v1/inline.js"></script>
-									<div class="button-style-1 clearfix mg-t170">
+									{{-- <div class="button-style-1 clearfix mg-t170">
 										<button type="button" onclick="calculate()">BOOK RESERVATION</button>
+									</div> --}}
+									<div class="button-style-1 clearfix mg-t170">
+									<a type="button" href="{{url('/invoice')}}" onclick="invoice()"><i class="fa fa-file-invoice"></i> Generate Invoice</a>
 									</div>
 								</li>
 							</ul>

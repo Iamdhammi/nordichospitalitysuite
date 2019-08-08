@@ -57,7 +57,7 @@
 							<div>
 								<div class="pull-left search-button clearfix">
 									<div class="button-style-1 center">
-									<a href="{{url('/sreservation')}}"><i class="fa fa-calendar"></i>BOOK NOW</a>
+										<a href="{{url('/sreservation')}}"><i class="fa fa-calendar"></i>BOOK NOW</a>
 									</div>
 								</div>
 							</div>

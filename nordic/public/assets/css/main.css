@@ -1207,8 +1207,8 @@ label {
     -ms-perspective: 1000;
     perspective: 1000;
     transform-style: preserve-3d;
-    -ms-transform: perspective(1000px);
-    -moz-transform: perspective(1000px);
+    /* -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px); */
     -moz-transform-style: preserve-3d; 
     -ms-transform-style: preserve-3d; 
 }

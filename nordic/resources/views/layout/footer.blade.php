@@ -71,8 +71,10 @@
 </div>
 <!-- JS FILES -->
 <script src="{{asset('assets/js/vendor/jquery-1.11.1.min.js')}}"></script>
+{{-- <script src="{{asset('js/jquery-1.3.2.min.js')}}"></script> --}}
 {{-- <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> --}}
 <script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 <script src="{{asset('assets/js/retina-1.1.0.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.flexslider-min.js')}}"></script>
 <script src="{{asset('assets/js/superfish.pack.1.4.1.js')}}"></script>
@@ -86,7 +88,10 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 {{-- <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script> --}}
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 <script src="{{asset('assets/js/main.js')}}"></script>
+<script src="{{asset('js/example.js')}}" ></script>
+
 {{-- DataTable --}}
 <script>
   $(document).ready( function () {
@@ -98,7 +103,7 @@
       });
   } );
 </script>
-<script>
+{{-- <script>
   function calculate() {
     let arrival = document.querySelector('.arrival').value;
     let depart = document.querySelector('.departure').value;
@@ -163,6 +168,143 @@
           transaction.depart = depart;
           transaction.total = total;
           //console.log(transaction);
+          let _token = $("input[name='_token']").val();
+            $.ajax({
+              url: window.location.href,
+              type: 'POST',
+              dataType: 'json',
+              data: { _token, transaction },
+            
+          })
+        },
+        onClose: function(){
+            
+        }
+      });
+      handler.openIframe();
+
+    }
+  };
+</script> --}}
+<script>
+window.print_this = function(id) {
+    var prtContent = document.getElementById(id);
+    var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+    
+    WinPrint.document.write('<link rel="stylesheet" href="{{asset("css/style.css")}}">');
+  
+
+    
+    WinPrint.document.write(prtContent.innerHTML);
+    WinPrint.document.close();
+    WinPrint.setTimeout(function(){
+      WinPrint.focus();
+      WinPrint.print();
+      WinPrint.close();
+    }, 1000);
+}
+</script>
+<script>
+  function invoice() {
+    let arrival = document.querySelector('.arrival').value;
+    let depart = document.querySelector('.departure').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let price = document.getElementById('price').value;
+    let room_no = document.getElementById('room_no').value;
+    let room_type = document.getElementById('room').value;
+    let guests = document.getElementById('guests').value;
+    let tel = document.getElementById('tel').value;
+    let ref = Math.floor(100000 + Math.random() * 900000);
+
+    let Payment = [arrival, depart, name, email, price, room_no, room_type, guests, tel, ref];
+    //console.log(Payment);
+    localStorage.setItem('Payment', JSON.stringify(Payment));
+  }
+</script>
+<script>
+  
+  const Payment = JSON.parse(localStorage.getItem('Payment'));
+  let arrivaldate = new Date(Payment[0]);
+  let departuredate = new Date(Payment[1]);
+  let diff = Math.abs(departuredate - arrivaldate)/1000/60/60/24;
+  let total = Payment[4] * diff * Payment[5];
+  
+  document.getElementById('invoice_name').innerText = Payment[2];
+  document.getElementById('invoice_email').innerText = Payment[3];
+  document.getElementById('invoice_phone').innerText = Payment[8];
+  document.getElementById('arrival_date').innerText = Payment[0];
+  document.getElementById('departure_date').innerText = Payment[1];
+  document.getElementById('invoice_room_type').innerText = Payment[6];
+  document.getElementById('invoice_guests').innerText = Payment[7];
+  document.getElementById('invoice_room_no').innerText = Payment[5];
+  document.getElementById('invoice_total').innerText = "₦"+total+".00";
+  document.getElementById('invoice_total_price').innerText = "₦"+total+".00";
+  document.getElementById('invoice_cost').innerText = "₦"+total+".00";
+  document.getElementById('total').innerText = "₦"+total+".00";
+  document.getElementById('invoice_amount_due').innerText = "₦"+total+".00";
+  document.getElementById('invoice_ref').innerText = Payment[9];
+</script>
+<script>
+  function calculate() {
+    let arrival = Payment[0];
+    let depart = Payment[1];
+    let name = Payment[2];
+    let email = Payment[3];
+    let totalprice = total;
+    let room_no = Payment[5];
+    let room_type = Payment[6];
+    let guests = Payment[7];
+    let tel = Payment[8];
+
+    if (arrival != "" && depart != "" && name != "" && email != "") {
+
+      
+
+      let totalamount = parseInt(totalprice) * 100;
+      let handler = PaystackPop.setup({
+        key: 'pk_test_bbbca00e8ea21f67ffbc2cc8858436c592266f5f',
+        email: email,
+        amount: totalamount,
+        currency: "NGN",
+        //ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+        ref: Payment[9],
+        metadata: {
+          custom_fields: [
+              {
+                display_name: "Customer Name",
+                variable_name: "customer_name",
+                value: name
+              }, 
+              {
+                display_name: "Email",
+                variable_name: "email",
+                value: email
+              },
+              {
+                display_name: "Phone",
+                variable_name: "phone",
+                value: tel  
+              }
+          ]
+        },
+        callback: function(response){
+          //console.log(window.location.href);
+          //console.log(response);
+          console.log(response);
+          let transaction = new Object();
+          transaction.name = name;
+          transaction.email = email;
+          transaction.tel = tel;
+          transaction.ref = response.reference;
+          transaction.id = response.transaction;
+          transaction.room_type = room_type;
+          transaction.room_no = room_no;
+          transaction.guests = guests;
+          transaction.arrival = arrival;
+          transaction.depart = depart;
+          transaction.total = totalprice;
+          console.log(transaction);
           let _token = $("input[name='_token']").val();
             $.ajax({
               url: window.location.href,

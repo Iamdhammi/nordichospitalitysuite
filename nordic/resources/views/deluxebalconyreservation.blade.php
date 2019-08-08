@@ -79,10 +79,19 @@
 									<label>Total Price</label>
 									<input type="text" id="total" name="deluxe_total" value="0" disabled/>
 								</li> --}}
-								<li class="clearfix">
+								{{-- <li class="clearfix">
 									<script src="https://js.paystack.co/v1/inline.js"></script>
 									<div class="button-style-1 clearfix mg-t170">
 										<button type="button" onclick="calculate()">BOOK RESERVATION</button>
+									</div>
+								</li> --}}
+								<li class="clearfix">
+									<script src="https://js.paystack.co/v1/inline.js"></script>
+									{{-- <div class="button-style-1 clearfix mg-t170">
+										<button type="button" onclick="calculate()">BOOK RESERVATION</button>
+									</div> --}}
+									<div class="button-style-1 clearfix mg-t170">
+									<a type="button" href="{{url('/invoice')}}" onclick="invoice()"><i class="fa fa-file-invoice"></i> Generate Invoice</a>
 									</div>
 								</li>
 							</ul>

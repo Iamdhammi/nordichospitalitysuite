@@ -28,4 +28,5 @@ Route::match(['get', 'post'], '/dbreservation', 'MainController@dbreservation');
 Route::match(['get', 'post'], '/nsreservation', 'MainController@nsreservation');
 Route::match(['get', 'post'], '/nsbreservation', 'MainController@nsbreservation');
 Route::match(['get', 'post'], '/sreservation', 'MainController@sreservation');
-Route::get('/invoice', 'MainController@invoice');
+Route::match(['get', 'post'],'/invoice', 'MainController@invoice');
+Route::get('/pdf', 'MainController@pdf');

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use App\Transaction;
+use App\Invoice;
+use PDF;
 class MainController extends Controller
 {
     public function home() {
@@ -61,8 +63,27 @@ class MainController extends Controller
             $transaction->payment_ref = $data['ref'];
             $transaction->payment_id = $data['id'];
             $transaction->amount = $data['total'];
-
             $transaction->save();
+            // $arrivaldate = strtotime($data['arrival']);
+            // $departuredate = strtotime($data['depart']);
+            // $diff = $departuredate - $arrivaldate;
+            // $number = floor($diff/(60*60*24));
+            // $amount = 25500 * $number * $data['room_no'];
+            // // dd($amount);
+            // $invoice = new Invoice;
+            // $invoice->name = $data['name'];
+            // $invoice->email = $data['email'];
+            // $invoice->phone = $data['tel'];
+            // $invoice->room_type = "Deluxe Room";
+            // $invoice->room_no = $data['room_no'];
+            // $invoice->guest = $data['guest'];
+            // $invoice->arrival = $data['arrival'];
+            // $invoice->depart = $data['depart'];
+            // $invoice->invoice_ref = mt_rand(100000, 999999);
+            // $invoice->amount = $amount;
+
+            // $invoice->save();
+            // return redirect('/invoice');
         }
         return view('deluxereservation');
     }
@@ -146,9 +167,32 @@ class MainController extends Controller
         }
         return view('standardreservation');
     }
-    public function invoice() {
+    public function invoice(Request $request) {
+        if($request->isMethod('post')) {
+            $data = $request->get('transaction');
+            $transaction = new Transaction;
+            $transaction->name = $data['name'];
+            $transaction->email = $data['email'];
+            $transaction->phone = $data['tel'];
+            $transaction->room_type = $data['room_type'];
+            $transaction->room_no = $data['room_no'];
+            $transaction->guests = $data['guests'];
+            $transaction->arrival = $data['arrival'];
+            $transaction->depart = $data['depart'];
+            $transaction->payment_ref = $data['ref'];
+            $transaction->payment_id = $data['id'];
+            $transaction->amount = $data['total'];
 
+            $transaction->save();
+        }
         return view('invoice');
     }
+
+    // public function pdf() {
+    //     $invoice = Invoice::orderBy('created_at','DESC')->first();
+    //     view()->share('invoice',$invoice);
+    //     $pdf = PDF::loadView('invoicePdf');
+    //     return $pdf->download('invoice.pdf');
+    // }
 }
 
