@@ -120,7 +120,7 @@
 									</div>
 									<div class="news-content pull-left">
 										<h6><a href="#">News from us from now</a></h6>
-										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui <a class="active-color" href="#">[...]</a></p>
+										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui <a class="active-color" href="{{url('/news')}}">[...]</a></p>
 									</div>
 								</div>
 								<div class="news-box clearfix">
@@ -129,7 +129,7 @@
 									</div>
 									<div class="news-content pull-left">
 										<h6><a href="#">News from us from now</a></h6>
-										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue <a class="active-color" href="#">[...]</a></p>
+										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue <a class="active-color" href="{{url('/news')}}">[...]</a></p>
 									</div>
 								</div>
 							</div>

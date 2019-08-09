@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use App\Transaction;
+use App\Blog;
 use App\Invoice;
 use PDF;
 class MainController extends Controller
@@ -194,5 +195,10 @@ class MainController extends Controller
     //     $pdf = PDF::loadView('invoicePdf');
     //     return $pdf->download('invoice.pdf');
     // }
+
+    public function news() {
+        $blogs = Blog::select('id', 'title', 'author', 'date', 'comment', 'postcontent', 'content')->get();
+        return view('news')->with(compact('blogs'));
+    }
 }
 

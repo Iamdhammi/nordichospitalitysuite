@@ -92,7 +92,7 @@
 									</li>
 									<li <?php if (preg_match("/about/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/about')}}">ABOUT US</a></li>
 									<li <?php if (preg_match("/gallery/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/gallery')}}">GALLERY</a></li>
-									<li <?php if (preg_match("/news/", $url)) { ?>  class="active" <?php } ?>><a href="#">NEWS</a></li>
+									<li <?php if (preg_match("/news/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/news')}}">NEWS</a></li>
                                     <li <?php if (preg_match("/contact/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/contact')}}">CONTACT</a></li>
 								</ul>
 							</nav>
