@@ -66,11 +66,11 @@
           </tr>
           
           <tr class="item-row">
-              <td class="item-name"><div id="invoice_room_type">Deluxe Room</div></td>
-              <td class="description"><textarea id="invoice_guests" disabled>1</textarea></td>
-              <td><textarea class="cost" id="invoice_cost" disabled>₦650.00</textarea></td>
-              <td><textarea class="qty" id="invoice_room_no" disabled>1</textarea></td>
-              <td><span class="price" id="invoice_total_price">₦650.00</span></td>
+              <td class="item-name"><div id="invoice_room_type"></div></td>
+              <td class="description"><textarea id="invoice_guests" disabled></textarea></td>
+              <td><textarea class="cost" id="invoice_cost" disabled></textarea></td>
+              <td><textarea class="qty" id="invoice_room_no" disabled></textarea></td>
+              <td><span class="price" id="invoice_total_price"></span></td>
           </tr>
           
           {{-- <tr>
@@ -82,7 +82,7 @@
     
               <td colspan="2" class="blank"> </td>
               <td colspan="2" class="total-line">Total</td>
-              <td class="total-value"><div id="total" class="invoice_total_amount">₦650.00</div></td>
+              <td class="total-value"><div id="total" class="invoice_total_amount"></div></td>
           </tr>
           <tr>
               <td colspan="2" class="blank"> </td>
@@ -93,7 +93,7 @@
           <tr>
               <td colspan="2" class="blank"> </td>
               <td colspan="2" class="total-line balance">Amount Due</td>
-              <td class="total-value balance"><div class="due" id="invoice_amount_due">₦650.00</div></td>
+              <td class="total-value balance"><div class="due" id="invoice_amount_due"></div></td>
           </tr>
         
         </table>

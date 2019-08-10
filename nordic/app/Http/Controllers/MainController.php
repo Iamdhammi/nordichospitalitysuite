@@ -51,120 +51,195 @@ class MainController extends Controller
     }
     public function dreservation(Request $request) {
         if($request->isMethod('post')) {
-            $data = $request->get('transaction');
-            $transaction = new Transaction;
-            $transaction->name = $data['name'];
-            $transaction->email = $data['email'];
-            $transaction->phone = $data['tel'];
-            $transaction->room_type = $data['room_type'];
-            $transaction->room_no = $data['room_no'];
-            $transaction->guests = $data['guests'];
-            $transaction->arrival = $data['arrival'];
-            $transaction->depart = $data['depart'];
-            $transaction->payment_ref = $data['ref'];
-            $transaction->payment_id = $data['id'];
-            $transaction->amount = $data['total'];
-            $transaction->save();
-            // $arrivaldate = strtotime($data['arrival']);
-            // $departuredate = strtotime($data['depart']);
-            // $diff = $departuredate - $arrivaldate;
-            // $number = floor($diff/(60*60*24));
-            // $amount = 25500 * $number * $data['room_no'];
-            // // dd($amount);
-            // $invoice = new Invoice;
-            // $invoice->name = $data['name'];
-            // $invoice->email = $data['email'];
-            // $invoice->phone = $data['tel'];
-            // $invoice->room_type = "Deluxe Room";
-            // $invoice->room_no = $data['room_no'];
-            // $invoice->guest = $data['guest'];
-            // $invoice->arrival = $data['arrival'];
-            // $invoice->depart = $data['depart'];
-            // $invoice->invoice_ref = mt_rand(100000, 999999);
-            // $invoice->amount = $amount;
+            $data = $request->all();
+            // $transaction = new Transaction;
+            // $transaction->name = $data['name'];
+            // $transaction->email = $data['email'];
+            // $transaction->phone = $data['tel'];
+            // $transaction->room_type = $data['room_type'];
+            // $transaction->room_no = $data['room_no'];
+            // $transaction->guests = $data['guests'];
+            // $transaction->arrival = $data['arrival'];
+            // $transaction->depart = $data['depart'];
+            // $transaction->payment_ref = $data['ref'];
+            // $transaction->payment_id = $data['id'];
+            // $transaction->amount = $data['total'];
+            // $transaction->save();
+            $arrivaldate = strtotime($data['arrival']);
+            $departuredate = strtotime($data['depart']);
+            $diff = $departuredate - $arrivaldate;
+            $number = floor($diff/(60*60*24));
+            $amount = 25500 * $number * $data['room_no'];
+            // dd($amount);
+            $invoice = new Invoice;
+            $invoice->name = $data['name'];
+            $invoice->email = $data['email'];
+            $invoice->phone = $data['tel'];
+            $invoice->room_type = "Deluxe Room";
+            $invoice->room_no = $data['room_no'];
+            $invoice->guests = $data['guest'];
+            $invoice->arrival = $data['arrival'];
+            $invoice->depart = $data['depart'];
+            $invoice->amount = $amount;
 
-            // $invoice->save();
-            // return redirect('/invoice');
+            $invoice->save();
+            return redirect('/invoice');
         }
         return view('deluxereservation');
     }
     public function dbreservation(Request $request) {
         if($request->isMethod('post')) {
-            $data = $request->get('transaction');
-            $transaction = new Transaction;
-            $transaction->name = $data['name'];
-            $transaction->email = $data['email'];
-            $transaction->phone = $data['tel'];
-            $transaction->room_type = $data['room_type'];
-            $transaction->room_no = $data['room_no'];
-            $transaction->guests = $data['guests'];
-            $transaction->arrival = $data['arrival'];
-            $transaction->depart = $data['depart'];
-            $transaction->payment_ref = $data['ref'];
-            $transaction->payment_id = $data['id'];
-            $transaction->amount = $data['total'];
+            $data = $request->all();
+            // $transaction = new Transaction;
+            // $transaction->name = $data['name'];
+            // $transaction->email = $data['email'];
+            // $transaction->phone = $data['tel'];
+            // $transaction->room_type = $data['room_type'];
+            // $transaction->room_no = $data['room_no'];
+            // $transaction->guests = $data['guests'];
+            // $transaction->arrival = $data['arrival'];
+            // $transaction->depart = $data['depart'];
+            // $transaction->payment_ref = $data['ref'];
+            // $transaction->payment_id = $data['id'];
+            // $transaction->amount = $data['total'];
 
-            $transaction->save();
+            // $transaction->save();
+            $arrivaldate = strtotime($data['arrival']);
+            $departuredate = strtotime($data['depart']);
+            $diff = $departuredate - $arrivaldate;
+            $number = floor($diff/(60*60*24));
+            $amount = 29500 * $number * $data['room_no'];
+            // dd($amount);
+            $invoice = new Invoice;
+            $invoice->name = $data['name'];
+            $invoice->email = $data['email'];
+            $invoice->phone = $data['tel'];
+            $invoice->room_type = "Deluxe Balcony";
+            $invoice->room_no = $data['room_no'];
+            $invoice->guests = $data['guest'];
+            $invoice->arrival = $data['arrival'];
+            $invoice->depart = $data['depart'];
+            $invoice->amount = $amount;
+
+            $invoice->save();
+            return redirect('/invoice');
         }
         return view('deluxebalconyreservation');
     }
     public function nsreservation(Request $request) {
         if($request->isMethod('post')) {
-            $data = $request->get('transaction');
-            $transaction = new Transaction;
-            $transaction->name = $data['name'];
-            $transaction->email = $data['email'];
-            $transaction->phone = $data['tel'];
-            $transaction->room_type = $data['room_type'];
-            $transaction->room_no = $data['room_no'];
-            $transaction->guests = $data['guests'];
-            $transaction->arrival = $data['arrival'];
-            $transaction->depart = $data['depart'];
-            $transaction->payment_ref = $data['ref'];
-            $transaction->payment_id = $data['id'];
-            $transaction->amount = $data['total'];
+            $data = $request->all();
+            // $transaction = new Transaction;
+            // $transaction->name = $data['name'];
+            // $transaction->email = $data['email'];
+            // $transaction->phone = $data['tel'];
+            // $transaction->room_type = $data['room_type'];
+            // $transaction->room_no = $data['room_no'];
+            // $transaction->guests = $data['guests'];
+            // $transaction->arrival = $data['arrival'];
+            // $transaction->depart = $data['depart'];
+            // $transaction->payment_ref = $data['ref'];
+            // $transaction->payment_id = $data['id'];
+            // $transaction->amount = $data['total'];
 
-            $transaction->save();
+            // $transaction->save();
+            $arrivaldate = strtotime($data['arrival']);
+            $departuredate = strtotime($data['depart']);
+            $diff = $departuredate - $arrivaldate;
+            $number = floor($diff/(60*60*24));
+            $amount = 35500 * $number * $data['room_no'];
+            // dd($amount);
+            $invoice = new Invoice;
+            $invoice->name = $data['name'];
+            $invoice->email = $data['email'];
+            $invoice->phone = $data['tel'];
+            $invoice->room_type = "Nordic Suite";
+            $invoice->room_no = $data['room_no'];
+            $invoice->guests = $data['guest'];
+            $invoice->arrival = $data['arrival'];
+            $invoice->depart = $data['depart'];
+            $invoice->amount = $amount;
+
+            $invoice->save();
+            return redirect('/invoice');
         }
         return view('nordicsuitereservation');
     }
     public function nsbreservation(Request $request) {
         if($request->isMethod('post')) {
-            $data = $request->get('transaction');
-            $transaction = new Transaction;
-            $transaction->name = $data['name'];
-            $transaction->email = $data['email'];
-            $transaction->phone = $data['tel'];
-            $transaction->room_type = $data['room_type'];
-            $transaction->room_no = $data['room_no'];
-            $transaction->guests = $data['guests'];
-            $transaction->arrival = $data['arrival'];
-            $transaction->depart = $data['depart'];
-            $transaction->payment_ref = $data['ref'];
-            $transaction->payment_id = $data['id'];
-            $transaction->amount = $data['total'];
+            $data = $request->all();
+            // $transaction = new Transaction;
+            // $transaction->name = $data['name'];
+            // $transaction->email = $data['email'];
+            // $transaction->phone = $data['tel'];
+            // $transaction->room_type = $data['room_type'];
+            // $transaction->room_no = $data['room_no'];
+            // $transaction->guests = $data['guests'];
+            // $transaction->arrival = $data['arrival'];
+            // $transaction->depart = $data['depart'];
+            // $transaction->payment_ref = $data['ref'];
+            // $transaction->payment_id = $data['id'];
+            // $transaction->amount = $data['total'];
 
-            $transaction->save();
+            // $transaction->save();
+            $arrivaldate = strtotime($data['arrival']);
+            $departuredate = strtotime($data['depart']);
+            $diff = $departuredate - $arrivaldate;
+            $number = floor($diff/(60*60*24));
+            $amount = 39500 * $number * $data['room_no'];
+            // dd($amount);
+            $invoice = new Invoice;
+            $invoice->name = $data['name'];
+            $invoice->email = $data['email'];
+            $invoice->phone = $data['tel'];
+            $invoice->room_type = "Nordic Suite Balcony";
+            $invoice->room_no = $data['room_no'];
+            $invoice->guests = $data['guest'];
+            $invoice->arrival = $data['arrival'];
+            $invoice->depart = $data['depart'];
+            $invoice->amount = $amount;
+
+            $invoice->save();
+            return redirect('/invoice');
         }
         return view('nordicsuitebalconyreservation');
     }
     public function sreservation(Request $request) {
         if($request->isMethod('post')) {
-            $data = $request->get('transaction');
-            $transaction = new Transaction;
-            $transaction->name = $data['name'];
-            $transaction->email = $data['email'];
-            $transaction->phone = $data['tel'];
-            $transaction->room_type = $data['room_type'];
-            $transaction->room_no = $data['room_no'];
-            $transaction->guests = $data['guests'];
-            $transaction->arrival = $data['arrival'];
-            $transaction->depart = $data['depart'];
-            $transaction->payment_ref = $data['ref'];
-            $transaction->payment_id = $data['id'];
-            $transaction->amount = $data['total'];
+            $data = $request->all();
+            // $transaction = new Transaction;
+            // $transaction->name = $data['name'];
+            // $transaction->email = $data['email'];
+            // $transaction->phone = $data['tel'];
+            // $transaction->room_type = $data['room_type'];
+            // $transaction->room_no = $data['room_no'];
+            // $transaction->guests = $data['guests'];
+            // $transaction->arrival = $data['arrival'];
+            // $transaction->depart = $data['depart'];
+            // $transaction->payment_ref = $data['ref'];
+            // $transaction->payment_id = $data['id'];
+            // $transaction->amount = $data['total'];
 
-            $transaction->save();
+            // $transaction->save();
+            $arrivaldate = strtotime($data['arrival']);
+            $departuredate = strtotime($data['depart']);
+            $diff = $departuredate - $arrivaldate;
+            $number = floor($diff/(60*60*24));
+            $amount = 18500 * $number * $data['room_no'];
+            // dd($amount);
+            $invoice = new Invoice;
+            $invoice->name = $data['name'];
+            $invoice->email = $data['email'];
+            $invoice->phone = $data['tel'];
+            $invoice->room_type = "Standard Room";
+            $invoice->room_no = $data['room_no'];
+            $invoice->guests = $data['guest'];
+            $invoice->arrival = $data['arrival'];
+            $invoice->depart = $data['depart'];
+            $invoice->amount = $amount;
+
+            $invoice->save();
+            return redirect('/invoice');
         }
         return view('standardreservation');
     }

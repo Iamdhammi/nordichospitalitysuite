@@ -1,5 +1,5 @@
 @include('layout.homeHeader')
-		<div class="book-slider">
+		{{-- <div class="book-slider">
 			<div class="container">
 				<div class="row pos-center">
 					<div class="reserve-form-area">
@@ -52,6 +52,20 @@
 							</ul>
 						</form>
 					</div>
+				</div>
+			</div>
+		{{-- </div> --}}
+		<div class="slider-textbox clearfix" style="margin-top: 200px;">
+			<div class="container">
+				<div class="row">
+					<div class="slider-bar pull-left">WELCOME TO NORDIC HOSPITALITY SUITES</div>
+					<div class="slider-triangle pull-left"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="slider-bar-under pull-left">5 STAR SUPPORT</div>
+					<div class="slider-triangle-under pull-left"></div>
 				</div>
 			</div>
 		</div>

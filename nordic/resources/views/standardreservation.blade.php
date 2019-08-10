@@ -19,45 +19,45 @@
 									<div class="col-md-6">
 										<li class="li-input li-side">
 											<label>Room Type</label>
-											<input type="text" id="room" name="room" value="Standard Room" disabled/>
+											<input type="text" id="room" name="room_type" value="Standard Room" disabled/>
 										</li>
 									</div>
 									<div class="col-md-6">
 										<li class="li-input li-side">
 											<label>Price Per Night(₦)</label>
-											<input type="text" id="price" name="price" value="18500" disabled/>
+											<input type="text" id="price" name="room_price" value="18500" disabled/>
 										</li>
 									</div>
 								</div>
 								<li class="li-input">
 									<label>Full Name</label>
-									<input type="text" id="name" name="name" required/>
+									<input type="text" id="name" name="name" required>
 								</li>
 								<li class="li-input">
 									<label>Email</label>
-									<input type="email" id="email" name="email" required/>
+									<input type="email" id="email" name="email" required>
 								</li>
 								<li class="li-input">
 									<label>Phone</label>
-									<input type="tel" id="tel" name="tel" required/>
+									<input type="tel" id="tel" name="tel" required>
 								</li>
 								<div class="row">
 									<div class="col-md-6">
 											<li class="li-input">
 												<label>Arrival</label>
-												<input type="text" id="dpd1" name="arrival" class="date-selector arrival" placeholder="&#xf073;" required/>
+												<input type="text" id="dpd1" name="arrival" class="date-selector arrival" placeholder="&#xf073;" required>
 											</li>
 									</div>
 									<div class="col-md-6">
 											<li class="li-input">
 												<label>Departure</label>
-												<input type="text" id="dpd2" name="depart" class="date-selector departure" placeholder="&#xf073;" required/>
+												<input type="text" id="dpd2" name="depart" class="date-selector departure" placeholder="&#xf073;" required>
 											</li>
 									</div>
 								</div>
 								<li class="li-select mg-r20">
 									<label>Rooms</label>
-									<select id="room_no" name="room_no" class="pretty-select">
+									<select id="room_no" name="room_no" class="pretty-select" required>
 										<option selected="selected" value="1" >1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
@@ -67,7 +67,7 @@
 								</li>
 								<li class="li-select">
 									<label>Guests</label>
-									<select id="guests" name="guest" class="pretty-select">
+									<select id="guests" name="guest" class="pretty-select" required>
 										<option selected="selected" value="1">1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
@@ -86,12 +86,12 @@
 									</div>
 								</li> --}}
 								<li class="clearfix">
-									<script src="https://js.paystack.co/v1/inline.js"></script>
+									{{-- <script src="https://js.paystack.co/v1/inline.js"></script> --}}
 									{{-- <div class="button-style-1 clearfix mg-t170">
 										<button type="button" onclick="calculate()">BOOK RESERVATION</button>
 									</div> --}}
 									<div class="button-style-1 clearfix mg-t170">
-									<a type="button" href="{{url('/invoice')}}" onclick="invoice()"><i class="fa fa-file-invoice"></i> Generate Invoice</a>
+										<button type="submit" onclick="invoice()"><i class="fa fa-file-invoice"></i> Generate Invoice</button>
 									</div>
 								</li>
 							</ul>

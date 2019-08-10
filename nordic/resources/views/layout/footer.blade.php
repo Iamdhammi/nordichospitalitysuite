@@ -228,6 +228,7 @@ window.print_this = function(id) {
   let arrivaldate = new Date(Payment[0]);
   let departuredate = new Date(Payment[1]);
   let diff = Math.abs(departuredate - arrivaldate)/1000/60/60/24;
+  let unitprice = Payment[4] * diff;
   let total = Payment[4] * diff * Payment[5];
   
   document.getElementById('invoice_name').innerText = Payment[2];
@@ -240,7 +241,7 @@ window.print_this = function(id) {
   document.getElementById('invoice_room_no').innerText = Payment[5];
   document.getElementById('invoice_total').innerText = "₦"+total+".00";
   document.getElementById('invoice_total_price').innerText = "₦"+total+".00";
-  document.getElementById('invoice_cost').innerText = "₦"+total+".00";
+  document.getElementById('invoice_cost').innerText = "₦"+unitprice+".00";
   document.getElementById('total').innerText = "₦"+total+".00";
   document.getElementById('invoice_amount_due').innerText = "₦"+total+".00";
   document.getElementById('invoice_ref').innerText = Payment[9];
