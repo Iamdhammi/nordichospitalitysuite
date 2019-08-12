@@ -32,3 +32,4 @@ Route::match(['get', 'post'],'/invoice', 'MainController@invoice');
 Route::match(['get', 'post'], '/news', 'MainController@news');
 // Route::get('/pdf', 'MainController@pdf');
 Route::get('/receipt', 'MainController@receipt');
+Route::get('/search', 'MainController@search');

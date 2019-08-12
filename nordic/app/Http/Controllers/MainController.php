@@ -280,5 +280,8 @@ class MainController extends Controller
         // $receipt = Transaction::select('id', 'name', 'email','phone', 'room_type', 'room_no', 'guests', 'arrival', 'depart', 'payment_ref','payment_id', 'amount');
         return view('receiptpage');
     }
+    public function search() {
+        return view('searchavailability');
+    }
 }
 
