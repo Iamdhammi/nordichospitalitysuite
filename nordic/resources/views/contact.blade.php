@@ -29,11 +29,11 @@
 							<h5>SOCIAL MEDIA</h5>
 						</div>
 						<ul class="social-links">
-							<li><a href="http://facebook.com/2035themes"><i class="fab fa-facebook"></i></a></li>
-							<li><a href="http://twitter.com/2035themes"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="http://vine.com/2035themes"><i class="fab fa-vine"></i></a></li>
-							<li><a href="http://foursquare.com/2035themes"><i class="fab fa-foursquare"></i></a></li>
-							<li><a href="http://instagram.com/2035themes"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-vine"></i></a></li>
+							<li><a href="#"><i class="fab fa-foursquare"></i></a></li>
+							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 						</ul>
 					</div>
 				</div>

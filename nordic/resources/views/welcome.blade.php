@@ -181,7 +181,7 @@
 											<li><i class="fa fa-star"></i></li>
 											<li><i class="fa fa-star"></i></li>
 											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star inactive"></i></li>
+											<li><i class="fa fa-star"></i></li>
 										</ul>
 									</div>
 								</div>
@@ -194,7 +194,7 @@
 								<div class="pull-left"><h4>₦18,500<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
-										<a href="#">BOOK NOW</a>
+										<a href="{{url('/sreservation')}}">BOOK NOW</a>
 									</div>
 								</div>
 							</div>
@@ -220,7 +220,7 @@
 											<li><i class="fa fa-star"></i></li>
 											<li><i class="fa fa-star"></i></li>
 											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star inactive"></i></li>
+											<li><i class="fa fa-star"></i></li>
 										</ul>
 									</div>
 								</div>
@@ -234,7 +234,7 @@
 								<div class="pull-left"><h4>₦35,500<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
-										<a href="#">BOOK NOW</a>
+										<a href="{{url('/nsreservation')}}">BOOK NOW</a>
 									</div>
 								</div>
 							</div>
@@ -243,7 +243,7 @@
 					<div class="col-lg-4 col-sm-6">
 						<div class="home-room-box">
 							<div class="room-image">
-								<div class="room-features">FEATURED</div>
+								{{-- <div class="room-features">FEATURED</div> --}}
 								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-5.JPG">
 								<div class="home-room-details">
 									<h5><a href="{{url('/rooms/deluxe')}}">The Deluxe</a></h5>
@@ -261,7 +261,7 @@
 											<li><i class="fa fa-star"></i></li>
 											<li><i class="fa fa-star"></i></li>
 											<li><i class="fa fa-star"></i></li>
-											<li><i class="fa fa-star inactive"></i></li>
+											<li><i class="fa fa-star "></i></li>
 										</ul>
 									</div>
 								</div>
@@ -275,7 +275,7 @@
 								<div class="pull-left"><h4>₦25,500<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
-										<a href="#">BOOK NOW</a>
+										<a href="{{url('/dreservation')}}">BOOK NOW</a>
 									</div>
 								</div>
 							</div>
