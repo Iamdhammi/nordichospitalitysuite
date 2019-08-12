@@ -1,0 +1,50 @@
+#to_print {margin-top: 100px!important; margin-right:300px; margin-left: 300px;font-size: 14px;position: relative;}
+#header {height: 30px!important; width: 100%; margin: 20px 0; background: #0c242e; text-align: center; color: white; font: bold 15px ; text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px;}
+.paid1 {position: absolute;top:100px;left: 100px;z-index: -1;font-size: 100px;transform: rotate(-25deg);color: #f7f7f7;font-weight: 600;}
+.paid2 {position: absolute;top:200px;left: 250px;z-index: -1;font-size: 100px;transform: rotate(-25deg);color: #f7f7f7;font-weight: 600;}
+.paid3 {position: absolute;top:300px;right: 120px;z-index: -1;font-size: 100px;transform: rotate(-25deg);color: #f7f7f7;font-weight: 600;}
+#meta td.meta-head {text-align: left; background: #0c242e; color: white; padding:2px 5px}
+#items thead {background-color: #0c242e;color: #fff; }
+.total {background-color: lightgray}
+@media print {
+	#meta td.meta-head {
+		background-color: #0c242e;
+		-webkit-print-color-adjust: exact; 
+	}
+	#items thead {
+		background-color: #0c242e;
+		-webkit-print-color-adjust: exact;
+	}
+	#header {
+		background-color: #0c242e;
+		-webkit-print-color-adjust: exact;
+	}
+	#items tr.item-row {
+		background: rgb(235, 235, 228);
+		-webkit-print-color-adjust: exact;
+	}
+	#items tr.item-row {
+		background: rgb(235, 235, 228);
+		-webkit-print-color-adjust: exact;
+	}
+	#items td.balance { 
+		background: #eee;
+		-webkit-print-color-adjust: exact;
+    }
+    .total {
+       background: lightgray;
+       -webkit-print-color-adjust: exact;
+    }
+    .paid1 {
+        color: #f7f7f7;
+        -webkit-print-color-adjust: exact;
+    }
+    .paid2 {
+        color: #f7f7f7;
+        -webkit-print-color-adjust: exact;
+    }
+    .paid3 {
+        color: #f7f7f7;
+        -webkit-print-color-adjust: exact;
+    }
+}

@@ -1,8 +1,4 @@
-/*
-	 CSS-Tricks Example
-	 by Chris Coyier
-	 http://css-tricks.com
-*/
+
 
 * { margin: 0; padding: 0; }
 body { font: 14px/1.4; }
@@ -16,7 +12,7 @@ textarea { border: 0; font: 14px; overflow: hidden; resize: none; }
 
 #header { height: 30px; width: 100%; margin: 20px 0; background: #0c242e; text-align: center; color: white; font: bold 15px ; text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; }
 
-#address { width: 250px; height: 150px; float: left; }
+#address { width: 400px; height: 150px; float: left; }
 #customer { overflow: hidden; }
 
 #logo { text-align: right; float: right; position: relative; margin-top: 10px; border: 1px solid #fff; max-width: 540px; max-height: 100px; overflow: hidden; }

@@ -11,7 +11,7 @@
         
               
         <div id="address">
-          Nordic Hospitality Suites<br>
+          <h3>Nordic Hospitality Suites</h3>
           14, Patrick O. Bokkor Crescent,<br>
           Jabi, Abuja.<br>
           Phone: (+234) 708-0266-555
@@ -29,8 +29,8 @@
     
                 <table id="meta">
                     <tr>
-                        <td class="meta-head">Invoice #</td>
-                        <td><div id="invoice_ref">000123</div></td>
+                        <td class="meta-head">Invoice Id</td>
+                        <td><div id="invoice_ref"></div></td>
                     </tr>
                     <tr>
                         <td class="meta-head">Arrival Date</td>
@@ -41,7 +41,7 @@
                         <td><div id="departure_date">December 15, 2009</div></td>
                     </tr>
                     <tr>
-                        <td class="meta-head">Amount Due</td>
+                        <td class="meta-head">Amount Due (&#8358;)</td>
                         <td><div class="due" id="invoice_total"></div></td>
                     </tr>
     
@@ -60,9 +60,9 @@
           <tr>
               <th>Room type</th>
               <th>Guests</th>
-              <th>Unit Cost</th>
+              <th>Unit Cost (&#8358;)</th>
               <th>No. of Room(s)</th>
-              <th>Price</th>
+              <th>Price (&#8358;)</th>
           </tr>
           
           <tr class="item-row">
@@ -81,18 +81,18 @@
           <tr>
     
               <td colspan="2" class="blank"> </td>
-              <td colspan="2" class="total-line">Total</td>
+              <td colspan="2" class="total-line">Total (&#8358;)</td>
               <td class="total-value"><div id="total" class="invoice_total_amount"></div></td>
           </tr>
           <tr>
               <td colspan="2" class="blank"> </td>
-              <td colspan="2" class="total-line">Amount Paid</td>
+              <td colspan="2" class="total-line">Amount Paid (&#8358;)</td>
     
-              <td class="total-value"><div id="paid">₦0</div></td>
+              <td class="total-value"><div id="paid">0</div></td>
           </tr>
           <tr>
               <td colspan="2" class="blank"> </td>
-              <td colspan="2" class="total-line balance">Amount Due</td>
+              <td colspan="2" class="total-line balance">Amount Due (&#8358;)</td>
               <td class="total-value balance"><div class="due" id="invoice_amount_due"></div></td>
           </tr>
         
@@ -102,7 +102,7 @@
       {{ csrf_field() }}
       <div class="bottom-btn">
         <ul>
-        <li><a href="javasript:;" onclick="print_this('to_print')" id="pdf"><i class="fa fa-print"></i> Print to Pdf</a></li>
+          <li><a href="javasript:;" onclick="print_this('to_print')" id="pdf"><i class="fa fa-print"></i> Print to Pdf</a></li>
           <li><a href="javasript:;" onclick="calculate()"><i class="fa fa-money-bill"></i> Make Payment</a></li>
         </ul>
       </div>

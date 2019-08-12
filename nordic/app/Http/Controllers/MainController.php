@@ -260,6 +260,7 @@ class MainController extends Controller
             $transaction->amount = $data['total'];
 
             $transaction->save();
+            // return redirect('/receipt');
         }
         return view('invoice');
     }
@@ -274,6 +275,10 @@ class MainController extends Controller
     public function news() {
         $blogs = Blog::select('id', 'title', 'author', 'date', 'comment', 'postcontent', 'content')->get();
         return view('news')->with(compact('blogs'));
+    }
+    public function receipt() {
+        // $receipt = Transaction::select('id', 'name', 'email','phone', 'room_type', 'room_no', 'guests', 'arrival', 'depart', 'payment_ref','payment_id', 'amount');
+        return view('receiptpage');
     }
 }
 

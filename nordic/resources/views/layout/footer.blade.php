@@ -191,10 +191,7 @@ window.print_this = function(id) {
     var prtContent = document.getElementById(id);
     var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
     
-    WinPrint.document.write('<link rel="stylesheet" href="{{asset("css/style.css")}}">');
-  
-
-    
+    WinPrint.document.write('<link rel="stylesheet" href="{{asset("css/style.css")}}">'); 
     WinPrint.document.write(prtContent.innerHTML);
     WinPrint.document.close();
     WinPrint.setTimeout(function(){
@@ -217,46 +214,46 @@ window.print_this = function(id) {
     let tel = document.getElementById('tel').value;
     let ref = Math.floor(100000 + Math.random() * 900000);
 
-    let Payment = [arrival, depart, name, email, price, room_no, room_type, guests, tel, ref];
+    let Invoice = [arrival, depart, name, email, price, room_no, room_type, guests, tel, ref];
     //console.log(Payment);
-    localStorage.setItem('Payment', JSON.stringify(Payment));
+    localStorage.setItem('Invoice', JSON.stringify(Invoice));
   }
 </script>
 <script>
   
-  const Payment = JSON.parse(localStorage.getItem('Payment'));
-  let arrivaldate = new Date(Payment[0]);
-  let departuredate = new Date(Payment[1]);
+  const Invoice = JSON.parse(localStorage.getItem('Invoice'));
+  let arrivaldate = new Date(Invoice[0]);
+  let departuredate = new Date(Invoice[1]);
   let diff = Math.abs(departuredate - arrivaldate)/1000/60/60/24;
-  let unitprice = Payment[4] * diff;
-  let total = Payment[4] * diff * Payment[5];
+  let unitprice = Invoice[4] * diff;
+  let total = Invoice[4] * diff * Invoice[5];
   
-  document.getElementById('invoice_name').innerText = Payment[2];
-  document.getElementById('invoice_email').innerText = Payment[3];
-  document.getElementById('invoice_phone').innerText = Payment[8];
-  document.getElementById('arrival_date').innerText = Payment[0];
-  document.getElementById('departure_date').innerText = Payment[1];
-  document.getElementById('invoice_room_type').innerText = Payment[6];
-  document.getElementById('invoice_guests').innerText = Payment[7];
-  document.getElementById('invoice_room_no').innerText = Payment[5];
-  document.getElementById('invoice_total').innerText = "₦"+total+".00";
-  document.getElementById('invoice_total_price').innerText = "₦"+total+".00";
-  document.getElementById('invoice_cost').innerText = "₦"+unitprice+".00";
-  document.getElementById('total').innerText = "₦"+total+".00";
-  document.getElementById('invoice_amount_due').innerText = "₦"+total+".00";
-  document.getElementById('invoice_ref').innerText = Payment[9];
+  document.getElementById('invoice_name').innerText = Invoice[2];
+  document.getElementById('invoice_email').innerText = Invoice[3];
+  document.getElementById('invoice_phone').innerText = Invoice[8];
+  document.getElementById('arrival_date').innerText = Invoice[0];
+  document.getElementById('departure_date').innerText = Invoice[1];
+  document.getElementById('invoice_room_type').innerText = Invoice[6];
+  document.getElementById('invoice_guests').innerText = Invoice[7];
+  document.getElementById('invoice_room_no').innerText = Invoice[5];
+  document.getElementById('invoice_total').innerText = total+".00";
+  document.getElementById('invoice_total_price').innerText = total+".00";
+  document.getElementById('invoice_cost').innerText = unitprice+".00";
+  document.getElementById('total').innerText = total+".00";
+  document.getElementById('invoice_amount_due').innerText = total+".00";
+  document.getElementById('invoice_ref').innerText = Invoice[9];
 </script>
 <script>
   function calculate() {
-    let arrival = Payment[0];
-    let depart = Payment[1];
-    let name = Payment[2];
-    let email = Payment[3];
+    let arrival = Invoice[0];
+    let depart = Invoice[1];
+    let name = Invoice[2];
+    let email = Invoice[3];
     let totalprice = total;
-    let room_no = Payment[5];
-    let room_type = Payment[6];
-    let guests = Payment[7];
-    let tel = Payment[8];
+    let room_no = Invoice[5];
+    let room_type = Invoice[6];
+    let guests = Invoice[7];
+    let tel = Invoice[8];
 
     if (arrival != "" && depart != "" && name != "" && email != "") {
 
@@ -269,7 +266,7 @@ window.print_this = function(id) {
         amount: totalamount,
         currency: "NGN",
         //ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-        ref: Payment[9],
+        ref: Invoice[9],
         metadata: {
           custom_fields: [
               {
@@ -292,7 +289,7 @@ window.print_this = function(id) {
         callback: function(response){
           //console.log(window.location.href);
           //console.log(response);
-          console.log(response);
+          // console.log(response);
           let transaction = new Object();
           transaction.name = name;
           transaction.email = email;
@@ -305,15 +302,17 @@ window.print_this = function(id) {
           transaction.arrival = arrival;
           transaction.depart = depart;
           transaction.total = totalprice;
-          console.log(transaction);
+          //console.log(transaction);
           let _token = $("input[name='_token']").val();
-            $.ajax({
-              url: window.location.href,
-              type: 'POST',
-              dataType: 'json',
-              data: { _token, transaction },
+          $.ajax({
+            url: window.location.href,
+            type: 'POST',
+            dataType: 'json',
+            data: { _token, transaction },
             
           })
+          localStorage.setItem('Transaction', JSON.stringify(transaction));
+          window.location.replace('/receipt');
         },
         onClose: function(){
             
