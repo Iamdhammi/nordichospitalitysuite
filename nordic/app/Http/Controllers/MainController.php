@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Transaction;
 use App\Blog;
+use App\Room;
 use App\Invoice;
 use PDF;
 class MainController extends Controller
@@ -281,7 +282,12 @@ class MainController extends Controller
         return view('receiptpage');
     }
     public function search() {
-        return view('searchavailability');
+        $deluxe = Room::where('room_type', 'Deluxe Room')->first();
+        $deluxeBalcony = Room::where('room_type', 'Deluxe Balcony')->first();
+        $nordic = Room::where('room_type', 'Nordic Suite')->first();
+        $nordicBalcony = Room::where('room_type', 'Nordic Suite Balcony')->first();
+        $standard = Room::where('room_type', 'Standard Room')->first();
+        return view('searchavailability')->with(compact('deluxe', 'deluxeBalcony', 'nordic', 'nordicBalcony', 'standard' ));
     }
 }
 

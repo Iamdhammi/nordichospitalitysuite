@@ -76,11 +76,11 @@
 										</ul>
 									</nav>
 								</div>
-								{{-- <div class="pull-right">
+								<div class="pull-right">
 									<div class="button-style-1 margint45">
-										<a href="#"><i class="fa fa-search"></i>Check Availability</a>
+									<a href="{{url('/search')}}"><i class="fa fa-search"></i>Check Availability</a>
 									</div>
-								</div> --}}
+								</div>
 							</div>
 						</div>
 					</div>
