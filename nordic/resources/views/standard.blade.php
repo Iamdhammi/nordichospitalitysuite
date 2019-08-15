@@ -57,7 +57,11 @@
 							<div>
 								<div class="pull-left search-button clearfix">
 									<div class="button-style-1 center">
-										<a href="{{url('/sreservation')}}"><i class="fa fa-calendar"></i>BOOK NOW</a>
+									@if($standard->no_rooms_available > 0)
+									<a href="{{url('/sreservation')}}"><i class="fa fa-calendar"></i>BOOK NOW</a>
+									@else
+									<a><i class="fa fa-calendar"></i>NO VACANCY</a>
+									@endif
 									</div>
 								</div>
 							</div>

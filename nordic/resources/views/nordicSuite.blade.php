@@ -62,7 +62,12 @@
 							<div>
 								<div class="pull-left search-button clearfix">
 									<div class="button-style-1 center">
+									@if($nordic->no_rooms_available > 0)
 									<a href="{{url('/nsreservation')}}"><i class="fa fa-calendar"></i>BOOK NOW</a>
+									@else
+									<a><i class="fa fa-calendar"></i>NO VACANCY</a>
+									@endif
+									
 									</div>
 								</div>
 							</div>

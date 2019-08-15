@@ -261,8 +261,8 @@ window.print_this = function(id) {
 
       let totalamount = parseInt(totalprice) * 100;
       let handler = PaystackPop.setup({
-        // key: 'pk_test_bbbca00e8ea21f67ffbc2cc8858436c592266f5f',
-        key: 'pk_test_d0aadce2c8a1b463e0cd398475e664729dcae8cb',
+        key: 'pk_test_bbbca00e8ea21f67ffbc2cc8858436c592266f5f',
+        // key: 'pk_test_d0aadce2c8a1b463e0cd398475e664729dcae8cb',
         email: email,
         amount: totalamount,
         currency: "NGN",

@@ -13,6 +13,10 @@ use PDF;
 class MainController extends Controller
 {
     public function home() {
+        // if($request->isMethod('post')) {
+        //     $data = $request->all();
+
+        // }
         return view('welcome');
     }
 
@@ -29,28 +33,39 @@ class MainController extends Controller
     }
 
     public function rooms() {
-        return view('rooms');
+        $deluxe = Room::where('room_type', 'Deluxe Room')->first();
+        $deluxeBalcony = Room::where('room_type', 'Deluxe Balcony')->first();
+        $nordic = Room::where('room_type', 'Nordic Suite')->first();
+        $nordicBalcony = Room::where('room_type', 'Nordic Suite Balcony')->first();
+        $standard = Room::where('room_type', 'Standard Room')->first();
+        return view('rooms')->with(compact('deluxe', 'deluxeBalcony', 'nordic', 'nordicBalcony', 'standard'));
     }
 
     public function deluxe() {
-        return view('deluxe');
+        $deluxe = Room::where('room_type', 'Deluxe Room')->first();
+        return view('deluxe')->with(compact('deluxe'));
     }
     public function deluxeBalcony() {
-        return view('deluxeBalcony');
+        $deluxeBalcony = Room::where('room_type', 'Deluxe Balcony')->first();
+        return view('deluxeBalcony')->with(compact('deluxeBalcony'));
     }
     public function nordicSuite() {
-        return view('nordicsuite');
+        $nordic = Room::where('room_type', 'Nordic Suite')->first();
+        return view('nordicsuite')->with(compact('nordic'));
     }
     public function nordicSuiteBalcony() {
-        return view('nordicSuiteBalcony');
+        $nordicBalcony = Room::where('room_type', 'Nordic Suite Balcony')->first();
+        return view('nordicSuiteBalcony')->with(compact('nordicBalcony'));
     }
     public function standard() {
-        return view('standard');
+        $standard = Room::where('room_type', 'Standard Room')->first();
+        return view('standard')->with(compact('standard'));
     }
     public function terms() {
         return view('terms');
     }
     public function dreservation(Request $request) {
+        $deluxe = Room::where('room_type', 'Deluxe Room')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
             // $transaction = new Transaction;
@@ -86,9 +101,10 @@ class MainController extends Controller
             $invoice->save();
             return redirect('/invoice');
         }
-        return view('deluxereservation');
+        return view('deluxereservation')->with(compact('deluxe'));
     }
     public function dbreservation(Request $request) {
+        $deluxeBalcony = Room::where('room_type', 'Deluxe Balcony')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
             // $transaction = new Transaction;
@@ -125,9 +141,10 @@ class MainController extends Controller
             $invoice->save();
             return redirect('/invoice');
         }
-        return view('deluxebalconyreservation');
+        return view('deluxebalconyreservation')->with(compact('deluxeBalcony'));
     }
     public function nsreservation(Request $request) {
+        $nordic = Room::where('room_type', 'Nordic Suite')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
             // $transaction = new Transaction;
@@ -164,9 +181,10 @@ class MainController extends Controller
             $invoice->save();
             return redirect('/invoice');
         }
-        return view('nordicsuitereservation');
+        return view('nordicsuitereservation')->with(compact('nordic'));
     }
     public function nsbreservation(Request $request) {
+        $nordicBalcony = Room::where('room_type', 'Nordic Suite Balcony')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
             // $transaction = new Transaction;
@@ -203,9 +221,10 @@ class MainController extends Controller
             $invoice->save();
             return redirect('/invoice');
         }
-        return view('nordicsuitebalconyreservation');
+        return view('nordicsuitebalconyreservation')->with(compact('nordicBalcony'));
     }
     public function sreservation(Request $request) {
+        $standard = Room::where('room_type', 'Standard Room')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
             // $transaction = new Transaction;
@@ -242,11 +261,15 @@ class MainController extends Controller
             $invoice->save();
             return redirect('/invoice');
         }
-        return view('standardreservation');
+        return view('standardreservation')->with(compact('standard'));
     }
     public function invoice(Request $request) {
         if($request->isMethod('post')) {
             $data = $request->get('transaction');
+            $input =  strtotime($data['arrival']);
+            // $arrivaldate = date('Y-m-d', $input);
+            // $today = date('Y-m-d'); 
+
             $transaction = new Transaction;
             $transaction->name = $data['name'];
             $transaction->email = $data['email'];
@@ -261,6 +284,18 @@ class MainController extends Controller
             $transaction->amount = $data['total'];
 
             $transaction->save();
+           
+            // dd($today);
+            // if($arrivaldate == $today) {
+            //     $room = Room::where(['room_type' => $data['room_type']])->first();
+            //     $room_no = $room->no_rooms_available;
+            //     $no = $room_no - 1;
+            //     dd($room_no);
+            //     Room::where(['room_type'=> $data['room_type']])->update([
+            //         // 'no_rooms_available' => $rooms_no->no_rooms_available - 1,
+            //     ]);
+            // }
+            
             // return redirect('/receipt');
         }
         return view('invoice');
@@ -288,6 +323,89 @@ class MainController extends Controller
         $nordicBalcony = Room::where('room_type', 'Nordic Suite Balcony')->first();
         $standard = Room::where('room_type', 'Standard Room')->first();
         return view('searchavailability')->with(compact('deluxe', 'deluxeBalcony', 'nordic', 'nordicBalcony', 'standard' ));
+    }
+    public function searchresult(Request $request) {
+        if($request->isMethod('post')) {
+            $data = $request->all();
+            $arrival = $data['arrival'];
+            $depart = $data['depart'];
+            // dd($data);
+            $deluxes = Transaction::where('room_type','Deluxe Room')->where('depart', '>=', $arrival)->where('arrival', '<=', $arrival)->get();
+            $deluxes1 = Transaction::where('room_type','Deluxe Room')->where('arrival', '<=', $depart)->where('arrival', '>=', $arrival)->get();
+            // dd($deluxes1);
+            $deluxe_total = 0;
+            if(count($deluxes) >= count($deluxes1)) {
+                foreach ($deluxes as $deluxe) {
+                    $deluxe_total += $deluxe->room_no;
+                };
+            }elseif(count($deluxes) <= count($deluxes1)){
+                foreach ($deluxes1 as $deluxe1) {
+                    $deluxe_total += $deluxe1->room_no;
+                };
+            }
+
+            $deluxeBalconys = Transaction::where('room_type','Deluxe Balcony')->where('depart', '>=', $arrival)->where('arrival', '<=', $arrival)->get();
+            $deluxeBalconys1 = Transaction::where('room_type','Deluxe Balcony')->where('arrival', '<=', $depart)->where('arrival', '>=', $arrival)->get();
+            $deluxeBalcony_total = 0;
+            if(count($deluxeBalconys) >= count($deluxeBalconys1)) {
+                foreach ($deluxeBalconys as $deluxeBalcony) {
+                    $deluxeBalcony_total += $deluxeBalcony->room_no;
+                };
+            }elseif(count($deluxeBalconys) <= count($deluxeBalconys1)){
+                foreach ($deluxeBalconys1 as $deluxeBalcony1) {
+                    $deluxeBalcony_total += $deluxeBalcony1->room_no;
+                };
+            }
+            
+
+            $nordics = Transaction::where('room_type','Nordic Suite')->where('depart', '>=', $arrival)->where('arrival', '<=', $arrival)->get();
+            $nordics1 = Transaction::where('room_type','Nordic Suite')->where('arrival', '<=', $depart)->where('arrival', '>=', $arrival)->get();
+            $nordic_total = 0;
+            if(count($nordics) >= count($nordics1)) {
+                foreach ($nordics as $nordic) {
+                    $nordic_total += $nordic->room_no;
+                };
+            }elseif(count($nordics) <= count($nordics1)){
+                foreach ($nordics1 as $nordic1) {
+                    $nordic_total += $nordic1->room_no;
+                };
+            }
+            
+
+            $nordicBalconys = Transaction::where('room_type','Nordic Suite Balcony')->where('depart', '>=', $arrival)->where('arrival', '<=', $arrival)->get();
+            $nordicBalconys1 = Transaction::where('room_type','Nordic Suite Balcony')->where('arrival', '<=', $depart)->where('arrival', '>=', $arrival)->get();
+            $nordicBalcony_total = 0;
+            if(count($nordicBalconys) >= count($nordicBalconys1)) {
+                foreach ($nordicBalconys as $nordicBalcony) {
+                    $nordicBalcony_total += $nordicBalcony->room_no;
+                };
+            }elseif(count($nordicBalconys) <= count($nordicBalconys1)){
+                foreach ($nordicBalconys1 as $nordicBalcony1) {
+                    $nordicBalcony_total += $nordicBalcony1->room_no;
+                };
+            }
+            
+
+            $standards = Transaction::where('room_type','Standard Room')->where('depart', '>=', $arrival)->where('arrival', '<=', $arrival)->get();
+            $standards1 = Transaction::where('room_type','Standard Room')->where('arrival', '<=', $depart)->where('arrival', '>=', $arrival)->get();
+            $standards_total = 0;
+            if(count($standards) >= count($standards1)) {
+                foreach ($standards as $standard) {
+                    $standards_total += $standard->room_no;
+                };
+            }elseif(count($standards) <= count($standards1)){
+                foreach ($standards1 as $standard1) {
+                    $standards_total += $standard1->room_no;
+                };
+            }
+            // dd($standards_total);
+            $no_deluxe = 8 - $deluxe_total;
+            $no_deluxeBalcony = 4 - $deluxeBalcony_total;
+            $no_nordic = 2 - $nordic_total;
+            $no_nordicBalcony = 4 - $nordicBalcony_total;
+            $no_standard = 2 - $standards_total;
+        }
+        return view('search')->with(compact('no_deluxe', 'no_deluxeBalcony', 'no_nordic','no_nordicBalcony', 'no_standard'));
     }
 }
 

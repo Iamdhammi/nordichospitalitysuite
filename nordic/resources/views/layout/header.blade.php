@@ -18,6 +18,7 @@
 	 @elseif(preg_match("/terms/", $url)) Terms & Condition
 	 @elseif(preg_match("/reservation/", $url)) Reservation
 	 @elseif(preg_match("/invoice/", $url)) Invoice
+	 @elseif(preg_match("/search/", $url)) Search
 	 @endif | Nordic Hospitality Suites
 </title>
 <meta name="description" content="">

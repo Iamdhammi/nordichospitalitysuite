@@ -33,3 +33,7 @@ Route::match(['get', 'post'], '/news', 'MainController@news');
 // Route::get('/pdf', 'MainController@pdf');
 Route::get('/receipt', 'MainController@receipt');
 Route::get('/search', 'MainController@search');
+Route::match(['get', 'post'],'/searchresult', 'MainController@searchresult');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

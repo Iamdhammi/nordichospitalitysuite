@@ -58,11 +58,14 @@
 								<li class="li-select mg-r20">
 									<label>Rooms</label>
 									<select id="room_no" name="room_no" class="pretty-select" required>
-										<option selected="selected" value="1" >1</option>
+										@for($i = 1; $i <= $deluxeBalcony->no_rooms_available; $i++)
+											<option value="{{$i}}">{{$i}}</option>
+										@endfor
+										{{-- <option selected="selected" value="1" >1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
 										<option value="4">4</option>
-										<option value="5">5</option>
+										<option value="5">5</option> --}}
 									</select>
 								</li>
 								<li class="li-select">

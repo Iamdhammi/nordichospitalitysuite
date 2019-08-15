@@ -1,19 +1,34 @@
 @include('layout.homeHeader')
-		{{-- <div class="book-slider">
+		<div class="slider-textbox clearfix" style="margin-top: 120px;">
+			<div class="container">
+				<div class="row">
+					<div class="slider-bar pull-left">WELCOME TO NORDIC HOSPITALITY SUITES</div>
+					<div class="slider-triangle pull-left"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="slider-bar-under pull-left">5 STAR SUPPORT</div>
+					<div class="slider-triangle-under pull-left"></div>
+				</div>
+			</div>
+		</div>
+		<div class="book-slider">
 			<div class="container">
 				<div class="row pos-center">
 					<div class="reserve-form-area">
-						<form action="#" method="post" id="ajax-reservation-form">
+						<form action="{{url('/searchresult')}}" method="post">
+							{{ csrf_field() }}
 							<ul class="clearfix">
 								<li class="li-input">
 									<label>ARRIVAL</label>
-									<input type="text" id="dpd1" name="dpd1" class="date-selector" placeholder="&#xf073;" />
+									<input type="text" id="dpd1" name="arrival" class="date-selector" placeholder="&#xf073;" required>
 								</li>
 								<li class="li-input">
 									<label>DEPARTURE</label>
-									<input type="text" id="dpd2" name="dpd2" class="date-selector" placeholder="&#xf073;" />
+									<input type="text" id="dpd2" name="depart" class="date-selector" placeholder="&#xf073;" required>
 								</li>
-								<li class="li-select">
+								{{-- <li class="li-select">
 									<label>ROOMS</label>
 									<select name="rooms" class="pretty-select">
 										<option selected="selected" value="1" >1</option>
@@ -43,10 +58,10 @@
 										<option value="4">4</option>
 										<option value="5">5</option>
 									</select>
-								</li>
+								</li> --}}
 								<li>
-									<div class="button-style-1 margint40">
-										<a id="res-submit" href="#"><i class="fa fa-search"></i>SEARCH</a>
+									<div class="button-style-1">
+										<button type="submit"><i class="fa fa-search"></i>SEARCH</button>
 									</div>
 								</li>
 							</ul>
@@ -54,21 +69,8 @@
 					</div>
 				</div>
 			</div>
-		{{-- </div> --}}
-		<div class="slider-textbox clearfix" style="margin-top: 200px;">
-			<div class="container">
-				<div class="row">
-					<div class="slider-bar pull-left">WELCOME TO NORDIC HOSPITALITY SUITES</div>
-					<div class="slider-triangle pull-left"></div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="slider-bar-under pull-left">5 STAR SUPPORT</div>
-					<div class="slider-triangle-under pull-left"></div>
-				</div>
-			</div>
-		</div>
+		 </div>
+		
 		<div class="bottom-book-slider">
 			<div class="container">
 				<div class="row pos-center">
