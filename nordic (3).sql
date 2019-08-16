@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2019 at 06:43 PM
+-- Generation Time: Aug 16, 2019 at 12:49 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -90,7 +90,24 @@ INSERT INTO `invoice` (`id`, `name`, `email`, `phone`, `room_type`, `room_no`, `
 (14, 'MUSIC', 'samuel@astract.com.ng', '08105389434', 'Nordic Suite', '1', '1', '08/14/2019', '08/15/2019', '35500', '2019-08-12 10:10:43', '2019-08-12 10:10:43'),
 (15, 'nmj', 'damilolabello4real@gmail.com', '08105389434', 'Nordic Suite', '1', '1', '08/14/2019', '08/15/2019', '35500', '2019-08-12 10:15:01', '2019-08-12 10:15:01'),
 (16, 'MUSIC', 'test@test.com', '08105389434', 'Nordic Suite', '1', '1', '08/13/2019', '08/14/2019', '35500', '2019-08-12 10:32:09', '2019-08-12 10:32:09'),
-(17, 'Bello', 'test@test.com', '08105398754', 'Deluxe Room', '1', '1', '08/13/2019', '08/14/2019', '25500', '2019-08-12 11:35:27', '2019-08-12 11:35:27');
+(17, 'Bello', 'test@test.com', '08105398754', 'Deluxe Room', '1', '1', '08/13/2019', '08/14/2019', '25500', '2019-08-12 11:35:27', '2019-08-12 11:35:27'),
+(18, 'Bello Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:17:00', '2019-08-15 09:17:00'),
+(19, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:21:12', '2019-08-15 09:21:12'),
+(20, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:27:32', '2019-08-15 09:27:32'),
+(21, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:28:14', '2019-08-15 09:28:14'),
+(22, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:30:51', '2019-08-15 09:30:51'),
+(23, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:32:03', '2019-08-15 09:32:03'),
+(24, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:34:16', '2019-08-15 09:34:16'),
+(25, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:35:00', '2019-08-15 09:35:00'),
+(26, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:40:12', '2019-08-15 09:40:12'),
+(27, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 09:40:46', '2019-08-15 09:40:46'),
+(28, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 11:24:44', '2019-08-15 11:24:44'),
+(29, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '25500', '2019-08-15 11:25:44', '2019-08-15 11:25:44'),
+(30, 'MUSIC', 'admin@admin.com', '08105389434', 'Deluxe Balcony', '1', '1', '08/15/2019', '08/16/2019', '29500', '2019-08-15 12:31:08', '2019-08-15 12:31:08'),
+(31, 'Bello', 'test@test.com', '08105389434', 'Deluxe Room', '5', '1', '08/15/2019', '08/16/2019', '127500', '2019-08-15 13:09:34', '2019-08-15 13:09:34'),
+(32, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '3', '1', '08/15/2019', '08/16/2019', '76500', '2019-08-15 13:34:32', '2019-08-15 13:34:32'),
+(33, 'Damilola', 'samuel@astract.com.ng', '08105389434', 'Nordic Suite', '1', '1', '08/15/2019', '08/16/2019', '35500', '2019-08-15 13:52:29', '2019-08-15 13:52:29'),
+(34, 'Bello', 'test@test.com', '09020080723', 'Standard Room', '2', '1', '08/17/2019', '08/18/2019', '37000', '2019-08-16 09:46:09', '2019-08-16 09:46:09');
 
 -- --------------------------------------------------------
 
@@ -127,6 +144,32 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `rooms`
+--
+
+CREATE TABLE `rooms` (
+  `id` int(11) NOT NULL,
+  `room_type` varchar(191) NOT NULL,
+  `room_no` varchar(191) NOT NULL,
+  `no_rooms_available` varchar(191) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rooms`
+--
+
+INSERT INTO `rooms` (`id`, `room_type`, `room_no`, `no_rooms_available`, `created_at`, `updated_at`) VALUES
+(1, 'Deluxe Room', '8', '3', '2019-08-16 10:23:29', '2019-08-16 09:23:29'),
+(2, 'Deluxe Balcony', '4', '3', '2019-08-16 10:23:29', '2019-08-16 09:23:29'),
+(3, 'Nordic Suite', '2', '1', '2019-08-16 10:23:29', '2019-08-16 09:23:29'),
+(4, 'Nordic Suite Balcony', '4', '4', '2019-08-16 10:23:29', '2019-08-16 09:23:29'),
+(5, 'Standard Room', '2', '2', '2019-08-16 10:23:29', '2019-08-16 09:23:29');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `transaction`
 --
 
@@ -152,17 +195,12 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`id`, `name`, `email`, `phone`, `room_type`, `room_no`, `guests`, `arrival`, `depart`, `payment_ref`, `payment_id`, `amount`, `created_at`, `updated_at`) VALUES
-(1, 'Bello Damilola', 'samuel@astract.com.ng', '08105389434', 'Deluxe Room', '1', '1', '08/06/2019', '08/07/2019', '467100003', '229283331', '25500', '2019-08-02 12:10:02', '2019-08-02 12:10:02'),
-(2, 'Bello Damilola', 'damilolabello4real@gmail.com', '08105389434', 'Deluxe Room', '1', '1', '08/07/2019', '08/08/2019', '692368806', '229468040', '25500', '2019-08-02 17:08:13', '2019-08-02 17:08:13'),
-(3, 'Bello Damilola', 'damilolabello4real@gmail.com', '09020080723', 'Deluxe Balcony', '2', '1', '08/21/2019', '08/22/2019', '312150916', '229486617', '59000', '2019-08-02 17:29:19', '2019-08-02 17:29:19'),
-(4, 'Damilola', 'damilolabello4real@gmail.com', '08105389434', 'Standard Room', '1', '1', '08/28/2019', '08/29/2019', '75667797', '229512419', '18500', '2019-08-02 17:51:41', '2019-08-02 17:51:41'),
-(5, 'THE BlOG WITH FLAYK', 'test@test.com', '09020080723', 'Deluxe Balcony', '1', '1', '08/09/2019', '08/10/2019', '864487', '234197199', '29500', '2019-08-08 20:22:16', '2019-08-08 20:22:16'),
-(6, 'Damilola', 'samuel@astract.com.ng', '08105389434', 'Deluxe Room', '1', '1', '08/17/2019', '08/18/2019', '804270', '237213178', '25500', '2019-08-12 09:34:35', '2019-08-12 09:34:35'),
-(7, 'Bello', 'damilolabelloforeal@gmail.com', '08105389434', 'Deluxe Balcony', '1', '1', '08/17/2019', '08/18/2019', '601953', '237230061', '29500', '2019-08-12 10:08:20', '2019-08-12 10:08:20'),
-(8, 'Bello', 'damilolabello4real@gmail.com', '08105389434', 'Nordic Suite', '1', '1', '08/24/2019', '08/25/2019', '606060', '237230942', '35500', '2019-08-12 10:09:52', '2019-08-12 10:09:52'),
-(9, 'MUSIC', 'samuel@astract.com.ng', '08105389434', 'Nordic Suite', '1', '1', '08/14/2019', '08/15/2019', '362100', '237232095', '35500', '2019-08-12 10:11:03', '2019-08-12 10:11:03'),
-(10, 'nmj', 'damilolabello4real@gmail.com', '08105389434', 'Nordic Suite', '1', '1', '08/14/2019', '08/15/2019', '843930', '237234764', '35500', '2019-08-12 10:15:19', '2019-08-12 10:15:19'),
-(11, 'MUSIC', 'test@test.com', '08105389434', 'Nordic Suite', '1', '1', '08/13/2019', '08/14/2019', '661156', '237245189', '35500', '2019-08-12 10:32:31', '2019-08-12 10:32:31');
+(16, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/17/2019', '680280', '239395286', '25500', '2019-08-15 17:59:05', '2019-08-15 09:31:06'),
+(17, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '1', '1', '08/15/2019', '08/16/2019', '789680', '239457332', '25500', '2019-08-16 09:18:45', '2019-08-15 11:25:59'),
+(18, 'MUSIC', 'admin@admin.com', '08105389434', 'Deluxe Balcony', '1', '1', '08/15/2019', '08/16/2019', '594691', '239489447', '29500', '2019-08-15 12:32:20', '2019-08-15 12:32:20'),
+(20, 'Damilola', 'test@test.com', '08105389434', 'Deluxe Room', '3', '1', '08/15/2019', '08/16/2019', '378439', '239590957', '76500', '2019-08-15 13:35:03', '2019-08-15 13:35:03'),
+(21, 'Damilola', 'samuel@astract.com.ng', '08105389434', 'Nordic Suite', '1', '1', '08/15/2019', '08/16/2019', '104612', '239627152', '35500', '2019-08-15 13:53:33', '2019-08-15 13:53:33'),
+(22, 'Bello', 'test@test.com', '09020080723', 'Standard Room', '2', '1', '08/17/2019', '08/18/2019', '986240', '240480618', '37000', '2019-08-16 09:46:30', '2019-08-16 09:46:30');
 
 -- --------------------------------------------------------
 
@@ -179,6 +217,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Bello Damilola', 'admin@admin.com', '$2y$10$E8o99J4dRH0RPc8I3bOwt.Nh9UP26JGGes6BjQviXl4ONWfwtk67S', 'cq58QqUlhNvcoelbXp1YKdPP9h1goSO4wRywgezPJuKeyBP6yxrbBip79BdL', '2019-08-15 20:13:07', '2019-08-15 20:13:07');
 
 --
 -- Indexes for dumped tables
@@ -209,6 +254,12 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
+-- Indexes for table `rooms`
+--
+ALTER TABLE `rooms`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `transaction`
 --
 ALTER TABLE `transaction`
@@ -235,7 +286,7 @@ ALTER TABLE `blogpost`
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -244,16 +295,22 @@ ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `rooms`
+--
+ALTER TABLE `rooms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

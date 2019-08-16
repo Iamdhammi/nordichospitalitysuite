@@ -325,6 +325,11 @@ class MainController extends Controller
         return view('searchavailability')->with(compact('deluxe', 'deluxeBalcony', 'nordic', 'nordicBalcony', 'standard' ));
     }
     public function searchresult(Request $request) {
+        $no_deluxe = Room::where(['room_type' => 'Deluxe Room'])->select('room_no')->first();
+        $no_deluxeBalcony = Room::where(['room_type' => 'Deluxe Balcony'])->select('room_no')->first();
+        $no_nordic = Room::where(['room_type' => 'Nordic Suite'])->select('room_no')->first();
+        $no_nordicBalcony = Room::where(['room_type' => 'Nordic Suite Balcony'])->select('room_no')->first();
+        $no_standard = Room::where(['room_type' => 'Standard Room'])->select('room_no')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
             $arrival = $data['arrival'];
@@ -399,13 +404,28 @@ class MainController extends Controller
                 };
             }
             // dd($standards_total);
-            $no_deluxe = 8 - $deluxe_total;
-            $no_deluxeBalcony = 4 - $deluxeBalcony_total;
-            $no_nordic = 2 - $nordic_total;
-            $no_nordicBalcony = 4 - $nordicBalcony_total;
-            $no_standard = 2 - $standards_total;
+            $no_deluxe = $no_deluxe->room_no - $deluxe_total;
+            $no_deluxeBalcony = $no_deluxeBalcony->room_no - $deluxeBalcony_total;
+            $no_nordic = $no_nordic->room_no - $nordic_total;
+            $no_nordicBalcony = $no_nordicBalcony->room_no - $nordicBalcony_total;
+            $no_standard = $no_standard->roo_no - $standards_total;
         }
         return view('search')->with(compact('no_deluxe', 'no_deluxeBalcony', 'no_nordic','no_nordicBalcony', 'no_standard'));
     }
+
+
+
+
+
+    // Admin
+    
+
+
+
+
+
+
 }
+
+
 

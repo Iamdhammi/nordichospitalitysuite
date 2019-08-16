@@ -1,5 +1,5 @@
-@include('layout.homeHeader')
-		<div class="slider-textbox clearfix" style="margin-top: 120px;">
+@include('layout.admin.homeHeader')
+		<div class="slider-textbox clearfix" style="margin-top: 150px;">
 			<div class="container">
 				<div class="row">
 					<div class="slider-bar pull-left">WELCOME TO NORDIC HOSPITALITY SUITES</div>
@@ -13,7 +13,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="book-slider">
+		{{-- <div class="book-slider">
 			<div class="container">
 				<div class="row pos-center">
 					<div class="reserve-form-area">
@@ -28,37 +28,7 @@
 									<label>DEPARTURE</label>
 									<input type="text" id="dpd2" name="depart" class="date-selector" placeholder="&#xf073;" required>
 								</li>
-								{{-- <li class="li-select">
-									<label>ROOMS</label>
-									<select name="rooms" class="pretty-select">
-										<option selected="selected" value="1" >1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-									</select>
-								</li>
-								<li class="li-select">
-									<label>ADULT</label>
-									<select name="adult" class="pretty-select">
-										<option selected="selected" value="1" >1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-									</select>
-								</li>
-								<li class="li-select">
-									<label>CHILDREN</label>
-									<select name="children" class="pretty-select">
-										<option selected="selected" value="0" >0</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-									</select>
-								</li> --}}
+								
 								<li>
 									<div class="button-style-1">
 										<button type="submit"><i class="fa fa-search"></i>SEARCH</button>
@@ -69,7 +39,7 @@
 					</div>
 				</div>
 			</div>
-		 </div>
+		</div> --}}
 		
 		<div class="bottom-book-slider">
 			<div class="container">
@@ -93,7 +63,7 @@
 				<div class="row">
 					<div class="about-title pos-center margint60">
 						<h2>WELCOME TO NORDIC HOSPITALITY SUITES</h2>
-						<div class="title-shape"><img alt="Shape" src="assets/img/shape.png"></div>
+						<div class="title-shape"><img alt="Shape" src="../assets/img/shape.png"></div>
 						<p>Welcome to our hotel, Nordic Hospitality is a boutique hotel located in Jabi.
 						We offer 22 unique state of the art rooms furnished in a modern day
 						style and decorated with designer furniture.
@@ -136,7 +106,7 @@
 									</div>
 									<div class="news-content pull-left">
 										<h6><a href="#">News from us from now</a></h6>
-										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui <a class="active-color" href="{{url('/news')}}">[...]</a></p>
+										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui <a class="active-color">[...]</a></p>
 									</div>
 								</div>
 								<div class="news-box clearfix">
@@ -145,7 +115,7 @@
 									</div>
 									<div class="news-content pull-left">
 										<h6><a href="#">News from us from now</a></h6>
-										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue <a class="active-color" href="{{url('/news')}}">[...]</a></p>
+										<p class="margint10">Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue <a class="active-color">[...]</a></p>
 									</div>
 								</div>
 							</div>
@@ -156,7 +126,7 @@
 		</div>
 
 		<!-- Explore Rooms Section -->
-		<div class="explore-rooms margint30 clearfix">
+		{{-- <div class="explore-rooms margint30 clearfix">
 			<div class="container">
 				<div class="row">	
 					<div class="title-style-2 marginb40 pos-center">
@@ -166,7 +136,7 @@
 					<div class="col-lg-4 col-sm-6">
 						<div class="home-room-box">
 							<div class="room-image">
-								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-2.JPG">
+								<img alt="Room Images" class="img-responsive" src="../assets/img/rooms/room-2.JPG">
 								<div class="home-room-details">
 									<h5><a href="{{url('/rooms/standard')}}">The Standard Room</a></h5>
 									<div class="pull-left">
@@ -205,7 +175,7 @@
 					<div class="col-lg-4 col-sm-6">
 						<div class="home-room-box">
 							<div class="room-image">
-								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-04.JPG">
+								<img alt="Room Images" class="img-responsive" src="../assets/img/rooms/room-04.JPG">
 								<div class="home-room-details">
 									<h5><a href="{{url('/rooms/nordicsuite')}}">The Nordic Suite</a></h5>
 									<div class="pull-left">
@@ -245,8 +215,8 @@
 					<div class="col-lg-4 col-sm-6">
 						<div class="home-room-box">
 							<div class="room-image">
-								{{-- <div class="room-features">FEATURED</div> --}}
-								<img alt="Room Images" class="img-responsive" src="assets/img/rooms/room-5.JPG">
+								{{-- <div class="room-features">FEATURED</div>
+								<img alt="Room Images" class="img-responsive" src="../assets/img/rooms/room-5.JPG">
 								<div class="home-room-details">
 									<h5><a href="{{url('/rooms/deluxe')}}">The Deluxe</a></h5>
 									<div class="pull-left">
@@ -285,7 +255,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 
 		<!-- Parallax Section -->
 		<div id="parallax123" class="parallax parallax-one clearfix margint60">
@@ -349,7 +319,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="newsletter-top pos-center margint30">
-						<img alt="Shape Image" src="assets/img/shape.png" >
+						<img alt="Shape Image" src="../assets/img/shape.png" >
 					</div>
 					<div class="newsletter-form margint40 pos-center">
 						<div class="newsletter-wrapper">
@@ -365,7 +335,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div> --}}
+			</div> --}}
+		</div>
 
-@include('layout.homeFooter')
+@include('layout.admin.homeFooter')

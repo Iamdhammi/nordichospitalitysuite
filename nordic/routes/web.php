@@ -34,6 +34,11 @@ Route::match(['get', 'post'], '/news', 'MainController@news');
 Route::get('/receipt', 'MainController@receipt');
 Route::get('/search', 'MainController@search');
 Route::match(['get', 'post'],'/searchresult', 'MainController@searchresult');
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin/home', 'HomeController@adminHome')->name('home');
+Route::match(['get', 'post'],'/admin/editrooms', 'HomeController@editrooms');
+Route::match(['get', 'post'],'/admin/transactions', 'HomeController@transactions');
+

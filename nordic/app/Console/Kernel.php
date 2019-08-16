@@ -37,6 +37,12 @@ class Kernel extends ConsoleKernel
         $schedule->call(function() {
             $today = date('m/d/Y');
             //Deluxe
+            $no_deluxe = DB::table('rooms')->where(['room_type' => 'Deluxe Room'])->select('room_no')->first();
+            $no_deluxeBalcony = DB::table('rooms')->where(['room_type' => 'Deluxe Balcony'])->select('room_no')->first();
+            $no_nordic = DB::table('rooms')->where(['room_type' => 'Nordic Suite'])->select('room_no')->first();
+            $no_nordicBalcony = DB::table('rooms')->where(['room_type' => 'Nordic Suite Balcony'])->select('room_no')->first();
+            $no_standard = DB::table('rooms')->where(['room_type' => 'Standard Room'])->select('room_no')->first();
+
             // $deluxe_arrival_no = DB::table('transaction')->where(['room_type' => 'Deluxe Room'])->where('arrival', '<=', $today)->where('depart', '>=', $today)->count();
             $deluxe_arrivals = DB::table('transaction')->where(['room_type' => 'Deluxe Room'])->where('arrival', '<=', $today)->where('depart', '>=', $today)->get();
             $deluxe_balcony_arrivals = DB::table('transaction')->where(['room_type' => 'Deluxe Balcony'])->where('arrival', '<=', $today)->where('depart', '>=', $today)->get();
@@ -81,11 +87,11 @@ class Kernel extends ConsoleKernel
             // $nordic_suite_arrival_no = DB::table('transaction')->where(['room_type' => 'Nordic Suite'])->where('arrival', '<=', $today)->where('depart', '>=', $today)->count();
             // $nordic_suite_balcony_arrival_no = DB::table('transaction')->where(['room_type' => 'Nordic Suite Balcony'])->where('arrival', '<=', $today)->where('depart', '>=', $today)->count();
             // $standard_arrival_no = DB::table('transaction')->where(['room_type' => 'Standard Room'])->where('arrival', '<=', $today)->where('depart', '>=', $today)->count();
-            $deluxe_no = 8 - $deluxe_total;
-            $deluxe_balcony_no = 4 - $deluxeBalcony_total;
-            $nordic_suite_no = 2 - $nordicSuite_total;
-            $nordic_suite_balcony_no = 4 - $nordicSuiteBalcony_total;
-            $standard_no = 2 - $standard_total;
+            $deluxe_no = $no_deluxe->room_no - $deluxe_total;
+            $deluxe_balcony_no = $no_deluxeBalcony->room_no  - $deluxeBalcony_total;
+            $nordic_suite_no = $no_nordic->room_no  - $nordicSuite_total;
+            $nordic_suite_balcony_no = $no_nordicBalcony->room_no  - $nordicSuiteBalcony_total;
+            $standard_no = $no_standard->room_no  - $standard_total;
             DB::table('rooms')->where(['room_type' => 'Deluxe Room'])->update(['no_rooms_available' => $deluxe_no]);
             DB::table('rooms')->where(['room_type' => 'Deluxe Balcony'])->update(['no_rooms_available' => $deluxe_balcony_no]);
             DB::table('rooms')->where(['room_type' => 'Nordic Suite'])->update(['no_rooms_available' => $nordic_suite_no]);

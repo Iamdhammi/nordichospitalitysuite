@@ -1,4 +1,4 @@
-<div class="footer margint40"><!-- Footer Section -->
+<div class="footer"><!-- Footer Section -->
   <div class="main-footer">
     <div class="container">
       <div class="row">

@@ -18,7 +18,8 @@
 	 @elseif(preg_match("/terms/", $url)) Terms & Condition
 	 @elseif(preg_match("/reservation/", $url)) Reservation
 	 @elseif(preg_match("/invoice/", $url)) Invoice
-	 @elseif(preg_match("/search/", $url)) Search
+     @elseif(preg_match("/search/", $url)) Search
+     @elseif(preg_match("/transaction/", $url)) Transaction
 	 @endif | Nordic Hospitality Suites
 </title>
 <meta name="description" content="">
@@ -36,6 +37,7 @@
 <link rel="stylesheet" href="{{asset('assets/css/2035.responsive.css')}}">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
 <link rel="stylesheet" href="{{asset('css/print.css')}}">
@@ -59,8 +61,13 @@
 					<div class="pull-right">
                         <div class="pull-left">
                             <ul class="pre-link-box">
-								<li><a href="{{url('/terms')}}">Terms & Conditions</a></li>
-								<li><a href="{{url('/login')}}">Admin Login</a></li>
+                                {{-- <li><a href="{{url('/terms')}}">Terms & Conditions</a></li> --}}
+                                <li>
+                                    <a  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
                             </ul>
                         </div>
 					</div>
@@ -79,8 +86,8 @@
 						<div class="pull-left">
 							<nav class="nav">
 								<ul id="navigate" class="sf-menu navigate">
-                                    <li><a href="{{url('/')}}">HOME</a></li>
-									<li
+                                    <li><a href="{{url('/admin/home')}}">HOME</a></li>
+									{{-- <li
 										@if(preg_match("/rooms/", $url)) class="active parent-menu"
 										@else class="parent-menu" 
 										@endif
@@ -92,19 +99,18 @@
 											<li><a href="{{url('/rooms/nordicsuitebalcony')}}">Nordic Suite Balcony</a></li>
 											<li><a href="{{url('/rooms/standard')}}">Standard Rooms</a></li>
 										</ul>
-									</li>
-									<li <?php if (preg_match("/about/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/about')}}">ABOUT US</a></li>
-									<li <?php if (preg_match("/gallery/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/gallery')}}">GALLERY</a></li>
-									<li <?php if (preg_match("/news/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/news')}}">NEWS</a></li>
-                                    <li <?php if (preg_match("/contact/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/contact')}}">CONTACT</a></li>
+									</li> --}}
+									
+                                    <li <?php if (preg_match("/editrooms/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/admin/editrooms')}}">EDIT ROOMS</a></li>
+                                    <li <?php if (preg_match("/transactions/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/admin/transactions')}}">TRANSACTION</a></li>
 								</ul>
 							</nav>
 						</div>
-						<div class="pull-right">
+						{{-- <div class="pull-right">
 							<div class="button-style-1 margint45">
 								<a href="{{url('/search')}}"><i class="fa fa-search"></i>Check Availability</a>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>

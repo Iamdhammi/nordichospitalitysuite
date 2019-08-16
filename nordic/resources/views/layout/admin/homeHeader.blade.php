@@ -37,8 +37,13 @@
 							<div class="pull-right">
 								<div class="pull-left">
 									<ul class="pre-link-box">
-										<li><a href="{{url('/terms')}}">Terms & Conditions</a></li>
-										<li><a href="{{url('/login')}}">Admin Login</a></li>
+										{{-- <li><a href="{{url('/terms')}}">Terms & Conditions</a></li> --}}
+										<li>
+                                            <a  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
+                                        </li>
 									</ul>
 								</div>
 								
@@ -52,7 +57,7 @@
 							<div class="pull-left">
 								<div class="logo colorWhiteBg">
 									<a href="#">
-										<img alt="Logo" src="assets/img/logo-grey.png" class="img-responsive" style="width: 120px; height: auto" />
+										<img alt="Logo" src="../assets/img/logo-grey.png" class="img-responsive" style="width: 120px; height: auto" />
 									</a>
 								</div>
 							</div>
@@ -60,8 +65,8 @@
 								<div class="pull-left">
 									<nav class="nav">
 										<ul id="navigate" class="sf-menu navigate">
-											<li class="active"><a href="{{url('/')}}">HOME</a></li>
-											<li class="parent-menu" ><a href="{{url('/rooms')}}">OUR ROOMS</a>
+											<li class="active"><a href="{{url('/admin/home')}}">HOME</a></li>
+											{{-- <li class="parent-menu" ><a href="{{url('/rooms')}}">OUR ROOMS</a>
 												<ul>
 													<li><a href="{{url('/rooms/deluxe')}}">Deluxe Rooms</a></li>
 													<li><a href="{{url('/rooms/deluxebalcony')}}">Deluxe Balcony</a></li>
@@ -69,19 +74,21 @@
 													<li><a href="{{url('/rooms/nordicsuitebalcony')}}">Nordic Suite Balcony</a></li>
 													<li><a href="{{url('/rooms/standard')}}">Standard Rooms</a></li>
 												</ul>
-											</li>
-											<li><a href="{{url('/about')}}">ABOUT US</a></li>
+											</li> --}}
+											{{-- <li><a href="{{url('/about')}}">ABOUT US</a></li>
 											<li><a href="{{url('/gallery')}}">GALLERY</a></li>
 											<li><a href="{{url('/news')}}">NEWS</a></li>
-											<li><a href="{{url('/contact')}}">CONTACT</a></li>
+                                            <li><a href="{{url('/contact')}}">CONTACT</a></li> --}}
+											<li><a href="{{url('/admin/editrooms')}}">EDIT ROOMS</a></li>
+											<li><a href="{{url('/admin/transactions')}}">TRANSACTION</a></li>
 										</ul>
 									</nav>
 								</div>
-								<div class="pull-right">
+								{{-- <div class="pull-right">
 									<div class="button-style-1 margint45">
 									<a href="{{url('/search')}}"><i class="fa fa-search"></i>Check Availability</a>
 									</div>
-								</div>
+								</div> --}}
 							</div>
 						</div>
 					</div>
