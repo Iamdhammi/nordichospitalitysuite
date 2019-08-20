@@ -97,11 +97,6 @@
   $(document).ready(function() {
    $('#example').DataTable({
         "order": [[6, 'desc']],
-        // "responsive": true,
-        "searching": false,
-        'destroy': true,
-        "lengthChange": false,
-        
     });
     // new $.fn.dataTable.FixedHeader( table );
 } );
