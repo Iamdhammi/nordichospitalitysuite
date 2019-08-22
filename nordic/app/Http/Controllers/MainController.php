@@ -402,10 +402,17 @@ class MainController extends Controller
 
 
 
-
-    // Admin
     
-
+  public function export_pdf()
+  {
+    $receipt = Transaction::where('id','21')->first();
+    $room = Room::where('room_type', $receipt->room_type)->first();
+    // view()->share('receipt',$receipt);
+    $pdf = PDF::loadView('testreceipt', compact('receipt', 'room'));
+    return $pdf->download('receipt.pdf');
+    // dd($_dompf_warnings);
+    // return view('testreceipt')->with(compact('receipt','room'));
+  }
 
 
 

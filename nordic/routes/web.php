@@ -35,6 +35,8 @@ Route::get('/receipt', 'MainController@receipt');
 Route::get('/search', 'MainController@search');
 Route::match(['get', 'post'],'/searchresult', 'MainController@searchresult');
 
+Route::get('/pdf','MainController@export_pdf');
+
 
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');

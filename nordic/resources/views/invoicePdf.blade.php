@@ -1,4 +1,4 @@
-
+<a href="{{ URL::to('/pdf') }}">Export PDF</a>
 <div id="header">INVOICE</div>
       
       <div id="identity">
