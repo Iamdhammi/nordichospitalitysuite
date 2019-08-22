@@ -98,6 +98,15 @@
    $('#example').DataTable({
         "order": [[6, 'desc']],
     });
+  $('#example1').DataTable({
+    'searching': false,
+    "lengthChange": false,
+    "bPaginate": false,
+  });
+  $('#example2').DataTable({
+    'searching': false,
+    "lengthChange": false,
+  });
     // new $.fn.dataTable.FixedHeader( table );
 } );
 </script>

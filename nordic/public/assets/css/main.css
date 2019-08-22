@@ -2040,6 +2040,14 @@ ul.tabbed-area li.active a {
     padding-right: 10px;
     color: #333;
 }
+.room_price input[type="number"] {
+    width: 100%;
+    border: solid 1px #f0f0f0;
+    height: 44px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333;
+}
 .light-book-form input[type="email"]{
     width: 100%;
     border:solid 1px #f0f0f0;

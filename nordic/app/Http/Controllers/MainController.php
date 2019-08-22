@@ -13,11 +13,10 @@ use PDF;
 class MainController extends Controller
 {
     public function home() {
-        // if($request->isMethod('post')) {
-        //     $data = $request->all();
-
-        // }
-        return view('welcome');
+        $deluxe = Room::where(['room_type' => 'Deluxe Room'])->select('price')->first();
+        $nordic = Room::where(['room_type' => 'Nordic Suite'])->select('price')->first();
+        $standard = Room::where(['room_type' => 'Standard Room'])->select('price')->first();
+        return view('welcome')->with(compact('deluxe', 'nordic', 'standard'));
     }
 
     public function about() {
@@ -68,19 +67,6 @@ class MainController extends Controller
         $deluxe = Room::where('room_type', 'Deluxe Room')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
-            // $transaction = new Transaction;
-            // $transaction->name = $data['name'];
-            // $transaction->email = $data['email'];
-            // $transaction->phone = $data['tel'];
-            // $transaction->room_type = $data['room_type'];
-            // $transaction->room_no = $data['room_no'];
-            // $transaction->guests = $data['guests'];
-            // $transaction->arrival = $data['arrival'];
-            // $transaction->depart = $data['depart'];
-            // $transaction->payment_ref = $data['ref'];
-            // $transaction->payment_id = $data['id'];
-            // $transaction->amount = $data['total'];
-            // $transaction->save();
             $arrivaldate = strtotime($data['arrival']);
             $departuredate = strtotime($data['depart']);
             $diff = $departuredate - $arrivaldate;

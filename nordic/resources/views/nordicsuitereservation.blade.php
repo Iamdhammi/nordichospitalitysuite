@@ -25,7 +25,7 @@
 									<div class="col-md-6">
 										<li class="li-input li-side">
 											<label>Price Per Night(₦)</label>
-											<input type="text" id="price" name="room_price" value="35500" disabled/>
+											<input type="text" id="price" name="room_price" value="{{$nordic->price}}" disabled/>
 										</li>
 									</div>
 								</div>

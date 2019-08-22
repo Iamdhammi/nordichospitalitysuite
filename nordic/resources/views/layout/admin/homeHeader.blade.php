@@ -79,8 +79,10 @@
 											<li><a href="{{url('/gallery')}}">GALLERY</a></li>
 											<li><a href="{{url('/news')}}">NEWS</a></li>
                                             <li><a href="{{url('/contact')}}">CONTACT</a></li> --}}
-											<li><a href="{{url('/admin/editrooms')}}">EDIT ROOMS</a></li>
+											<li><a href="{{url('/admin/editroom')}}">EDIT ROOMS</a></li>
+											<li><a href="{{url('/admin/editprice')}}">EDIT PRICES</a></li>
 											<li><a href="{{url('/admin/transactions')}}">TRANSACTION</a></li>
+											<li><a href="{{url('/admin/rooms')}}">AVAILABLE ROOMS</a></li>
 										</ul>
 									</nav>
 								</div>

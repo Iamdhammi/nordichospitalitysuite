@@ -28,7 +28,7 @@
 									<label>DEPARTURE</label>
 									<input type="text" id="dpd2" name="depart" class="date-selector" placeholder="&#xf073;" required>
 								</li>
-								{{-- <li class="li-select">
+								<li class="li-select">
 									<label>ROOMS</label>
 									<select name="rooms" class="pretty-select">
 										<option selected="selected" value="1" >1</option>
@@ -36,19 +36,25 @@
 										<option value="3">3</option>
 										<option value="4">4</option>
 										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
 									</select>
 								</li>
 								<li class="li-select">
-									<label>ADULT</label>
-									<select name="adult" class="pretty-select">
+									<label>GUESTS</label>
+									<select name="guests" class="pretty-select">
 										<option selected="selected" value="1" >1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
 										<option value="4">4</option>
 										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
 									</select>
 								</li>
-								<li class="li-select">
+								{{-- <li class="li-select">
 									<label>CHILDREN</label>
 									<select name="children" class="pretty-select">
 										<option selected="selected" value="0" >0</option>
@@ -193,7 +199,7 @@
 									32" flat-screen TV, High Speed Internet. A Standard Room can accommodate one guest<a class="active-color" href="{{url('/rooms/standard')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
-								<div class="pull-left"><h4>₦18,500<span class="room-bottom-time">/ Night</span></h4></div>
+								<div class="pull-left"><h4>₦{{$standard->price}}<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
 										<a href="{{url('/sreservation')}}">BOOK NOW</a>
@@ -233,7 +239,7 @@
 								<a class="active-color" href="{{url('/rooms/nordicsuite')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
-								<div class="pull-left"><h4>₦35,500<span class="room-bottom-time">/ Night</span></h4></div>
+								<div class="pull-left"><h4>₦{{$nordic->price}}<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
 										<a href="{{url('/nsreservation')}}">BOOK NOW</a>
@@ -274,7 +280,7 @@
 								This room is perfect not only for business but also for a romantic getaway<a class="active-color" href="{{url('/rooms/deluxe')}}">[...]</a></p>
 							</div>
 							<div class="room-bottom">
-								<div class="pull-left"><h4>₦25,500<span class="room-bottom-time">/ Night</span></h4></div>
+								<div class="pull-left"><h4>₦{{$deluxe->price}}<span class="room-bottom-time">/ Night</span></h4></div>
 								<div class="pull-right">
 									<div class="button-style-1">
 										<a href="{{url('/dreservation')}}">BOOK NOW</a>

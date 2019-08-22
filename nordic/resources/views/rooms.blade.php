@@ -51,7 +51,7 @@
 									</p>
 								</td>
 								<td><h5>{{$deluxe->no_rooms_available}}</h5></td>
-								<td><h5>₦25,500</h5></td>
+								<td><h5>₦{{$deluxe->price}}</h5></td>
 								@if($deluxe->no_rooms_available > 0)
 								<td><div class="button-style-1"><a href="{{url('/dreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 								@else
@@ -92,7 +92,7 @@
 									</p>
 								</td>
 								<td><h5>{{$deluxeBalcony->no_rooms_available}}</h5></td>
-								<td><h5>₦29,500</h5></td>
+								<td><h5>₦{{$deluxeBalcony->price}}</h5></td>
 								@if($deluxeBalcony->no_rooms_available > 0)
 								<td><div class="button-style-1"><a href="{{url('/dbreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 								@else
@@ -134,7 +134,7 @@
 									</p>
 								</td>
 								<td><h5>{{$nordic->no_rooms_available}}</h5></td>
-								<td><h5>₦35,500</h5></td>
+								<td><h5>₦{{$nordic->price}}</h5></td>
 								@if($nordic->no_rooms_available > 0)
 								<td><div class="button-style-1"><a href="{{url('/nsreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 								@else
@@ -176,7 +176,7 @@
 									</p>
 								</td>
 								<td><h5>{{$nordicBalcony->no_rooms_available}}</h5></td>
-								<td><h5>₦39,500</h5></td>
+								<td><h5>₦{{$nordicBalcony->price}}</h5></td>
 								@if($nordicBalcony->no_rooms_available > 0)
 								<td><div class="button-style-1"><a href="{{url('/nsbreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 								@else
@@ -218,7 +218,7 @@
 									</p>
 								</td>
 								<td><h5>{{$standard->no_rooms_available}}</h5></td>
-								<td><h5>₦18,500</h5></td>
+								<td><h5>₦{{$standard->price}}</h5></td>
 								@if($standard->no_rooms_available > 0)
 								<td><div class="button-style-1"><a href="{{url('/sreservation')}}"><i class="fa fa-calendar"></i><span class="mobile-visibility">BOOK NOW</span></a></div></td>
 								@else

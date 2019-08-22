@@ -12,14 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>
 	 @if (preg_match("/about/", $url)) About 
-	 @elseif(preg_match("/gallery/", $url)) Gallery
-	 @elseif(preg_match("/contact/", $url)) Contact
-	 @elseif(preg_match("/rooms/", $url)) Hotel Rooms
-	 @elseif(preg_match("/terms/", $url)) Terms & Condition
-	 @elseif(preg_match("/reservation/", $url)) Reservation
-	 @elseif(preg_match("/invoice/", $url)) Invoice
-     @elseif(preg_match("/search/", $url)) Search
-     @elseif(preg_match("/transaction/", $url)) Transaction
+	 @elseif(preg_match("/edit/", $url)) Edit Rooms
 	 @endif | Nordic Hospitality Suites
 </title>
 <meta name="description" content="">
@@ -101,8 +94,10 @@
 										</ul>
 									</li> --}}
 									
-                                    <li <?php if (preg_match("/editrooms/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/admin/editrooms')}}">EDIT ROOMS</a></li>
-                                    <li <?php if (preg_match("/transactions/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/admin/transactions')}}">TRANSACTION</a></li>
+									<li <?php if (preg_match("/editroom/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/admin/editroom')}}">EDIT ROOMS</a></li>
+									<li <?php if (preg_match("/editprice/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/admin/editprice')}}">EDIT PRICES</a></li>
+									<li <?php if (preg_match("/transactions/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/admin/transactions')}}">TRANSACTION</a></li>
+									<li <?php if (preg_match("/rooms/", $url)) { ?>  class="active" <?php } ?>><a href="{{url('/admin/rooms')}}">AVAILABLE ROOMS</a></li>
 								</ul>
 							</nav>
 						</div>

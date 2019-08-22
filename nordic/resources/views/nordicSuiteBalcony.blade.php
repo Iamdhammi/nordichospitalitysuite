@@ -56,7 +56,7 @@
 								<h4>RATES</h4>
                                 <div class="line"></div>
                                 <div style="padding-top:30px;" >
-									<p class="whiteColor"><i class="fa fa-check-circle" style="color: #e4b248"></i><span class="bullet-point">Nordic Suite Balcony ₦39,500 / night</p>
+									<p class="whiteColor"><i class="fa fa-check-circle" style="color: #e4b248"></i><span class="bullet-point">Nordic Suite Balcony ₦{{$nordicBalcony->price}} / night</p>
 									<p class="whiteColor"><i class="fa fa-check-circle" style="color: #e4b248"></i><span class="bullet-point">Breakfast included</p>
                                 </div>
 							</div>

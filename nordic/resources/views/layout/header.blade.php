@@ -60,7 +60,6 @@
                         <div class="pull-left">
                             <ul class="pre-link-box">
 								<li><a href="{{url('/terms')}}">Terms & Conditions</a></li>
-								<li><a href="{{url('/login')}}">Admin Login</a></li>
                             </ul>
                         </div>
 					</div>
