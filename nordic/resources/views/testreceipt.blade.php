@@ -36,7 +36,7 @@
                     <td align="right"  style="padding:2px 5px"><div id="departure_date">{{$receipt->depart}}</div></td>
                 </tr>
                 <tr style="border: 1px solid #000">
-                    <td align="left" class="meta-head" style=" text-align: left; background-color: #0c242e; color: white;padding:2px 5px ">Amount Due</td>
+                    <td align="left" class="meta-head" style=" text-align: left; background-color: #0c242e; color: white;padding:2px 5px ">Amount Paid</td>
                     <td align="right"  style="padding:2px 5px"><div id="invoice_total" class="due">NGN {{$receipt->amount}}</div></td>
                 </tr>
             </table>

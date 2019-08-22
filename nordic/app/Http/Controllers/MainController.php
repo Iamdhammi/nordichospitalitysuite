@@ -85,6 +85,40 @@ class MainController extends Controller
             $invoice->amount = $amount;
 
             $invoice->save();
+
+            $email = $data['email'];
+            $name = $data['name'];
+            
+           
+            $room = Room::where('room_type', "Deluxe Room")->first();
+            $pdf = PDF::loadView('testinvoice', compact('invoice', 'room'));
+
+            $view = (string)\View::make('emails.invoice');
+
+            require (base_path() .'/sendgrid/sendgrid-php.php');
+
+            $obj_email = new \SendGrid\Mail\Mail(); 
+            $obj_email->setFrom("info@nordichospitalitysuites.com", "Nordic Hospitality Suite");
+            $obj_email->setSubject("Invoice");
+            $obj_email->addTo($email, $name);
+            $obj_email->addContent("text/html", $view);
+            $attachment = $pdf->output();
+            $content = file_get_contents($attachment);
+            $obj_email = addAttachment(
+                $content,
+                "application/pdf",
+                "invoice.pdf",
+                "attachment"
+            );
+            // $obj_email->addAttachment("application/text", $pdf->output(), 'invoice.pdf');
+            $sendgrid = new \SendGrid('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');
+            try {
+            $response = $sendgrid->send($obj_email);
+
+            } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+
             return redirect('/invoice');
         }
         return view('deluxereservation')->with(compact('deluxe'));
@@ -412,6 +446,14 @@ class MainController extends Controller
     return $pdf->download('receipt.pdf');
     // dd($_dompf_warnings);
     // return view('testreceipt')->with(compact('receipt','room'));
+  }
+
+  public function invoice_pdf(){
+    $invoice = Invoice::where('id', '21')->first();
+    $room = Room::where('room_type', $invoice->room_type)->first();
+    $pdf = PDF::loadView('testinvoice', compact('invoice', 'room'));
+    // dd($pdf-());
+    // return view('testinvoice')->with(compact('invoice','room'));
   }
 
 

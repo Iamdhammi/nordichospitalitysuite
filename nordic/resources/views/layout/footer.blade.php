@@ -241,7 +241,6 @@ window.print_this = function(id) {
   document.getElementById('invoice_cost').innerText = unitprice+".00";
   document.getElementById('total').innerText = total+".00";
   document.getElementById('invoice_amount_due').innerText = total+".00";
-  document.getElementById('invoice_ref').innerText = Invoice[9];
 </script>
 <script>
   function calculate() {

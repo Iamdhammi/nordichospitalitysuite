@@ -28,10 +28,10 @@
         <div id="customer">
     
                 <table id="meta">
-                    <tr>
+                    {{-- <tr>
                         <td class="meta-head">Invoice Id</td>
                         <td><div id="invoice_ref"></div></td>
-                    </tr>
+                    </tr> --}}
                     <tr>
                         <td class="meta-head">Arrival Date</td>
                         <td><div id="arrival_date"></div></td>

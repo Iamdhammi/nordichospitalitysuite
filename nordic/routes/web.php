@@ -36,6 +36,7 @@ Route::get('/search', 'MainController@search');
 Route::match(['get', 'post'],'/searchresult', 'MainController@searchresult');
 
 Route::get('/pdf','MainController@export_pdf');
+Route::get('/invoicepdf','MainController@invoice_pdf');
 
 
 Auth::routes();
