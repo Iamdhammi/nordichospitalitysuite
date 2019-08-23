@@ -112,6 +112,20 @@
     <div class="breadcrumb breadcrumb-1 pos-center bg">
             <h1>RECEIPT</h1>
       </div>
+        <div class="col-md-8 col-md-offset-2" style="text-align:center;margin-top:30px">
+            @if(Session::has('flash_message_success'))
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button> 
+                        <strong>{!! session('flash_message_success') !!}</strong>
+                </div>
+            @endif
+            @if(Session::has('flash_message_error'))
+                <div class="alert alert-danger alert-block" >
+                    <button type="button" class="close" data-dismiss="alert">×</button> 
+                        <strong>{!! session('flash_message_error') !!}</strong>
+                </div>
+            @endif
+        </div>
     
     <div id="to_print">
         <div id="header" >RECEIPT</div>
@@ -209,7 +223,8 @@
     </div>
     <div class="bottom-btn" style="margin-left: 300px!important">
         <ul>
-                <li><a href="javasript:;" onclick="print_this('to_print')"><i class="fa fa-print"></i> Print to Pdf</a></li>
+            <li><a href="javasript:;" onclick="print_this('to_print')"><i class="fa fa-print"></i> Print to Pdf</a></li>
+            <li><a href="{{url('/sendreceipt')}}"><i class="fa fa-envelope"></i> Send to Mail</a></li>
         </ul>
       </div>
 @include('layout.receiptfooter')

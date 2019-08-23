@@ -25,27 +25,27 @@
             <table style="width:300px;padding:5px;" id="meta">
                 <tr style="border: 1px solid #000">
                     <td align="left" class="meta-head" style=" text-align: left; background-color: #0c242e; color: white; padding:2px 5px">Receipt Id</td>
-                    <td align="right" style="padding:2px 5px"><div id="invoice_ref" >{{$receipt->payment_ref}}</div></td>
+                    <td align="right" style="padding:2px 5px"><div id="invoice_ref" >{{$transaction->payment_ref}}</div></td>
                 </tr>
                 <tr style="border: 1px solid #000">
                     <td align="left" class="meta-head" style=" text-align: left; background-color: #0c242e; color: white; padding:2px 5px ">Arrival Date</td>
-                    <td align="right"  style="padding:2px 5px"><div id="arrival_date">{{$receipt->arrival}}</div></td>
+                    <td align="right"  style="padding:2px 5px"><div id="arrival_date">{{$transaction->arrival}}</div></td>
                 </tr>
                 <tr style="border: 1px solid #000">
                     <td align="left" class="meta-head" style=" text-align: left; background-color: #0c242e; color: white;padding:2px 5px ">Departure Date</td>
-                    <td align="right"  style="padding:2px 5px"><div id="departure_date">{{$receipt->depart}}</div></td>
+                    <td align="right"  style="padding:2px 5px"><div id="departure_date">{{$transaction->depart}}</div></td>
                 </tr>
                 <tr style="border: 1px solid #000">
                     <td align="left" class="meta-head" style=" text-align: left; background-color: #0c242e; color: white;padding:2px 5px ">Amount Paid</td>
-                    <td align="right"  style="padding:2px 5px"><div id="invoice_total" class="due">NGN {{$receipt->amount}}</div></td>
+                    <td align="right"  style="padding:2px 5px"><div id="invoice_total" class="due">NGN {{$transaction->amount}}</div></td>
                 </tr>
             </table>
         </div>
         <div style="position:absolute;right:0px; text-align: right">
             <h4 style="margin:0px">BILL TO:</h4>
-            <p style="margin:0px; padding: 5px; font-size:16px;"><span id="invoice_name">{{$receipt->name}}</span><br>
-            <span id="invoice_email">{{$receipt->email}}</span><br>
-            <span id="invoice_phone">{{$receipt->phone}}</span><br>
+            <p style="margin:0px; padding: 5px; font-size:16px;"><span id="invoice_name">{{$transaction->name}}</span><br>
+            <span id="invoice_email">{{$transaction->email}}</span><br>
+            <span id="invoice_phone">{{$transaction->phone}}</span><br>
             </p>
         </div>
     </div>
@@ -67,11 +67,11 @@
         <tbody>
         <tr class="item-row">
             <td align="right">1</td>
-            <td align="right" id="invoice_room_type">{{$receipt->room_type}}</td>
-            <td align="right" id="invoice_guests">{{$receipt->guests}}</td>
+            <td align="right" id="invoice_room_type">{{$transaction->room_type}}</td>
+            <td align="right" id="invoice_guests">{{$transaction->guests}}</td>
             <td align="right" id="invoice_cost">NGN {{$room->price}}</td>
-            <td align="right" id="invoice_room_no">{{$receipt->room_no}}</td>
-            <td align="right" id="invoice_total_price">NGN {{$receipt->amount}}</td>
+            <td align="right" id="invoice_room_no">{{$transaction->room_no}}</td>
+            <td align="right" id="invoice_total_price">NGN {{$transaction->amount}}</td>
         </tr>
         
         </tbody>
@@ -80,12 +80,12 @@
             <tr>
                 <td style="font-weight: bold;font-size: 14px;padding: 5px" colspan="4"></td>
                 <td style="font-weight: bold;font-size: 14px;padding: 5px" align="right">Total</td>
-                <td style="font-weight: bold;font-size: 14px;padding: 5px" align="right" id="invoice_total_amount">NGN {{$receipt->amount}}</td>
+                <td style="font-weight: bold;font-size: 14px;padding: 5px" align="right" id="invoice_total_amount">NGN {{$transaction->amount}}</td>
             </tr>
             <tr>
                 <td style="font-weight: bold;font-size: 14px;padding: 5px" colspan="4"></td>
                 <td style="font-weight: bold;font-size: 14px;padding: 5px" align="right">Amount Paid</td>
-                <td style="font-weight: bold;font-size: 14px;padding: 5px" align="right" id="invoice_amount_due">NGN {{$receipt->amount}}</td>
+                <td style="font-weight: bold;font-size: 14px;padding: 5px" align="right" id="invoice_amount_due">NGN {{$transaction->amount}}</td>
             </tr>
             <tr>
                 <td style="font-weight: bold;font-size: 14px;padding: 5px" colspan="4"></td>

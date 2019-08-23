@@ -103,9 +103,8 @@ class MainController extends Controller
             $obj_email->addTo($email, $name);
             $obj_email->addContent("text/html", $view);
             $attachment = $pdf->output();
-            $content = file_get_contents($attachment);
-            $obj_email = addAttachment(
-                $content,
+            $obj_email->addAttachment(
+                $attachment,
                 "application/pdf",
                 "invoice.pdf",
                 "attachment"
@@ -119,7 +118,7 @@ class MainController extends Controller
             echo 'Caught exception: '. $e->getMessage() ."\n";
             }
 
-            return redirect('/invoice');
+            return redirect('/invoice')->with('flash_message_success','Invoice has been sent to your mail');
         }
         return view('deluxereservation')->with(compact('deluxe'));
     }
@@ -127,20 +126,6 @@ class MainController extends Controller
         $deluxeBalcony = Room::where('room_type', 'Deluxe Balcony')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
-            // $transaction = new Transaction;
-            // $transaction->name = $data['name'];
-            // $transaction->email = $data['email'];
-            // $transaction->phone = $data['tel'];
-            // $transaction->room_type = $data['room_type'];
-            // $transaction->room_no = $data['room_no'];
-            // $transaction->guests = $data['guests'];
-            // $transaction->arrival = $data['arrival'];
-            // $transaction->depart = $data['depart'];
-            // $transaction->payment_ref = $data['ref'];
-            // $transaction->payment_id = $data['id'];
-            // $transaction->amount = $data['total'];
-
-            // $transaction->save();
             $arrivaldate = strtotime($data['arrival']);
             $departuredate = strtotime($data['depart']);
             $diff = $departuredate - $arrivaldate;
@@ -159,7 +144,40 @@ class MainController extends Controller
             $invoice->amount = $amount;
 
             $invoice->save();
-            return redirect('/invoice');
+            
+            $email = $data['email'];
+            $name = $data['name'];
+            
+           
+            $room = Room::where('room_type', "Deluxe Balcony")->first();
+            $pdf = PDF::loadView('testinvoice', compact('invoice', 'room'));
+
+            $view = (string)\View::make('emails.invoice');
+
+            require (base_path() .'/sendgrid/sendgrid-php.php');
+
+            $obj_email = new \SendGrid\Mail\Mail(); 
+            $obj_email->setFrom("info@nordichospitalitysuites.com", "Nordic Hospitality Suite");
+            $obj_email->setSubject("Invoice");
+            $obj_email->addTo($email, $name);
+            $obj_email->addContent("text/html", $view);
+            $attachment = $pdf->output();
+            $obj_email->addAttachment(
+                $attachment,
+                "application/pdf",
+                "invoice.pdf",
+                "attachment"
+            );
+            // $obj_email->addAttachment("application/text", $pdf->output(), 'invoice.pdf');
+            $sendgrid = new \SendGrid('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');
+            try {
+            $response = $sendgrid->send($obj_email);
+
+            } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+
+            return redirect('/invoice')->with('flash_message_success','Invoice has been sent to your mail');
         }
         return view('deluxebalconyreservation')->with(compact('deluxeBalcony'));
     }
@@ -167,20 +185,6 @@ class MainController extends Controller
         $nordic = Room::where('room_type', 'Nordic Suite')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
-            // $transaction = new Transaction;
-            // $transaction->name = $data['name'];
-            // $transaction->email = $data['email'];
-            // $transaction->phone = $data['tel'];
-            // $transaction->room_type = $data['room_type'];
-            // $transaction->room_no = $data['room_no'];
-            // $transaction->guests = $data['guests'];
-            // $transaction->arrival = $data['arrival'];
-            // $transaction->depart = $data['depart'];
-            // $transaction->payment_ref = $data['ref'];
-            // $transaction->payment_id = $data['id'];
-            // $transaction->amount = $data['total'];
-
-            // $transaction->save();
             $arrivaldate = strtotime($data['arrival']);
             $departuredate = strtotime($data['depart']);
             $diff = $departuredate - $arrivaldate;
@@ -199,7 +203,40 @@ class MainController extends Controller
             $invoice->amount = $amount;
 
             $invoice->save();
-            return redirect('/invoice');
+            
+            $email = $data['email'];
+            $name = $data['name'];
+            
+           
+            $room = Room::where('room_type', "Nordic Suite")->first();
+            $pdf = PDF::loadView('testinvoice', compact('invoice', 'room'));
+
+            $view = (string)\View::make('emails.invoice');
+
+            require (base_path() .'/sendgrid/sendgrid-php.php');
+
+            $obj_email = new \SendGrid\Mail\Mail(); 
+            $obj_email->setFrom("info@nordichospitalitysuites.com", "Nordic Hospitality Suite");
+            $obj_email->setSubject("Invoice");
+            $obj_email->addTo($email, $name);
+            $obj_email->addContent("text/html", $view);
+            $attachment = $pdf->output();
+            $obj_email->addAttachment(
+                $attachment,
+                "application/pdf",
+                "invoice.pdf",
+                "attachment"
+            );
+            // $obj_email->addAttachment("application/text", $pdf->output(), 'invoice.pdf');
+            $sendgrid = new \SendGrid('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');
+            try {
+            $response = $sendgrid->send($obj_email);
+
+            } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+
+            return redirect('/invoice')->with('flash_message_success','Invoice has been sent to your mail');
         }
         return view('nordicsuitereservation')->with(compact('nordic'));
     }
@@ -207,20 +244,6 @@ class MainController extends Controller
         $nordicBalcony = Room::where('room_type', 'Nordic Suite Balcony')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
-            // $transaction = new Transaction;
-            // $transaction->name = $data['name'];
-            // $transaction->email = $data['email'];
-            // $transaction->phone = $data['tel'];
-            // $transaction->room_type = $data['room_type'];
-            // $transaction->room_no = $data['room_no'];
-            // $transaction->guests = $data['guests'];
-            // $transaction->arrival = $data['arrival'];
-            // $transaction->depart = $data['depart'];
-            // $transaction->payment_ref = $data['ref'];
-            // $transaction->payment_id = $data['id'];
-            // $transaction->amount = $data['total'];
-
-            // $transaction->save();
             $arrivaldate = strtotime($data['arrival']);
             $departuredate = strtotime($data['depart']);
             $diff = $departuredate - $arrivaldate;
@@ -239,7 +262,40 @@ class MainController extends Controller
             $invoice->amount = $amount;
 
             $invoice->save();
-            return redirect('/invoice');
+
+            $email = $data['email'];
+            $name = $data['name'];
+            
+           
+            $room = Room::where('room_type', "Nordic Suite Balcony")->first();
+            $pdf = PDF::loadView('testinvoice', compact('invoice', 'room'));
+
+            $view = (string)\View::make('emails.invoice');
+
+            require (base_path() .'/sendgrid/sendgrid-php.php');
+
+            $obj_email = new \SendGrid\Mail\Mail(); 
+            $obj_email->setFrom("info@nordichospitalitysuites.com", "Nordic Hospitality Suite");
+            $obj_email->setSubject("Invoice");
+            $obj_email->addTo($email, $name);
+            $obj_email->addContent("text/html", $view);
+            $attachment = $pdf->output();
+            $obj_email->addAttachment(
+                $attachment,
+                "application/pdf",
+                "invoice.pdf",
+                "attachment"
+            );
+            // $obj_email->addAttachment("application/text", $pdf->output(), 'invoice.pdf');
+            $sendgrid = new \SendGrid('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');
+            try {
+            $response = $sendgrid->send($obj_email);
+
+            } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+
+            return redirect('/invoice')->with('flash_message_success','Invoice has been sent to your mail');
         }
         return view('nordicsuitebalconyreservation')->with(compact('nordicBalcony'));
     }
@@ -247,20 +303,7 @@ class MainController extends Controller
         $standard = Room::where('room_type', 'Standard Room')->first();
         if($request->isMethod('post')) {
             $data = $request->all();
-            // $transaction = new Transaction;
-            // $transaction->name = $data['name'];
-            // $transaction->email = $data['email'];
-            // $transaction->phone = $data['tel'];
-            // $transaction->room_type = $data['room_type'];
-            // $transaction->room_no = $data['room_no'];
-            // $transaction->guests = $data['guests'];
-            // $transaction->arrival = $data['arrival'];
-            // $transaction->depart = $data['depart'];
-            // $transaction->payment_ref = $data['ref'];
-            // $transaction->payment_id = $data['id'];
-            // $transaction->amount = $data['total'];
-
-            // $transaction->save();
+            
             $arrivaldate = strtotime($data['arrival']);
             $departuredate = strtotime($data['depart']);
             $diff = $departuredate - $arrivaldate;
@@ -279,7 +322,40 @@ class MainController extends Controller
             $invoice->amount = $amount;
 
             $invoice->save();
-            return redirect('/invoice');
+            
+            $email = $data['email'];
+            $name = $data['name'];
+            
+           
+            $room = Room::where('room_type', "Standard Room")->first();
+            $pdf = PDF::loadView('testinvoice', compact('invoice', 'room'));
+
+            $view = (string)\View::make('emails.invoice');
+
+            require (base_path() .'/sendgrid/sendgrid-php.php');
+
+            $obj_email = new \SendGrid\Mail\Mail(); 
+            $obj_email->setFrom("info@nordichospitalitysuites.com", "Nordic Hospitality Suite");
+            $obj_email->setSubject("Invoice");
+            $obj_email->addTo($email, $name);
+            $obj_email->addContent("text/html", $view);
+            $attachment = $pdf->output();
+            $obj_email->addAttachment(
+                $attachment,
+                "application/pdf",
+                "invoice.pdf",
+                "attachment"
+            );
+            // $obj_email->addAttachment("application/text", $pdf->output(), 'invoice.pdf');
+            $sendgrid = new \SendGrid('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');
+            try {
+            $response = $sendgrid->send($obj_email);
+
+            } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+
+            return redirect('/invoice')->with('flash_message_success','Invoice has been sent to your mail');
         }
         return view('standardreservation')->with(compact('standard'));
     }
@@ -302,25 +378,50 @@ class MainController extends Controller
             $transaction->payment_ref = $data['ref'];
             $transaction->payment_id = $data['id'];
             $transaction->amount = $data['total'];
-
             $transaction->save();
-           
-            // dd($today);
-            // if($arrivaldate == $today) {
-            //     $room = Room::where(['room_type' => $data['room_type']])->first();
-            //     $room_no = $room->no_rooms_available;
-            //     $no = $room_no - 1;
-            //     dd($room_no);
-            //     Room::where(['room_type'=> $data['room_type']])->update([
-            //         // 'no_rooms_available' => $rooms_no->no_rooms_available - 1,
-            //     ]);
-            // }
             
-            // return redirect('/receipt');
+            return back()->with('flash_message_success','Receipt has been sent to your mail');
+            // return redirect('/receipt')->with('flash_message_success','Receipt has been sent to your mail');
         }
         return view('invoice');
     }
 
+    public function sendreceipt() {
+            $transaction = Transaction::orderBy('created_at', 'DESC')->first();
+            $email = $transaction->email;
+            $name = $transaction->name;
+            
+           
+            $room = Room::where('room_type', $transaction->room_type)->first();
+            $pdf = PDF::loadView('testreceipt', compact('transaction', 'room'));
+
+            $view = (string)\View::make('emails.receipt');
+
+            require (base_path() .'/sendgrid/sendgrid-php.php');
+
+            $obj_email = new \SendGrid\Mail\Mail(); 
+            $obj_email->setFrom("info@nordichospitalitysuites.com", "Nordic Hospitality Suite");
+            $obj_email->setSubject("Receipt");
+            $obj_email->addTo($email, $name);
+            $obj_email->addContent("text/html", $view);
+            $attachment = $pdf->output();
+            $obj_email->addAttachment(
+                $attachment,
+                "application/pdf",
+                "receipt.pdf",
+                "attachment"
+            );
+            // $obj_email->addAttachment("application/text", $pdf->output(), 'invoice.pdf');
+            $sendgrid = new \SendGrid('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');
+            try {
+            $response = $sendgrid->send($obj_email);
+
+            } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+            return redirect('/receipt')->with('flash_message_success','Receipt has been sent to your mail');
+            
+    }
     // public function pdf() {
     //     $invoice = Invoice::orderBy('created_at','DESC')->first();
     //     view()->share('invoice',$invoice);

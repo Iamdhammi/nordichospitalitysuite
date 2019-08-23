@@ -3,6 +3,20 @@
     <div class="breadcrumb breadcrumb-1 pos-center bg">
 		  <h1>INVOICE</h1>
     </div>
+    <div class="col-md-8 col-md-offset-2" style="text-align:center;margin-top:30px">
+        @if(Session::has('flash_message_success'))
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button> 
+                    <strong>{!! session('flash_message_success') !!}</strong>
+            </div>
+        @endif
+        @if(Session::has('flash_message_error'))
+            <div class="alert alert-danger alert-block" >
+                <button type="button" class="close" data-dismiss="alert">×</button> 
+                    <strong>{!! session('flash_message_error') !!}</strong>
+            </div>
+        @endif
+    </div>
     <div id="page-wrap">
       <div id="to_print">
         <div id="header">INVOICE</div>
@@ -102,7 +116,6 @@
       {{ csrf_field() }}
       <div class="bottom-btn">
         <ul>
-          <li><a href="javasript:;" onclick="print_this('to_print')" id="pdf"><i class="fa fa-print"></i> Print to Pdf</a></li>
           <li><a href="javasript:;" onclick="calculate()"><i class="fa fa-money-bill"></i> Make Payment</a></li>
         </ul>
       </div>
