@@ -19,11 +19,11 @@
                     <hr class="footer-hr">
                     <ul class="footer-links">
                       
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Deluxe Room</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Deluxe Balcony</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Nordic Suite</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Nordic Suite Balcony</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Standard Room</a></li>
+                    <li><a href="{{url('/rooms/deluxe')}}"><i class="fa fa-angle-right"></i> Deluxe Room</a></li>
+                    <li><a href="{{url('/rooms/deluxebalcony')}}"><i class="fa fa-angle-right"></i> Deluxe Balcony</a></li>
+                    <li><a href="{{url('/rooms/nordicsuite')}}"><i class="fa fa-angle-right"></i> Nordic Suite</a></li>
+                    <li><a href="{{url('/rooms/nordicsuitebalcony')}}"><i class="fa fa-angle-right"></i> Nordic Suite Balcony</a></li>
+                    <li><a href="{{url('/rooms/standard')}}"><i class="fa fa-angle-right"></i> Standard Room</a></li>
                     
                   </ul>
                 </div>
@@ -31,11 +31,11 @@
                   <h5>LINKS</h5>
                   <hr class="footer-hr">
                   <ul class="footer-links">
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Home </a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i> About</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Contact</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Gallery</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i> Terms & Conditions</a></li>
+                    <li><a href="{{url('/')}}"><i class="fa fa-angle-right"></i> Home </a></li>
+                    <li><a href="{{url('/about')}}"><i class="fa fa-angle-right"></i> About</a></li>
+                    <li><a href="{{url('/contact')}}"><i class="fa fa-angle-right"></i> Contact</a></li>
+                    <li><a href="{{url('/gallery')}}"><i class="fa fa-angle-right"></i> Gallery</a></li>
+                    <li><a href="{{url('/terms')}}"><i class="fa fa-angle-right"></i> Terms & Conditions</a></li>
                   </ul>
                 </div>
                 <div class="col-lg-4 col-sm-4">

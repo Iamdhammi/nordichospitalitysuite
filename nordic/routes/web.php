@@ -15,7 +15,7 @@ use App\Http\Controllers\MainController;
 Route::get('/', 'MainController@home');
 Route::get('/about', 'MainController@about');
 Route::get('/gallery', 'MainController@gallery');
-Route::get('/contact', 'MainController@contact');
+Route::match(['get', 'post'],'/contact', 'MainController@contact');
 Route::get('/rooms', 'MainController@Rooms');
 Route::get('/rooms/deluxe', 'MainController@deluxe');
 Route::get('/rooms/deluxebalcony', 'MainController@deluxeBalcony');

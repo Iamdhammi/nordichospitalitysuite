@@ -27,7 +27,37 @@ class MainController extends Controller
         return view('gallery');
     }
 
-    public function contact() {
+    public function contact(Request $request) {
+
+        if($request->isMethod('post')) {
+            $data = $request->all();
+            $name = $data['name'];
+            $email = $data['email'];
+            $subject = $data['subject'];
+            $message = $data['message'];
+
+            $view = (string)\View::make('emails.contactMessage', [
+                'message' => $message
+            ]);
+
+            require (base_path() .'/sendgrid/sendgrid-php.php');
+            
+            $obj_email = new \SendGrid\Mail\Mail(); 
+            $obj_email->setFrom($email, $name);
+            $obj_email->setSubject($subject);
+            $obj_email->addTo("info@nordichospitalitysuites.com", "Nordic Hospitality Suite");
+            $obj_email->addContent("text/html", $view);
+            
+            // $obj_email->addAttachment("application/text", $pdf->output(), 'invoice.pdf');
+            $sendgrid = new \SendGrid('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');
+            try {
+            $response = $sendgrid->send($obj_email);
+
+            } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
+            return redirect('/contact')->with('flash_message_success','Message sent successfully');
+        }
         return view('contact');
     }
 

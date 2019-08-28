@@ -39,13 +39,29 @@
 				</div>
 				<!-- Contact -->
 				<div class="col-lg-8 col-sm-8 mg-t60">
+					<div class="col-md-12" style="text-align:center;">
+						@if(Session::has('flash_message_success'))
+							<div class="alert alert-success alert-block">
+								<button type="button" class="close" data-dismiss="alert">×</button> 
+									<strong>{!! session('flash_message_success') !!}</strong>
+							</div>
+						@endif
+						@if(Session::has('flash_message_error'))
+							<div class="alert alert-danger alert-block" >
+								<button type="button" class="close" data-dismiss="alert">×</button> 
+									<strong>{!! session('flash_message_error') !!}</strong>
+							</div>
+						@endif
+					</div>
 					<div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="300px" id="gmap_canvas" src="https://maps.google.com/maps?q=%2014%2C%20Patrick%20O.%20Bokkor%20Crescent%2C%20Jabi%2C%20Abuja&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/best-wordpress-themes/">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:300px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:100%;}</style></div>
 					<div class="contact-form margint30"><!-- Contact Form -->
-						<form action="#" method="post" id="ajax-contact-form">
-                            <input type="text" id="cname" placeholder="Name" name="name" >
-                            <input type="text" id="cmail" placeholder="E-Mail" name="email" >
-							<input type="text" id="csubject" placeholder="Subject" name="subject" >
-							<textarea placeholder="Write what do you want..." id="ctext" name="message"></textarea>
+						
+						<form action="" method="post">
+							{{ csrf_field() }}
+                            <input type="text" id="name" placeholder="Name" name="name" required>
+                            <input type="text" id="email" placeholder="E-Mail" name="email" required>
+							<input type="text" id="subject" placeholder="Subject" name="subject" required>
+							<textarea placeholder="Write what do you want..." id="text" name="message" required></textarea>
 							<input class="pull-right margint10" type="submit" value="SUBMIT">
 						</form>
 					</div>
