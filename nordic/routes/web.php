@@ -12,7 +12,7 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('/', 'MainController@home');
+Route::match(['get', 'post'] , '/', 'MainController@home');
 Route::get('/about', 'MainController@about');
 Route::get('/gallery', 'MainController@gallery');
 Route::match(['get', 'post'],'/contact', 'MainController@contact');

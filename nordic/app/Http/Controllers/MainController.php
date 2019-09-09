@@ -10,12 +10,22 @@ use App\Blog;
 use App\Room;
 use App\Invoice;
 use PDF;
+use Newsletter;
 class MainController extends Controller
 {
-    public function home() {
+    public function home(Request $request) {
         $deluxe = Room::where(['room_type' => 'Deluxe Room'])->select('price')->first();
         $nordic = Room::where(['room_type' => 'Nordic Suite'])->select('price')->first();
         $standard = Room::where(['room_type' => 'Standard Room'])->select('price')->first();
+        if($request->isMethod('post')) {
+            if ( ! Newsletter::isSubscribed($request->email) ) 
+            {
+                Newsletter::subscribe($request->email);
+                return back()->with('success', 'Thanks For Subscribing');
+            }
+            return back()->with('failure', 'Sorry! You have already subscribed ');
+
+        }
         return view('welcome')->with(compact('deluxe', 'nordic', 'standard'));
     }
 
